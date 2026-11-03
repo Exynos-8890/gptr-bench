@@ -3,7 +3,7 @@
 Implementation: **0.5.0-dev.16**. Current workflow: two live arms, shared prompts, manual review.
 This maintainer-directed simplification supersedes the reference/replay/scoring workflow in older plans and reports.
 
-- [Latest T01 experiment report](docs/REPORT-T01-live.zh-CN.html)
+- [Latest T01 experiment report](docs/REPORT-T01-live.en.html)
 - [Current source and run instructions](aws/README.md)
 - [Operator commands](aws/RUNBOOK.md)
 - [Current developer tests](tests/)

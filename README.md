@@ -20,6 +20,14 @@ Codex must be authenticated. On a fresh Ubuntu host, run
 `bash biomedical/v0.5/aws/setup-linux.sh` to install dependencies into `.runtime/`.
 See the [runbook](biomedical/v0.5/aws/RUNBOOK.md) for data preparation and import.
 
+## Latest report
+
+[English report source](biomedical/v0.5/docs/REPORT-T01-live.en.md) ·
+[Download the interactive HTML](biomedical/v0.5/docs/REPORT-T01-live.en.html)
+
+Download the HTML and open it locally to view its interactive charts.
+GitHub shows HTML source in its repository viewer.
+
 ## Layout
 
 - `biomedical/v0.5/aws/`: canonical runtime, prompts and data preparation.
