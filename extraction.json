@@ -1,0 +1,16 @@
+{
+  "source_repository": "gptr",
+  "source_revision": "939eed5ac9305ee43cc8d61dc8b0206bd8972a61",
+  "source_directory": "dev/bench/biomedical",
+  "destination_directory": "biomedical",
+  "history": "snapshot; earlier history remains in gptr",
+  "preserved_untracked": [
+    "data",
+    "runs",
+    "local reports"
+  ],
+  "removed_broken_aliases": [
+    "v04-tasks.json",
+    "v05-tasks.json"
+  ]
+}

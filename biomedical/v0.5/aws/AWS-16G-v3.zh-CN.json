@@ -1,0 +1,161 @@
+{
+  "checked_at_utc": "2026-10-31T07:43:21+00:00",
+  "read_only_commands": {
+    "pricing": [
+      "aws",
+      "pricing",
+      "get-products",
+      "--region",
+      "us-east-1",
+      "--service-code",
+      "AmazonEC2",
+      "--filters",
+      "Type=TERM_MATCH,Field=location,Value=US East (N. Virginia)",
+      "Type=TERM_MATCH,Field=instanceType,Value=r6a.large",
+      "Type=TERM_MATCH,Field=operatingSystem,Value=Linux",
+      "Type=TERM_MATCH,Field=tenancy,Value=Shared",
+      "Type=TERM_MATCH,Field=preInstalledSw,Value=NA",
+      "Type=TERM_MATCH,Field=capacitystatus,Value=Used",
+      "Type=TERM_MATCH,Field=licenseModel,Value=No License required",
+      "--output",
+      "json"
+    ],
+    "specification": [
+      "aws",
+      "ec2",
+      "describe-instance-types",
+      "--region",
+      "us-east-1",
+      "--instance-types",
+      "r6a.large",
+      "--output",
+      "json"
+    ]
+  },
+  "results": {
+    "pricing": {
+      "PriceList": [
+        "{\"product\":{\"productFamily\":\"Compute Instance\",\"attributes\":{\"enhancedNetworkingSupported\":\"Yes\",\"intelTurboAvailable\":\"No\",\"memory\":\"16 GiB\",\"dedicatedEbsThroughput\":\"Up to 6667 Mbps\",\"vcpu\":\"2\",\"classicnetworkingsupport\":\"false\",\"capacitystatus\":\"Used\",\"locationType\":\"AWS Region\",\"storage\":\"EBS only\",\"instanceFamily\":\"Memory optimized\",\"operatingSystem\":\"Linux\",\"intelAvx2Available\":\"No\",\"instanceFamilyCategory\":\"Memory Optimized\",\"regionCode\":\"us-east-1\",\"physicalProcessor\":\"AMD EPYC 7R13 Processor\",\"clockSpeed\":\"3.6 GHz\",\"ecu\":\"NA\",\"networkPerformance\":\"Up to 12500 Megabit\",\"servicename\":\"Amazon Elastic Compute Cloud\",\"gpuMemory\":\"NA\",\"dedicatedEbsThroughputDescription\":\"531 Mbps\",\"vpcnetworkingsupport\":\"true\",\"instanceType\":\"r6a.large\",\"tenancy\":\"Shared\",\"usagetype\":\"BoxUsage:r6a.large\",\"normalizationSizeFactor\":\"4\",\"intelAvxAvailable\":\"No\",\"processorFeatures\":\"AMD Turbo; AVX; AVX2\",\"servicecode\":\"AmazonEC2\",\"licenseModel\":\"No License required\",\"currentGeneration\":\"Yes\",\"preInstalledSw\":\"NA\",\"location\":\"US East (N. Virginia)\",\"processorArchitecture\":\"64-bit\",\"marketoption\":\"OnDemand\",\"operation\":\"RunInstances\",\"availabilityzone\":\"NA\"},\"sku\":\"XVAAB4G989M59AFX\"},\"serviceCode\":\"AmazonEC2\",\"terms\":{\"OnDemand\":{\"XVAAB4G989M59AFX.JRTCKXETXF\":{\"priceDimensions\":{\"XVAAB4G989M59AFX.JRTCKXETXF.6YS6EN2CT7\":{\"unit\":\"Hrs\",\"endRange\":\"Inf\",\"description\":\"$0.1134 per On Demand Linux r6a.large Instance Hour\",\"appliesTo\":[],\"rateCode\":\"XVAAB4G989M59AFX.JRTCKXETXF.6YS6EN2CT7\",\"beginRange\":\"0\",\"pricePerUnit\":{\"USD\":\"0.1134000000\"}}},\"sku\":\"XVAAB4G989M59AFX\",\"effectiveDate\":\"2026-10-01T00:00:00Z\",\"offerTermCode\":\"JRTCKXETXF\",\"termAttributes\":{}}},\"Reserved\":{\"XVAAB4G989M59AFX.7NE97W5U4E\":{\"priceDimensions\":{\"XVAAB4G989M59AFX.7NE97W5U4E.6YS6EN2CT7\":{\"unit\":\"Hrs\",\"endRange\":\"Inf\",\"description\":\"Linux/UNIX (Amazon VPC), r6a.large reserved instance applied\",\"appliesTo\":[],\"rateCode\":\"XVAAB4G989M59AFX.7NE97W5U4E.6YS6EN2CT7\",\"beginRange\":\"0\",\"pricePerUnit\":{\"USD\":\"0.0821600000\"}}},\"sku\":\"XVAAB4G989M59AFX\",\"effectiveDate\":\"2026-10-29T18:17:24Z\",\"offerTermCode\":\"7NE97W5U4E\",\"termAttributes\":{\"LeaseContractLength\":\"1yr\",\"OfferingClass\":\"convertible\",\"PurchaseOption\":\"No Upfront\"}},\"XVAAB4G989M59AFX.6QCMYABX3D\":{\"priceDimensions\":{\"XVAAB4G989M59AFX.6QCMYABX3D.6YS6EN2CT7\":{\"unit\":\"Hrs\",\"endRange\":\"Inf\",\"description\":\"USD 0.0 per Linux/UNIX (Amazon VPC), r6a.large reserved instance applied\",\"appliesTo\":[],\"rateCode\":\"XVAAB4G989M59AFX.6QCMYABX3D.6YS6EN2CT7\",\"beginRange\":\"0\",\"pricePerUnit\":{\"USD\":\"0.0000000000\"}},\"XVAAB4G989M59AFX.6QCMYABX3D.2TG2D8R56U\":{\"unit\":\"Quantity\",\"description\":\"Upfront Fee\",\"appliesTo\":[],\"rateCode\":\"XVAAB4G989M59AFX.6QCMYABX3D.2TG2D8R56U\",\"pricePerUnit\":{\"USD\":\"613\"}}},\"sku\":\"XVAAB4G989M59AFX\",\"effectiveDate\":\"2026-10-29T18:17:25Z\",\"offerTermCode\":\"6QCMYABX3D\",\"termAttributes\":{\"LeaseContractLength\":\"1yr\",\"OfferingClass\":\"standard\",\"PurchaseOption\":\"All Upfront\"}},\"XVAAB4G989M59AFX.38NPMPTW36\":{\"priceDimensions\":{\"XVAAB4G989M59AFX.38NPMPTW36.6YS6EN2CT7\":{\"unit\":\"Hrs\",\"endRange\":\"Inf\",\"description\":\"Linux/UNIX (Amazon VPC), r6a.large reserved instance applied\",\"appliesTo\":[],\"rateCode\":\"XVAAB4G989M59AFX.38NPMPTW36.6YS6EN2CT7\",\"beginRange\":\"0\",\"pricePerUnit\":{\"USD\":\"0.0238100000\"}},\"XVAAB4G989M59AFX.38NPMPTW36.2TG2D8R56U\":{\"unit\":\"Quantity\",\"description\":\"Upfront Fee\",\"appliesTo\":[],\"rateCode\":\"XVAAB4G989M59AFX.38NPMPTW36.2TG2D8R56U\",\"pricePerUnit\":{\"USD\":\"626\"}}},\"sku\":\"XVAAB4G989M59AFX\",\"effectiveDate\":\"2026-10-29T18:17:27Z\",\"offerTermCode\":\"38NPMPTW36\",\"termAttributes\":{\"LeaseContractLength\":\"3yr\",\"OfferingClass\":\"standard\",\"PurchaseOption\":\"Partial Upfront\"}},\"XVAAB4G989M59AFX.BPH4J8HBKS\":{\"priceDimensions\":{\"XVAAB4G989M59AFX.BPH4J8HBKS.6YS6EN2CT7\":{\"unit\":\"Hrs\",\"endRange\":\"Inf\",\"description\":\"Linux/UNIX (Amazon VPC), r6a.large reserved instance applied\",\"appliesTo\":[],\"rateCode\":\"XVAAB4G989M59AFX.BPH4J8HBKS.6YS6EN2CT7\",\"beginRange\":\"0\",\"pricePerUnit\":{\"USD\":\"0.0514400000\"}}},\"sku\":\"XVAAB4G989M59AFX\",\"effectiveDate\":\"2026-10-29T18:17:24Z\",\"offerTermCode\":\"BPH4J8HBKS\",\"termAttributes\":{\"LeaseContractLength\":\"3yr\",\"OfferingClass\":\"standard\",\"PurchaseOption\":\"No Upfront\"}},\"XVAAB4G989M59AFX.Z2E3P23VKM\":{\"priceDimensions\":{\"XVAAB4G989M59AFX.Z2E3P23VKM.6YS6EN2CT7\":{\"unit\":\"Hrs\",\"endRange\":\"Inf\",\"description\":\"Linux/UNIX (Amazon VPC), r6a.large reserved instance applied\",\"appliesTo\":[],\"rateCode\":\"XVAAB4G989M59AFX.Z2E3P23VKM.6YS6EN2CT7\",\"beginRange\":\"0\",\"pricePerUnit\":{\"USD\":\"0.0591500000\"}}},\"sku\":\"XVAAB4G989M59AFX\",\"effectiveDate\":\"2026-10-29T18:17:25Z\",\"offerTermCode\":\"Z2E3P23VKM\",\"termAttributes\":{\"LeaseContractLength\":\"3yr\",\"OfferingClass\":\"convertible\",\"PurchaseOption\":\"No Upfront\"}},\"XVAAB4G989M59AFX.NQ3QZPMQV9\":{\"priceDimensions\":{\"XVAAB4G989M59AFX.NQ3QZPMQV9.6YS6EN2CT7\":{\"unit\":\"Hrs\",\"endRange\":\"Inf\",\"description\":\"USD 0.0 per Linux/UNIX (Amazon VPC), r6a.large reserved instance applied\",\"appliesTo\":[],\"rateCode\":\"XVAAB4G989M59AFX.NQ3QZPMQV9.6YS6EN2CT7\",\"beginRange\":\"0\",\"pricePerUnit\":{\"USD\":\"0.0000000000\"}},\"XVAAB4G989M59AFX.NQ3QZPMQV9.2TG2D8R56U\":{\"unit\":\"Quantity\",\"description\":\"Upfront Fee\",\"appliesTo\":[],\"rateCode\":\"XVAAB4G989M59AFX.NQ3QZPMQV9.2TG2D8R56U\",\"pricePerUnit\":{\"USD\":\"1177\"}}},\"sku\":\"XVAAB4G989M59AFX\",\"effectiveDate\":\"2026-10-29T18:17:26Z\",\"offerTermCode\":\"NQ3QZPMQV9\",\"termAttributes\":{\"LeaseContractLength\":\"3yr\",\"OfferingClass\":\"standard\",\"PurchaseOption\":\"All Upfront\"}},\"XVAAB4G989M59AFX.R5XV2EPZQZ\":{\"priceDimensions\":{\"XVAAB4G989M59AFX.R5XV2EPZQZ.6YS6EN2CT7\":{\"unit\":\"Hrs\",\"endRange\":\"Inf\",\"description\":\"Linux/UNIX (Amazon VPC), r6a.large reserved instance applied\",\"appliesTo\":[],\"rateCode\":\"XVAAB4G989M59AFX.R5XV2EPZQZ.6YS6EN2CT7\",\"beginRange\":\"0\",\"pricePerUnit\":{\"USD\":\"0.0273900000\"}},\"XVAAB4G989M59AFX.R5XV2EPZQZ.2TG2D8R56U\":{\"unit\":\"Quantity\",\"description\":\"Upfront Fee\",\"appliesTo\":[],\"rateCode\":\"XVAAB4G989M59AFX.R5XV2EPZQZ.2TG2D8R56U\",\"pricePerUnit\":{\"USD\":\"720\"}}},\"sku\":\"XVAAB4G989M59AFX\",\"effectiveDate\":\"2026-10-29T18:17:27Z\",\"offerTermCode\":\"R5XV2EPZQZ\",\"termAttributes\":{\"LeaseContractLength\":\"3yr\",\"OfferingClass\":\"convertible\",\"PurchaseOption\":\"Partial Upfront\"}},\"XVAAB4G989M59AFX.HU7G6KETJZ\":{\"priceDimensions\":{\"XVAAB4G989M59AFX.HU7G6KETJZ.2TG2D8R56U\":{\"unit\":\"Quantity\",\"description\":\"Upfront Fee\",\"appliesTo\":[],\"rateCode\":\"XVAAB4G989M59AFX.HU7G6KETJZ.2TG2D8R56U\",\"pricePerUnit\":{\"USD\":\"313\"}},\"XVAAB4G989M59AFX.HU7G6KETJZ.6YS6EN2CT7\":{\"unit\":\"Hrs\",\"endRange\":\"Inf\",\"description\":\"Linux/UNIX (Amazon VPC), r6a.large reserved instance applied\",\"appliesTo\":[],\"rateCode\":\"XVAAB4G989M59AFX.HU7G6KETJZ.6YS6EN2CT7\",\"beginRange\":\"0\",\"pricePerUnit\":{\"USD\":\"0.0357200000\"}}},\"sku\":\"XVAAB4G989M59AFX\",\"effectiveDate\":\"2026-10-29T18:17:28Z\",\"offerTermCode\":\"HU7G6KETJZ\",\"termAttributes\":{\"LeaseContractLength\":\"1yr\",\"OfferingClass\":\"standard\",\"PurchaseOption\":\"Partial Upfront\"}},\"XVAAB4G989M59AFX.4NA7Y494T4\":{\"priceDimensions\":{\"XVAAB4G989M59AFX.4NA7Y494T4.6YS6EN2CT7\":{\"unit\":\"Hrs\",\"endRange\":\"Inf\",\"description\":\"Linux/UNIX (Amazon VPC), r6a.large reserved instance applied\",\"appliesTo\":[],\"rateCode\":\"XVAAB4G989M59AFX.4NA7Y494T4.6YS6EN2CT7\",\"beginRange\":\"0\",\"pricePerUnit\":{\"USD\":\"0.0750100000\"}}},\"sku\":\"XVAAB4G989M59AFX\",\"effectiveDate\":\"2026-10-29T18:17:24Z\",\"offerTermCode\":\"4NA7Y494T4\",\"termAttributes\":{\"LeaseContractLength\":\"1yr\",\"OfferingClass\":\"standard\",\"PurchaseOption\":\"No Upfront\"}},\"XVAAB4G989M59AFX.CUZHX8X6JH\":{\"priceDimensions\":{\"XVAAB4G989M59AFX.CUZHX8X6JH.2TG2D8R56U\":{\"unit\":\"Quantity\",\"description\":\"Upfront Fee\",\"appliesTo\":[],\"rateCode\":\"XVAAB4G989M59AFX.CUZHX8X6JH.2TG2D8R56U\",\"pricePerUnit\":{\"USD\":\"343\"}},\"XVAAB4G989M59AFX.CUZHX8X6JH.6YS6EN2CT7\":{\"unit\":\"Hrs\",\"endRange\":\"Inf\",\"description\":\"Linux/UNIX (Amazon VPC), r6a.large reserved instance applied\",\"appliesTo\":[],\"rateCode\":\"XVAAB4G989M59AFX.CUZHX8X6JH.6YS6EN2CT7\",\"beginRange\":\"0\",\"pricePerUnit\":{\"USD\":\"0.0391200000\"}}},\"sku\":\"XVAAB4G989M59AFX\",\"effectiveDate\":\"2026-10-29T18:17:25Z\",\"offerTermCode\":\"CUZHX8X6JH\",\"termAttributes\":{\"LeaseContractLength\":\"1yr\",\"OfferingClass\":\"convertible\",\"PurchaseOption\":\"Partial Upfront\"}},\"XVAAB4G989M59AFX.VJWZNREJX2\":{\"priceDimensions\":{\"XVAAB4G989M59AFX.VJWZNREJX2.2TG2D8R56U\":{\"unit\":\"Quantity\",\"description\":\"Upfront Fee\",\"appliesTo\":[],\"rateCode\":\"XVAAB4G989M59AFX.VJWZNREJX2.2TG2D8R56U\",\"pricePerUnit\":{\"USD\":\"672\"}},\"XVAAB4G989M59AFX.VJWZNREJX2.6YS6EN2CT7\":{\"unit\":\"Hrs\",\"endRange\":\"Inf\",\"description\":\"USD 0.0 per Linux/UNIX (Amazon VPC), r6a.large reserved instance applied\",\"appliesTo\":[],\"rateCode\":\"XVAAB4G989M59AFX.VJWZNREJX2.6YS6EN2CT7\",\"beginRange\":\"0\",\"pricePerUnit\":{\"USD\":\"0.0000000000\"}}},\"sku\":\"XVAAB4G989M59AFX\",\"effectiveDate\":\"2026-10-29T18:17:25Z\",\"offerTermCode\":\"VJWZNREJX2\",\"termAttributes\":{\"LeaseContractLength\":\"1yr\",\"OfferingClass\":\"convertible\",\"PurchaseOption\":\"All Upfront\"}},\"XVAAB4G989M59AFX.MZU6U2429S\":{\"priceDimensions\":{\"XVAAB4G989M59AFX.MZU6U2429S.2TG2D8R56U\":{\"unit\":\"Quantity\",\"description\":\"Upfront Fee\",\"appliesTo\":[],\"rateCode\":\"XVAAB4G989M59AFX.MZU6U2429S.2TG2D8R56U\",\"pricePerUnit\":{\"USD\":\"1411\"}},\"XVAAB4G989M59AFX.MZU6U2429S.6YS6EN2CT7\":{\"unit\":\"Hrs\",\"endRange\":\"Inf\",\"description\":\"USD 0.0 per Linux/UNIX (Amazon VPC), r6a.large reserved instance applied\",\"appliesTo\":[],\"rateCode\":\"XVAAB4G989M59AFX.MZU6U2429S.6YS6EN2CT7\",\"beginRange\":\"0\",\"pricePerUnit\":{\"USD\":\"0.0000000000\"}}},\"sku\":\"XVAAB4G989M59AFX\",\"effectiveDate\":\"2026-10-29T18:17:28Z\",\"offerTermCode\":\"MZU6U2429S\",\"termAttributes\":{\"LeaseContractLength\":\"3yr\",\"OfferingClass\":\"convertible\",\"PurchaseOption\":\"All Upfront\"}}}},\"version\":\"20261029175634\",\"publicationDate\":\"2026-10-29T17:56:34Z\"}"
+      ],
+      "FormatVersion": "aws_v1"
+    },
+    "specification": {
+      "InstanceTypes": [
+        {
+          "InstanceType": "r6a.large",
+          "CurrentGeneration": true,
+          "FreeTierEligible": false,
+          "SupportedUsageClasses": [
+            "on-demand",
+            "spot"
+          ],
+          "SupportedRootDeviceTypes": [
+            "ebs"
+          ],
+          "SupportedVirtualizationTypes": [
+            "hvm"
+          ],
+          "BareMetal": false,
+          "Hypervisor": "nitro",
+          "ProcessorInfo": {
+            "SupportedArchitectures": [
+              "x86_64"
+            ],
+            "SustainedClockSpeedInGhz": 3.6,
+            "SupportedFeatures": [
+              "amd-sev-snp"
+            ],
+            "Manufacturer": "AMD"
+          },
+          "VCpuInfo": {
+            "DefaultVCpus": 2,
+            "DefaultCores": 1,
+            "DefaultThreadsPerCore": 2,
+            "ValidCores": [
+              1
+            ],
+            "ValidThreadsPerCore": [
+              1,
+              2
+            ]
+          },
+          "MemoryInfo": {
+            "SizeInMiB": 16384
+          },
+          "InstanceStorageSupported": false,
+          "EbsInfo": {
+            "EbsOptimizedSupport": "default",
+            "EncryptionSupport": "supported",
+            "EbsOptimizedInfo": {
+              "BaselineBandwidthInMbps": 650,
+              "BaselineThroughputInMBps": 81.25,
+              "BaselineIops": 3600,
+              "MaximumBandwidthInMbps": 10000,
+              "MaximumThroughputInMBps": 1250.0,
+              "MaximumIops": 40000
+            },
+            "NvmeSupport": "required",
+            "MaximumEbsAttachments": 27,
+            "AttachmentLimitType": "shared"
+          },
+          "NetworkInfo": {
+            "NetworkPerformance": "Up to 12.5 Gigabit",
+            "MaximumNetworkInterfaces": 3,
+            "MaximumNetworkCards": 1,
+            "DefaultNetworkCardIndex": 0,
+            "NetworkCards": [
+              {
+                "NetworkCardIndex": 0,
+                "NetworkPerformance": "Up to 12.5 Gigabit",
+                "MaximumNetworkInterfaces": 3,
+                "BaselineBandwidthInGbps": 0.781,
+                "PeakBandwidthInGbps": 12.5,
+                "DefaultEnaQueueCountPerInterface": 2
+              }
+            ],
+            "Ipv4AddressesPerInterface": 10,
+            "Ipv6AddressesPerInterface": 10,
+            "Ipv6Supported": true,
+            "EnaSupport": "required",
+            "EfaSupported": false,
+            "EncryptionInTransitSupported": true,
+            "EnaSrdSupported": false,
+            "FlexibleEnaQueuesSupport": "unsupported",
+            "ConnectionTrackingConfiguration": {
+              "DefaultTcpEstablishedTimeout": 432000,
+              "DefaultUdpTimeout": 30,
+              "DefaultUdpStreamTimeout": 180
+            },
+            "SecondaryNetworkSupported": false
+          },
+          "PlacementGroupInfo": {
+            "SupportedStrategies": [
+              "cluster",
+              "partition",
+              "spread"
+            ]
+          },
+          "HibernationSupported": true,
+          "BurstablePerformanceSupported": false,
+          "DedicatedHostsSupported": true,
+          "AutoRecoverySupported": true,
+          "SupportedBootModes": [
+            "legacy-bios",
+            "uefi"
+          ],
+          "NitroEnclavesSupport": "unsupported",
+          "NitroTpmSupport": "supported",
+          "NitroTpmInfo": {
+            "SupportedVersions": [
+              "2.0"
+            ]
+          },
+          "PhcSupport": "unsupported",
+          "RebootMigrationSupport": "supported",
+          "SupportedInRegion": true
+        }
+      ]
+    }
+  },
+  "resources_created": false
+}

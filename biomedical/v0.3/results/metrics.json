@@ -1,0 +1,58 @@
+{
+  "A1 / live": {
+    "n": 3,
+    "median_seconds": 61.850687833008124,
+    "min_seconds": 58.649057667003945,
+    "max_seconds": 61.93117545900168,
+    "median_rss_mib": 3731.921875
+  },
+  "C1 / live": {
+    "n": 3,
+    "median_seconds": 72.6916546249995,
+    "min_seconds": 70.19138308402034,
+    "max_seconds": 94.57282816601219,
+    "median_rss_mib": 2969.1875
+  },
+  "A2 / canonical": {
+    "n": 10,
+    "median_seconds": 11.99134314598632,
+    "min_seconds": 11.750444958015578,
+    "max_seconds": 13.264135707984678,
+    "median_rss_mib": 3113.1640625
+  },
+  "C2 / canonical": {
+    "n": 10,
+    "median_seconds": 10.358268624491757,
+    "min_seconds": 10.244719957991038,
+    "max_seconds": 10.644035125005757,
+    "median_rss_mib": 2768.3515625
+  },
+  "C3 / canonical": {
+    "n": 10,
+    "median_seconds": 5.115807583511923,
+    "min_seconds": 4.9599058750027325,
+    "max_seconds": 5.309740458993474,
+    "median_rss_mib": 2868.9140625
+  },
+  "A2 / A1-1": {
+    "n": 10,
+    "median_seconds": 13.33446208301757,
+    "min_seconds": 13.022526749991812,
+    "max_seconds": 14.11082595802145,
+    "median_rss_mib": 3168.140625
+  },
+  "A2 / A1-2": {
+    "n": 10,
+    "median_seconds": 13.081447499993374,
+    "min_seconds": 13.001588500017533,
+    "max_seconds": 13.18014216699521,
+    "median_rss_mib": 3221.078125
+  },
+  "A2 / A1-3": {
+    "n": 10,
+    "median_seconds": 12.528229833507794,
+    "min_seconds": 12.371572874981211,
+    "max_seconds": 13.018323833006434,
+    "median_rss_mib": 3141.359375
+  }
+}

@@ -1,0 +1,867 @@
+{
+  "version": "0.6.0-draft.2",
+  "updated_at_utc": "2026-10-31T23:10:05Z",
+  "status": "proposal_only_20_additions_not_implemented_no_new_collection",
+  "based_on": {
+    "version": "0.5.0-draft.4",
+    "registry": "v0.5/tasks.json",
+    "registry_sha256": "f251c0b3bed7a40a0dcf1eb12a015ec7aaab2e7f151f7a7307597896965b9aec"
+  },
+  "paths_relative_to": "dev/bench/biomedical",
+  "host": {
+    "physical_memory_gib": 16,
+    "jobs": 1,
+    "t01_preferred_available_memory_gib": 12,
+    "host_headroom_gib": 3,
+    "task_peak_tree_rss_stop_gib": 11,
+    "deployment_proposal": {
+      "provider": "AWS",
+      "region": "us-east-1",
+      "instance_type": "r6a.large",
+      "vcpus": 2,
+      "memory_gib": 16,
+      "storage_gib_total": 200,
+      "storage_type": "gp3",
+      "linux_on_demand_usd_per_hour": 0.1134,
+      "launch_authorized": false,
+      "pricing_evidence": "v0.5/aws/AWS-16G-v3.zh-CN.json",
+      "comparison_32gib_instance": "r6a.xlarge",
+      "system_volume_gib": 40,
+      "data_volume_gib": 160
+    },
+    "task_peak_tree_rss_warn_gib": 10,
+    "host_available_stop_gib": 3,
+    "resource_gates_implementation_status": "implemented_offline_checked_remote_acceptance_pending",
+    "start_memory_rule": "min(12GiB, declared working-memory upper estimate +3GiB)",
+    "numerical_library_threads": 1
+  },
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "low",
+  "repetitions": {
+    "real_per_arm": 3,
+    "canonical_per_arm": 10,
+    "captured_per_compatible_A1": 10
+  },
+  "target_scientific_tasks": 30,
+  "later_extension_target": 50,
+  "implemented_parent_reference_blocks": 218,
+  "planned_additional_reference_blocks": 502,
+  "total_reference_blocks_after_implementation": 720,
+  "reference_blocks_are_not_observed_function_calls": true,
+  "source_family_count": 19,
+  "source_family_count_is_not_independent_cohort_count": true,
+  "dataset_overlap_audit_required": true,
+  "tasks": [
+    {
+      "id": "T01",
+      "name": "Single-cell immune composition",
+      "source_family": "GSE236581",
+      "source_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE236581",
+      "base_module": "tasks/v04/t01.R",
+      "parent_profile_id": "T01",
+      "implementation_status": "parent_v05_code_available_remote_profile_pilot_pending",
+      "reference_blocks": 20,
+      "reference_block_status": "implemented_v04_reference",
+      "working_memory_gib_planning": [
+        8,
+        12
+      ],
+      "requests": 3,
+      "fit_status": "whole_profile_validation_required_on_16gib"
+    },
+    {
+      "id": "T02",
+      "name": "Clinical survival",
+      "source_family": "METABRIC",
+      "source_url": "https://github.com/cBioPortal/datahub/tree/master/public/brca_metabric",
+      "base_module": "tasks/v04/t02.R",
+      "parent_profile_id": "T02",
+      "implementation_status": "parent_v05_code_available_remote_profile_pilot_pending",
+      "reference_blocks": 18,
+      "reference_block_status": "implemented_v04_reference",
+      "working_memory_gib_planning": [
+        2,
+        4
+      ],
+      "requests": 3,
+      "fit_status": "whole_profile_validation_required_on_16gib"
+    },
+    {
+      "id": "T03",
+      "name": "Bulk differential expression",
+      "source_family": "TCGA-LUAD",
+      "source_url": "https://portal.gdc.cancer.gov/projects/tcga-luad",
+      "base_module": "tasks/v04/t03.R",
+      "parent_profile_id": "T03",
+      "implementation_status": "parent_v05_code_available_remote_profile_pilot_pending",
+      "reference_blocks": 24,
+      "reference_block_status": "implemented_v04_reference",
+      "working_memory_gib_planning": [
+        4,
+        8
+      ],
+      "requests": 3,
+      "fit_status": "whole_profile_validation_required_on_16gib"
+    },
+    {
+      "id": "T04",
+      "name": "Population genetics",
+      "source_family": "1000Genomes_chr22",
+      "source_url": "https://www.internationalgenome.org/data-portal/data-collection/phase3",
+      "base_module": "tasks/v04/t04.R",
+      "parent_profile_id": "T04",
+      "implementation_status": "parent_v05_code_available_remote_profile_pilot_pending",
+      "reference_blocks": 22,
+      "reference_block_status": "implemented_v04_reference",
+      "working_memory_gib_planning": [
+        4,
+        8
+      ],
+      "requests": 3,
+      "fit_status": "whole_profile_validation_required_on_16gib"
+    },
+    {
+      "id": "T05",
+      "name": "GWAS functional interpretation",
+      "source_family": "GCST006900_BMI",
+      "source_url": "https://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST006001-GCST007000/GCST006900/",
+      "base_module": "tasks/v04/t05.R",
+      "parent_profile_id": "T05",
+      "implementation_status": "parent_v05_code_available_remote_profile_pilot_pending",
+      "reference_blocks": 20,
+      "reference_block_status": "implemented_v04_reference",
+      "working_memory_gib_planning": [
+        8,
+        32
+      ],
+      "requests": 3,
+      "fit_status": "whole_profile_validation_required_on_16gib"
+    },
+    {
+      "id": "T06",
+      "name": "ATAC regulation",
+      "source_family": "ATAC_GSM5259202",
+      "source_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM5259202",
+      "base_module": "tasks/v04/t06.R",
+      "parent_profile_id": "T06",
+      "implementation_status": "parent_v05_code_available_remote_profile_pilot_pending",
+      "reference_blocks": 20,
+      "reference_block_status": "implemented_v04_reference",
+      "working_memory_gib_planning": [
+        4,
+        8
+      ],
+      "requests": 3,
+      "fit_status": "whole_profile_validation_required_on_16gib"
+    },
+    {
+      "id": "T07",
+      "name": "Protein candidate design",
+      "source_family": "ProteinGym_GB1",
+      "source_url": "https://proteingym.org/download",
+      "base_module": "tasks/v04/t07.R",
+      "parent_profile_id": "T07",
+      "implementation_status": "parent_v05_code_available_remote_profile_pilot_pending",
+      "reference_blocks": 24,
+      "reference_block_status": "implemented_v04_reference",
+      "working_memory_gib_planning": [
+        4,
+        8
+      ],
+      "requests": 3,
+      "fit_status": "whole_profile_validation_required_on_16gib"
+    },
+    {
+      "id": "T08",
+      "name": "Proteome subtype differences",
+      "source_family": "PDC000173",
+      "source_url": "https://proteomic.datacommons.cancer.gov/pdc/study/PDC000173",
+      "base_module": "tasks/v04/t08.R",
+      "parent_profile_id": "T08",
+      "implementation_status": "parent_v05_code_available_remote_profile_pilot_pending",
+      "reference_blocks": 22,
+      "reference_block_status": "implemented_v04_reference",
+      "working_memory_gib_planning": [
+        4,
+        8
+      ],
+      "requests": 3,
+      "fit_status": "whole_profile_validation_required_on_16gib"
+    },
+    {
+      "id": "T09",
+      "name": "Metabolomic prediction",
+      "source_family": "MTBLS90",
+      "source_url": "https://www.ebi.ac.uk/metabolights/MTBLS90",
+      "base_module": "tasks/v04/t09.R",
+      "parent_profile_id": "T09",
+      "implementation_status": "parent_v05_code_available_remote_profile_pilot_pending",
+      "reference_blocks": 24,
+      "reference_block_status": "implemented_v04_reference",
+      "working_memory_gib_planning": [
+        2,
+        4
+      ],
+      "requests": 3,
+      "fit_status": "whole_profile_validation_required_on_16gib"
+    },
+    {
+      "id": "T10",
+      "name": "Spatial transcriptomics",
+      "source_family": "10x_breast_spatial",
+      "source_url": "https://www.10xgenomics.com/datasets/human-breast-cancer-block-a-section-1-1-standard-1-0-0",
+      "base_module": "tasks/v04/t10.R",
+      "parent_profile_id": "T10",
+      "implementation_status": "parent_v05_code_available_remote_profile_pilot_pending",
+      "reference_blocks": 24,
+      "reference_block_status": "implemented_v04_reference",
+      "working_memory_gib_planning": [
+        8,
+        16
+      ],
+      "requests": 3,
+      "fit_status": "whole_profile_validation_required_on_16gib"
+    },
+    {
+      "id": "T11",
+      "name": "Single-cell lineage-specific pseudobulk expression",
+      "source_family": "GSE236581",
+      "source_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE236581",
+      "scientific_objective": "Patient-level within-lineage expression effects, distinct from composition.",
+      "request_stages": [
+        "Audit patient/lineage pseudobulk counts",
+        "Fit paired expression contrasts and pathway effects",
+        "Leave-patient-out and expression-filter sensitivity"
+      ],
+      "planned_artifacts": [
+        "pseudobulk-counts.csv",
+        "paired-expression.csv",
+        "pathway-effects.csv",
+        "patient-leaveout.csv"
+      ],
+      "reference_blocks": 26,
+      "reference_block_status": "planned_not_implemented_not_observed_function_calls",
+      "working_memory_gib_planning": [
+        6,
+        10
+      ],
+      "working_memory_status": "unmeasured_requires_11gib_gate",
+      "input_file_bytes": null,
+      "prepared_input_bytes": null,
+      "input_read_gb": null,
+      "size_status": "file_manifest_and_preparation_pending",
+      "source_access_status": "source_landing_page_verified_file_release_pin_pending",
+      "implementation_status": "proposed_preparation_reference_and_checker_not_implemented",
+      "requests": 3
+    },
+    {
+      "id": "T12",
+      "name": "Breast expression subtyping and stability",
+      "source_family": "METABRIC",
+      "source_url": "https://github.com/cBioPortal/datahub/tree/master/public/brca_metabric",
+      "scientific_objective": "Expression subtype structure, distinct from survival.",
+      "request_stages": [
+        "Align expression and samples; label-free feature selection",
+        "Cluster and evaluate held-out subtype labels",
+        "Patient bootstrap and feature-selection stability"
+      ],
+      "planned_artifacts": [
+        "sample-expression-audit.csv",
+        "clusters.csv",
+        "subtype-concordance.csv",
+        "cluster-stability.csv"
+      ],
+      "reference_blocks": 24,
+      "reference_block_status": "planned_not_implemented_not_observed_function_calls",
+      "working_memory_gib_planning": [
+        4,
+        8
+      ],
+      "working_memory_status": "unmeasured_requires_11gib_gate",
+      "input_file_bytes": null,
+      "prepared_input_bytes": null,
+      "input_read_gb": null,
+      "size_status": "file_manifest_and_preparation_pending",
+      "source_access_status": "source_landing_page_verified_file_release_pin_pending",
+      "implementation_status": "proposed_preparation_reference_and_checker_not_implemented",
+      "requests": 3
+    },
+    {
+      "id": "T13",
+      "name": "Copy-number dosage and expression coupling",
+      "source_family": "METABRIC",
+      "source_url": "https://github.com/cBioPortal/datahub/tree/master/public/brca_metabric",
+      "scientific_objective": "Cross-omic dosage effects with subtype adjustment.",
+      "request_stages": [
+        "Align copy-number/expression genes and samples",
+        "Estimate dosage-expression associations adjusting subtype",
+        "Validate effects on held-out samples and missingness sensitivity"
+      ],
+      "planned_artifacts": [
+        "cna-expression-alignment.csv",
+        "dosage-effects.csv",
+        "subtype-adjusted-effects.csv",
+        "heldout-effects.csv"
+      ],
+      "reference_blocks": 24,
+      "reference_block_status": "planned_not_implemented_not_observed_function_calls",
+      "working_memory_gib_planning": [
+        4,
+        8
+      ],
+      "working_memory_status": "unmeasured_requires_11gib_gate",
+      "input_file_bytes": null,
+      "prepared_input_bytes": null,
+      "input_read_gb": null,
+      "size_status": "file_manifest_and_preparation_pending",
+      "source_access_status": "source_landing_page_verified_file_release_pin_pending",
+      "implementation_status": "proposed_preparation_reference_and_checker_not_implemented",
+      "requests": 3
+    },
+    {
+      "id": "T14",
+      "name": "Somatic mutation co-occurrence and exclusivity",
+      "source_family": "METABRIC",
+      "source_url": "https://github.com/cBioPortal/datahub/tree/master/public/brca_metabric",
+      "scientific_objective": "Gene-pair mutation relationships with coverage-aware inference.",
+      "request_stages": [
+        "Audit mutations and tested-gene coverage",
+        "Test adjusted co-occurrence/exclusivity with multiplicity control",
+        "Permutation and mutation-burden/subtype sensitivity"
+      ],
+      "planned_artifacts": [
+        "mutation-audit.csv",
+        "pair-associations.csv",
+        "burden-adjusted-pairs.csv",
+        "pair-stability.csv"
+      ],
+      "reference_blocks": 24,
+      "reference_block_status": "planned_not_implemented_not_observed_function_calls",
+      "working_memory_gib_planning": [
+        2,
+        4
+      ],
+      "working_memory_status": "unmeasured_requires_11gib_gate",
+      "input_file_bytes": null,
+      "prepared_input_bytes": null,
+      "input_read_gb": null,
+      "size_status": "file_manifest_and_preparation_pending",
+      "source_access_status": "source_landing_page_verified_file_release_pin_pending",
+      "implementation_status": "proposed_preparation_reference_and_checker_not_implemented",
+      "requests": 3
+    },
+    {
+      "id": "T15",
+      "name": "Lung co-expression modules and clinical associations",
+      "source_family": "TCGA-LUAD",
+      "source_url": "https://portal.gdc.cancer.gov/projects/TCGA-LUAD",
+      "scientific_objective": "Expression modules and phenotype associations, distinct from differential expression.",
+      "request_stages": [
+        "Audit normalized expression and sample covariates",
+        "Infer modules with prespecified gene scope",
+        "Patient-resampling stability and adjusted phenotype association"
+      ],
+      "planned_artifacts": [
+        "network-input-audit.csv",
+        "gene-modules.csv",
+        "module-trait-effects.csv",
+        "module-stability.csv"
+      ],
+      "reference_blocks": 26,
+      "reference_block_status": "planned_not_implemented_not_observed_function_calls",
+      "working_memory_gib_planning": [
+        4,
+        8
+      ],
+      "working_memory_status": "unmeasured_requires_11gib_gate",
+      "input_file_bytes": null,
+      "prepared_input_bytes": null,
+      "input_read_gb": null,
+      "size_status": "file_manifest_and_preparation_pending",
+      "source_access_status": "source_landing_page_verified_file_release_pin_pending",
+      "implementation_status": "proposed_preparation_reference_and_checker_not_implemented",
+      "requests": 3
+    },
+    {
+      "id": "T16",
+      "name": "GB1 fitness epistasis decomposition",
+      "source_family": "ProteinGym_GB1",
+      "source_url": "https://raw.githubusercontent.com/OATML-Markslab/ProteinGym/main/reference_files/DMS_substitutions.csv",
+      "scientific_objective": "Nonadditivity in measured fitness, distinct from candidate prediction.",
+      "request_stages": [
+        "Audit variant/fitness coverage and reference state",
+        "Estimate additive and interaction effects",
+        "Held-out interactions and replicate/missing-single-mutant sensitivity"
+      ],
+      "planned_artifacts": [
+        "variant-effect-audit.csv",
+        "epistasis.csv",
+        "heldout-decomposition.csv",
+        "accessible-paths.csv"
+      ],
+      "reference_blocks": 24,
+      "reference_block_status": "planned_not_implemented_not_observed_function_calls",
+      "working_memory_gib_planning": [
+        2,
+        4
+      ],
+      "working_memory_status": "unmeasured_requires_11gib_gate",
+      "input_file_bytes": null,
+      "prepared_input_bytes": null,
+      "input_read_gb": null,
+      "size_status": "file_manifest_and_preparation_pending",
+      "source_access_status": "source_landing_page_verified_file_release_pin_pending",
+      "implementation_status": "proposed_preparation_reference_and_checker_not_implemented",
+      "requests": 3
+    },
+    {
+      "id": "T17",
+      "name": "Metabolite effect sizes and correlation modules",
+      "source_family": "MTBLS90",
+      "source_url": "https://www.ebi.ac.uk/metabolights/MTBLS90",
+      "scientific_objective": "Metabolite effects and modules, distinct from classification.",
+      "request_stages": [
+        "Audit full metabolite matrix and sample groups",
+        "Estimate adjusted effects and correlation modules",
+        "Bootstrap intervals and missingness/model sensitivity"
+      ],
+      "planned_artifacts": [
+        "metabolite-audit.csv",
+        "adjusted-effects.csv",
+        "metabolite-modules.csv",
+        "robustness.csv"
+      ],
+      "reference_blocks": 22,
+      "reference_block_status": "planned_not_implemented_not_observed_function_calls",
+      "working_memory_gib_planning": [
+        2,
+        4
+      ],
+      "working_memory_status": "unmeasured_requires_11gib_gate",
+      "input_file_bytes": null,
+      "prepared_input_bytes": null,
+      "input_read_gb": null,
+      "size_status": "file_manifest_and_preparation_pending",
+      "source_access_status": "source_landing_page_verified_file_release_pin_pending",
+      "implementation_status": "proposed_preparation_reference_and_checker_not_implemented",
+      "requests": 3
+    },
+    {
+      "id": "T18",
+      "name": "Blood methylation and age associations",
+      "source_family": "GSE40279",
+      "source_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE40279",
+      "scientific_objective": "Age associations across blood DNA methylation probes.",
+      "request_stages": [
+        "Audit all supplied methylation probes and age metadata",
+        "Fit covariate-adjusted age associations with multiplicity control",
+        "Subject splits and cell-composition/model sensitivity"
+      ],
+      "planned_artifacts": [
+        "methylation-audit.csv",
+        "age-effects.csv",
+        "age-cpg-replication.csv",
+        "confounder-sensitivity.csv"
+      ],
+      "reference_blocks": 26,
+      "reference_block_status": "planned_not_implemented_not_observed_function_calls",
+      "working_memory_gib_planning": [
+        6,
+        10
+      ],
+      "working_memory_status": "unmeasured_requires_11gib_gate",
+      "input_file_bytes": null,
+      "prepared_input_bytes": null,
+      "input_read_gb": null,
+      "size_status": "file_manifest_and_preparation_pending",
+      "source_access_status": "conditional_source_access_verification_required",
+      "implementation_status": "proposed_preparation_reference_and_checker_not_implemented",
+      "requests": 3
+    },
+    {
+      "id": "T19",
+      "name": "Sorted-blood methylation signatures across donors",
+      "source_family": "FlowSorted_Blood_450k",
+      "source_url": "https://bioconductor.org/packages/release/data/experiment/html/FlowSorted.Blood.450k.html",
+      "scientific_objective": "Cell-type methylation markers with donor-independent validation.",
+      "request_stages": [
+        "Audit sorted-cell methylation and donor labels",
+        "Estimate cell-type signatures on training donors",
+        "Validate on held-out donors and probe-selection stability"
+      ],
+      "planned_artifacts": [
+        "donor-celltype-audit.csv",
+        "celltype-cpg-markers.csv",
+        "donor-heldout-predictions.csv",
+        "signature-stability.csv"
+      ],
+      "reference_blocks": 24,
+      "reference_block_status": "planned_not_implemented_not_observed_function_calls",
+      "working_memory_gib_planning": [
+        4,
+        8
+      ],
+      "working_memory_status": "unmeasured_requires_11gib_gate",
+      "input_file_bytes": null,
+      "prepared_input_bytes": null,
+      "input_read_gb": null,
+      "size_status": "file_manifest_and_preparation_pending",
+      "source_access_status": "source_landing_page_verified_file_release_pin_pending",
+      "implementation_status": "proposed_preparation_reference_and_checker_not_implemented",
+      "requests": 3
+    },
+    {
+      "id": "T20",
+      "name": "Colorectal microbiome differential abundance",
+      "source_family": "CRC_metagenomic_multistudy",
+      "source_url": "https://waldronlab.io/curatedMetagenomicDataAnalyses/articles/MLdatasets.html",
+      "scientific_objective": "Study-adjusted microbial abundance effects.",
+      "request_stages": [
+        "Audit genuine abundance units and cohort metadata",
+        "Estimate adjusted differential abundance controlling study",
+        "Leave-study-out and compositional/confounder sensitivity"
+      ],
+      "planned_artifacts": [
+        "microbiome-cohort-audit.csv",
+        "species-effects.csv",
+        "cross-cohort-effects.csv",
+        "compositional-sensitivity.csv"
+      ],
+      "reference_blocks": 24,
+      "reference_block_status": "planned_not_implemented_not_observed_function_calls",
+      "working_memory_gib_planning": [
+        2,
+        4
+      ],
+      "working_memory_status": "unmeasured_requires_11gib_gate",
+      "input_file_bytes": null,
+      "prepared_input_bytes": null,
+      "input_read_gb": null,
+      "size_status": "file_manifest_and_preparation_pending",
+      "source_access_status": "source_landing_page_verified_file_release_pin_pending",
+      "implementation_status": "proposed_preparation_reference_and_checker_not_implemented",
+      "requests": 3
+    },
+    {
+      "id": "T21",
+      "name": "Microbiome cross-cohort prediction",
+      "source_family": "CRC_metagenomic_multistudy",
+      "source_url": "https://waldronlab.io/curatedMetagenomicDataAnalyses/articles/MLdatasets.html",
+      "scientific_objective": "Generalization to unseen studies, distinct from abundance effects.",
+      "request_stages": [
+        "Audit cohort IDs and prevent subject overlap",
+        "Tune predictors within training studies",
+        "Evaluate unseen-study discrimination/calibration and feature stability"
+      ],
+      "planned_artifacts": [
+        "cohort-splits.csv",
+        "training-only-features.csv",
+        "external-predictions.csv",
+        "calibration.csv"
+      ],
+      "reference_blocks": 26,
+      "reference_block_status": "planned_not_implemented_not_observed_function_calls",
+      "working_memory_gib_planning": [
+        2,
+        4
+      ],
+      "working_memory_status": "unmeasured_requires_11gib_gate",
+      "input_file_bytes": null,
+      "prepared_input_bytes": null,
+      "input_read_gb": null,
+      "size_status": "file_manifest_and_preparation_pending",
+      "source_access_status": "source_landing_page_verified_file_release_pin_pending",
+      "implementation_status": "proposed_preparation_reference_and_checker_not_implemented",
+      "requests": 3
+    },
+    {
+      "id": "T22",
+      "name": "CRISPR lineage-selective dependencies",
+      "source_family": "DepMap_release",
+      "source_url": "https://bioconductor.org/packages/release/data/experiment/html/depmap.html",
+      "scientific_objective": "Lineage-specific gene dependency effects.",
+      "request_stages": [
+        "Audit gene effects and cell-line lineage metadata",
+        "Estimate lineage-selective dependency effects",
+        "Bootstrap and covariate/reference-essential sensitivity"
+      ],
+      "planned_artifacts": [
+        "cell-line-audit.csv",
+        "lineage-dependencies.csv",
+        "common-essential-background.csv",
+        "heldout-selectivity.csv"
+      ],
+      "reference_blocks": 24,
+      "reference_block_status": "planned_not_implemented_not_observed_function_calls",
+      "working_memory_gib_planning": [
+        4,
+        8
+      ],
+      "working_memory_status": "unmeasured_requires_11gib_gate",
+      "input_file_bytes": null,
+      "prepared_input_bytes": null,
+      "input_read_gb": null,
+      "size_status": "file_manifest_and_preparation_pending",
+      "source_access_status": "conditional_source_access_verification_required",
+      "implementation_status": "proposed_preparation_reference_and_checker_not_implemented",
+      "requests": 3
+    },
+    {
+      "id": "T23",
+      "name": "Mutation-conditioned dependency associations",
+      "source_family": "DepMap_release",
+      "source_url": "https://bioconductor.org/packages/release/data/experiment/html/depmap.html",
+      "scientific_objective": "Mutation-dependency associations, without causal synthetic-lethality claims.",
+      "request_stages": [
+        "Align mutation, dependency and lineage records",
+        "Estimate mutation-conditioned dependency effects",
+        "Held-out lineages and prevalence/covariate sensitivity"
+      ],
+      "planned_artifacts": [
+        "mutation-dependency-audit.csv",
+        "conditional-dependencies.csv",
+        "lineage-heldout-effects.csv",
+        "permutation-calibration.csv"
+      ],
+      "reference_blocks": 26,
+      "reference_block_status": "planned_not_implemented_not_observed_function_calls",
+      "working_memory_gib_planning": [
+        4,
+        8
+      ],
+      "working_memory_status": "unmeasured_requires_11gib_gate",
+      "input_file_bytes": null,
+      "prepared_input_bytes": null,
+      "input_read_gb": null,
+      "size_status": "file_manifest_and_preparation_pending",
+      "source_access_status": "conditional_source_access_verification_required",
+      "implementation_status": "proposed_preparation_reference_and_checker_not_implemented",
+      "requests": 3
+    },
+    {
+      "id": "T24",
+      "name": "CRISPR co-essentiality modules",
+      "source_family": "DepMap_release",
+      "source_url": "https://bioconductor.org/packages/release/data/experiment/html/depmap.html",
+      "scientific_objective": "Co-dependency network structure, distinct from group contrasts.",
+      "request_stages": [
+        "Audit dependency matrix and predeclare gene-network scope",
+        "Estimate co-essentiality network and modules",
+        "Cell-line resampling and reference-module validation"
+      ],
+      "planned_artifacts": [
+        "coessentiality-input-audit.csv",
+        "coessentiality-edges.csv",
+        "gene-modules.csv",
+        "module-validation.csv"
+      ],
+      "reference_blocks": 26,
+      "reference_block_status": "planned_not_implemented_not_observed_function_calls",
+      "working_memory_gib_planning": [
+        4,
+        8
+      ],
+      "working_memory_status": "unmeasured_requires_11gib_gate",
+      "input_file_bytes": null,
+      "prepared_input_bytes": null,
+      "input_read_gb": null,
+      "size_status": "file_manifest_and_preparation_pending",
+      "source_access_status": "conditional_source_access_verification_required",
+      "implementation_status": "proposed_preparation_reference_and_checker_not_implemented",
+      "requests": 3
+    },
+    {
+      "id": "T25",
+      "name": "Genomic associations with drug sensitivity",
+      "source_family": "DepMap_release",
+      "source_url": "https://bioconductor.org/packages/release/data/experiment/html/depmap.html",
+      "scientific_objective": "Drug-response association and held-out prediction.",
+      "request_stages": [
+        "Align drug response, expression and cell-line metadata",
+        "Fit genomic response associations and training-only tuning",
+        "Evaluate held-out cell lines and lineage/drug sensitivity"
+      ],
+      "planned_artifacts": [
+        "drug-response-audit.csv",
+        "genomic-drug-associations.csv",
+        "lineage-heldout-predictions.csv",
+        "drug-calibration.csv"
+      ],
+      "reference_blocks": 28,
+      "reference_block_status": "planned_not_implemented_not_observed_function_calls",
+      "working_memory_gib_planning": [
+        4,
+        8
+      ],
+      "working_memory_status": "unmeasured_requires_11gib_gate",
+      "input_file_bytes": null,
+      "prepared_input_bytes": null,
+      "input_read_gb": null,
+      "size_status": "file_manifest_and_preparation_pending",
+      "source_access_status": "conditional_source_access_verification_required",
+      "implementation_status": "proposed_preparation_reference_and_checker_not_implemented",
+      "requests": 3
+    },
+    {
+      "id": "T26",
+      "name": "TCR antigen specificity and convergent motifs",
+      "source_family": "VDJdb",
+      "source_url": "https://github.com/antigenomics/vdjdb-db",
+      "scientific_objective": "Antigen-associated receptor motifs with clonotype leakage control.",
+      "request_stages": [
+        "Audit receptor sequences, antigen labels and duplicate clones",
+        "Estimate V/J-conditioned antigen motif enrichment",
+        "Hold out donors/clonotypes and test motif robustness"
+      ],
+      "planned_artifacts": [
+        "receptor-provenance.csv",
+        "epitope-motifs.csv",
+        "study-heldout-motifs.csv",
+        "hla-sensitivity.csv"
+      ],
+      "reference_blocks": 24,
+      "reference_block_status": "planned_not_implemented_not_observed_function_calls",
+      "working_memory_gib_planning": [
+        2,
+        4
+      ],
+      "working_memory_status": "unmeasured_requires_11gib_gate",
+      "input_file_bytes": null,
+      "prepared_input_bytes": null,
+      "input_read_gb": null,
+      "size_status": "file_manifest_and_preparation_pending",
+      "source_access_status": "source_landing_page_verified_file_release_pin_pending",
+      "implementation_status": "proposed_preparation_reference_and_checker_not_implemented",
+      "requests": 3
+    },
+    {
+      "id": "T27",
+      "name": "Human transcript/splicing QTL analysis",
+      "source_family": "GEUVADIS_chr19_CEU",
+      "source_url": "https://bioconductor.org/packages/release/data/experiment/html/GeuvadisTranscriptExpr.html",
+      "scientific_objective": "Genotype-transcript associations within the released chr19 CEU scope.",
+      "request_stages": [
+        "Align released genotype/transcript/sample data",
+        "Estimate cis transcript/splicing associations with ancestry covariates",
+        "Permutation/multiplicity and transcript/MAF sensitivity"
+      ],
+      "planned_artifacts": [
+        "qtl-sample-allele-audit.csv",
+        "cis-sqtl.csv",
+        "permutation-fdr.csv",
+        "isoform-sensitivity.csv"
+      ],
+      "reference_blocks": 28,
+      "reference_block_status": "planned_not_implemented_not_observed_function_calls",
+      "working_memory_gib_planning": [
+        4,
+        8
+      ],
+      "working_memory_status": "unmeasured_requires_11gib_gate",
+      "input_file_bytes": null,
+      "prepared_input_bytes": null,
+      "input_read_gb": null,
+      "size_status": "file_manifest_and_preparation_pending",
+      "source_access_status": "source_landing_page_verified_file_release_pin_pending",
+      "implementation_status": "proposed_preparation_reference_and_checker_not_implemented",
+      "requests": 3
+    },
+    {
+      "id": "T28",
+      "name": "RBP-knockdown differential exon usage",
+      "source_family": "pasilla",
+      "source_url": "https://bioconductor.org/packages/release/data/experiment/html/pasilla.html",
+      "scientific_objective": "Exon usage changes after real RNAi perturbation.",
+      "request_stages": [
+        "Audit exon counts, genes and experiment design",
+        "Fit gene-aware differential exon usage",
+        "Validate exon evidence and filtering/design sensitivity"
+      ],
+      "planned_artifacts": [
+        "exon-design-audit.csv",
+        "differential-exon-usage.csv",
+        "gene-level-adjustment.csv",
+        "exon-sensitivity.csv"
+      ],
+      "reference_blocks": 26,
+      "reference_block_status": "planned_not_implemented_not_observed_function_calls",
+      "working_memory_gib_planning": [
+        2,
+        4
+      ],
+      "working_memory_status": "unmeasured_requires_11gib_gate",
+      "input_file_bytes": null,
+      "prepared_input_bytes": null,
+      "input_read_gb": null,
+      "size_status": "file_manifest_and_preparation_pending",
+      "source_access_status": "source_landing_page_verified_file_release_pin_pending",
+      "implementation_status": "proposed_preparation_reference_and_checker_not_implemented",
+      "requests": 3
+    },
+    {
+      "id": "T29",
+      "name": "Paired glucocorticoid transcriptional response",
+      "source_family": "airway",
+      "source_url": "https://bioconductor.org/packages/release/data/experiment/html/airway.html",
+      "scientific_objective": "Donor-paired dexamethasone response in airway cell lines.",
+      "request_stages": [
+        "Audit complete supplied gene counts and donor pairs",
+        "Fit paired treatment effects and pathway changes",
+        "Leave-donor-out and filtering/batch sensitivity"
+      ],
+      "planned_artifacts": [
+        "paired-drug-design.csv",
+        "drug-response-expression.csv",
+        "pathway-response.csv",
+        "donor-leaveout.csv"
+      ],
+      "reference_blocks": 24,
+      "reference_block_status": "planned_not_implemented_not_observed_function_calls",
+      "working_memory_gib_planning": [
+        2,
+        4
+      ],
+      "working_memory_status": "unmeasured_requires_11gib_gate",
+      "input_file_bytes": null,
+      "prepared_input_bytes": null,
+      "input_read_gb": null,
+      "size_status": "file_manifest_and_preparation_pending",
+      "source_access_status": "source_landing_page_verified_file_release_pin_pending",
+      "implementation_status": "proposed_preparation_reference_and_checker_not_implemented",
+      "requests": 3
+    },
+    {
+      "id": "T30",
+      "name": "Cell-cycle periodicity and replicated phase",
+      "source_family": "yeastCC",
+      "source_url": "https://bioconductor.org/packages/release/data/experiment/html/yeastCC.html",
+      "scientific_objective": "Periodicity and phase reproducibility across real time-series studies.",
+      "request_stages": [
+        "Audit time points, synchronization and gene identifiers",
+        "Fit periodic models and estimate amplitude/phase",
+        "Cross-experiment phase replication and sampling/permutation sensitivity"
+      ],
+      "planned_artifacts": [
+        "time-series-audit.csv",
+        "periodic-genes.csv",
+        "phase-replication.csv",
+        "time-permutation.csv"
+      ],
+      "reference_blocks": 26,
+      "reference_block_status": "planned_not_implemented_not_observed_function_calls",
+      "working_memory_gib_planning": [
+        2,
+        4
+      ],
+      "working_memory_status": "unmeasured_requires_11gib_gate",
+      "input_file_bytes": null,
+      "prepared_input_bytes": null,
+      "input_read_gb": null,
+      "size_status": "file_manifest_and_preparation_pending",
+      "source_access_status": "source_landing_page_verified_file_release_pin_pending",
+      "implementation_status": "proposed_preparation_reference_and_checker_not_implemented",
+      "requests": 3
+    }
+  ],
+  "priority": "Execute v0.5 T01-T10 first; twenty additional tasks remain proposals"
+}

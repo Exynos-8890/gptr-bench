@@ -1,0 +1,15 @@
+.DS_Store
+__pycache__/
+*.pyc
+.runtime/
+.secrets/
+.env
+.env.*
+*.env
+biomedical/data/
+biomedical/runs/
+LOCAL_SETUP.md
+# Machine-specific migration views remain local.
+/EXTRACTION.zh-CN.*
+/biomedical/OPEN-IN-VSCODE.zh-CN.*
+/biomedical/VERSION-LAYOUT.zh-CN.json

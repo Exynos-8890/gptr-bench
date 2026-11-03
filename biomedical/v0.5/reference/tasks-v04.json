@@ -1,0 +1,173 @@
+{
+  "version": "0.4.0-draft.6",
+  "updated_at_utc": "2026-10-31T00:40:12Z",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "low",
+  "tasks": [
+    {
+      "id": "T01",
+      "name": "Single-cell immune composition",
+      "module": "tasks/v04/t01.R",
+      "prepare": "prepare-v04-t01.R",
+      "packages": [
+        "Matrix"
+      ],
+      "reference_calls": 20,
+      "requests": [
+        6,
+        8,
+        6
+      ],
+      "source_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE236581"
+    },
+    {
+      "id": "T02",
+      "name": "Clinical survival",
+      "module": "tasks/v04/t02.R",
+      "prepare": "prepare-v04-t02.R",
+      "packages": [
+        "survival"
+      ],
+      "reference_calls": 18,
+      "requests": [
+        5,
+        7,
+        6
+      ],
+      "source_url": "https://github.com/cBioPortal/datahub/tree/master/public/brca_metabric"
+    },
+    {
+      "id": "T03",
+      "name": "Bulk differential expression",
+      "module": "tasks/v04/t03.R",
+      "prepare": "prepare-v04-t03.py",
+      "packages": [
+        "edgeR",
+        "limma"
+      ],
+      "reference_calls": 24,
+      "requests": [
+        7,
+        10,
+        7
+      ],
+      "source_url": "https://portal.gdc.cancer.gov/projects/tcga-luad"
+    },
+    {
+      "id": "T04",
+      "name": "Population genetics",
+      "module": "tasks/v04/t04.R",
+      "prepare": "prepare-v04-t04.R",
+      "packages": [
+        "Matrix"
+      ],
+      "reference_calls": 22,
+      "requests": [
+        7,
+        9,
+        6
+      ],
+      "source_url": "https://www.internationalgenome.org/data-portal/data-collection/phase3"
+    },
+    {
+      "id": "T05",
+      "name": "GWAS functional interpretation",
+      "module": "tasks/v04/t05.R",
+      "prepare": "prepare-v04-t05.R",
+      "packages": [],
+      "reference_calls": 20,
+      "requests": [
+        6,
+        8,
+        6
+      ],
+      "source_url": "https://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST006001-GCST007000/GCST006900/",
+      "source_change": "GCST009004 original lacks coordinates; use real BMI GCST006900 with CHR/POS hg19."
+    },
+    {
+      "id": "T06",
+      "name": "ATAC regulation",
+      "module": "tasks/v04/t06.R",
+      "prepare": "prepare-v04-t06.py",
+      "packages": [],
+      "reference_calls": 20,
+      "requests": [
+        6,
+        8,
+        6
+      ],
+      "source_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM5259202"
+    },
+    {
+      "id": "T07",
+      "name": "Protein candidate design",
+      "module": "tasks/v04/t07.R",
+      "prepare": "prepare-v04-t07.R",
+      "packages": [
+        "Matrix",
+        "glmnet"
+      ],
+      "reference_calls": 24,
+      "requests": [
+        7,
+        10,
+        7
+      ],
+      "source_url": "https://proteingym.org/download"
+    },
+    {
+      "id": "T08",
+      "name": "Proteome subtype differences",
+      "module": "tasks/v04/t08.R",
+      "prepare": "prepare-v04-t08.py",
+      "packages": [
+        "limma"
+      ],
+      "reference_calls": 22,
+      "requests": [
+        6,
+        9,
+        7
+      ],
+      "source_url": "https://proteomic.datacommons.cancer.gov/pdc/study/PDC000173"
+    },
+    {
+      "id": "T09",
+      "name": "Metabolomic prediction",
+      "module": "tasks/v04/t09.R",
+      "prepare": "prepare-v04-t09.R",
+      "packages": [
+        "glmnet"
+      ],
+      "reference_calls": 24,
+      "requests": [
+        7,
+        10,
+        7
+      ],
+      "source_url": "https://www.ebi.ac.uk/metabolights/MTBLS90",
+      "prepare_packages": [
+        "readxl"
+      ]
+    },
+    {
+      "id": "T10",
+      "name": "Spatial transcriptomics",
+      "module": "tasks/v04/t10.R",
+      "prepare": "prepare-v04-t10.R",
+      "packages": [
+        "Matrix"
+      ],
+      "reference_calls": 24,
+      "requests": [
+        7,
+        10,
+        7
+      ],
+      "source_url": "https://www.10xgenomics.com/datasets/human-breast-cancer-block-a-section-1-1-standard-1-0-0"
+    }
+  ],
+  "implementation_version": "0.4.0-dev.2",
+  "execution_status": "T01_held_T02_T10_live_authorized",
+  "execution_order": "sequential_T02_to_T10"
+}

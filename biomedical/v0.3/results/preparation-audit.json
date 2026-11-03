@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "cells": 100000,
+  "genes": 36027,
+  "nonzero": 134275503,
+  "total_umi": 377073775,
+  "source_umi_matches": true,
+  "source_feature_matches": true,
+  "patients": 22,
+  "orig_ident_levels": 1,
+  "samples": 169,
+  "groups": 168,
+  "baseline_cells": 99125,
+  "revised_cells": 69684,
+  "input_bytes": 1636075918,
+  "audited_at": "2026-10-28T22:14:57Z",
+  "preparation_note": "The producer finished writing validated files before its Rscript reader reported a trailing parse error after a cosmetic edit while the process was active. This audit verifies the produced input; the frozen current standalone CLI passes its fresh-process test.",
+  "standalone_reproduction_exit_code": 0,
+  "reproduced_input_sha256": "b4d5c80715241c712d5cef4081eed444fed2e962cb93db3dbcfda4fbba8b03a9",
+  "reproduced_at": "2026-10-28T22:46:03.859007+00:00",
+  "byte_identical_reproduction": true
+}

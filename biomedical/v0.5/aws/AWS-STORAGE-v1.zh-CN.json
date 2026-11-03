@@ -1,0 +1,45 @@
+{
+  "report_version": "1.0",
+  "checked_at_utc": "2026-10-31T06:55:35+00:00",
+  "region": "us-east-1",
+  "read_only_query": [
+    "aws",
+    "pricing",
+    "get-products",
+    "--region",
+    "us-east-1",
+    "--service-code",
+    "AmazonEC2",
+    "--filters",
+    "Type=TERM_MATCH,Field=location,Value=US East (N. Virginia)",
+    "Type=TERM_MATCH,Field=usagetype,Value=EBS:SnapshotUsage",
+    "--output",
+    "json"
+  ],
+  "snapshot_price_dimensions": [
+    {
+      "sku": "7U7TWP44UP36AT3R",
+      "attributes": {
+        "storageMedia": "Amazon S3",
+        "regionCode": "us-east-1",
+        "servicecode": "AmazonEC2",
+        "usagetype": "EBS:SnapshotUsage",
+        "locationType": "AWS Region",
+        "location": "US East (N. Virginia)",
+        "servicename": "Amazon Elastic Compute Cloud",
+        "operation": ""
+      },
+      "unit": "GB-Mo",
+      "usd": "0.0500000000",
+      "description": "$0.05 per GB-Month of snapshot data stored - US East (Northern Virginia)"
+    }
+  ],
+  "raw_pricing_response": {
+    "PriceList": [
+      "{\"product\":{\"productFamily\":\"Storage Snapshot\",\"attributes\":{\"storageMedia\":\"Amazon S3\",\"regionCode\":\"us-east-1\",\"servicecode\":\"AmazonEC2\",\"usagetype\":\"EBS:SnapshotUsage\",\"locationType\":\"AWS Region\",\"location\":\"US East (N. Virginia)\",\"servicename\":\"Amazon Elastic Compute Cloud\",\"operation\":\"\"},\"sku\":\"7U7TWP44UP36AT3R\"},\"serviceCode\":\"AmazonEC2\",\"terms\":{\"OnDemand\":{\"7U7TWP44UP36AT3R.JRTCKXETXF\":{\"priceDimensions\":{\"7U7TWP44UP36AT3R.JRTCKXETXF.6YS6EN2CT7\":{\"unit\":\"GB-Mo\",\"endRange\":\"Inf\",\"description\":\"$0.05 per GB-Month of snapshot data stored - US East (Northern Virginia)\",\"appliesTo\":[],\"rateCode\":\"7U7TWP44UP36AT3R.JRTCKXETXF.6YS6EN2CT7\",\"beginRange\":\"0\",\"pricePerUnit\":{\"USD\":\"0.0500000000\"}}},\"sku\":\"7U7TWP44UP36AT3R\",\"effectiveDate\":\"2026-10-01T00:00:00Z\",\"offerTermCode\":\"JRTCKXETXF\",\"termAttributes\":{}}}},\"version\":\"20261029175634\",\"publicationDate\":\"2026-10-29T17:56:34Z\"}"
+    ],
+    "FormatVersion": "aws_v1"
+  },
+  "gp3_price_evidence": "AWS-PRICING-v2.zh-CN.json",
+  "resources_created": false
+}

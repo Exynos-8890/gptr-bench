@@ -1,0 +1,3620 @@
+{
+  "checked_at_utc": "2026-10-30T06:33:09Z",
+  "source_api": "https://huggingface.co/api/datasets/phylobio/BiomniBench-DA/tree/main?recursive=true&limit=1000",
+  "pages": 1,
+  "entries": 987,
+  "task_count": 50,
+  "scope": "Public repository tree metadata only. No gated task instructions, rubrics, traces or data files downloaded.",
+  "data_size_rule": "Sum files under each environment directory, excluding Dockerfile and source-script/config extensions. These are published on-disk file bytes, not resident matrix sizes or measured read bytes.",
+  "data_bytes_total": 82946366733,
+  "data_gb_min": 0.000134173,
+  "data_gb_q25": 0.004149327,
+  "data_gb_median": 0.02862786,
+  "data_gb_q75": 0.12950247625,
+  "data_gb_max": 19.315199231,
+  "size_bands": {
+    "below_0.01GB": 19,
+    "0.01_to_0.1GB": 16,
+    "0.1_to_1GB": 8,
+    "1GB_and_above": 7
+  },
+  "tasks": [
+    {
+      "task": "da-4-6",
+      "data_bytes": 134173,
+      "data_files": [
+        {
+          "path": "da-4-6/environment/data/mmc5.csv",
+          "bytes": 134173
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-4-6/environment/Dockerfile",
+          "bytes": 330
+        },
+        {
+          "path": "da-4-6/instruction.md",
+          "bytes": 5158
+        },
+        {
+          "path": "da-4-6/task.toml",
+          "bytes": 605
+        },
+        {
+          "path": "da-4-6/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-4-6/tests/rubric.txt",
+          "bytes": 6495
+        },
+        {
+          "path": "da-4-6/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-9-1",
+      "data_bytes": 144904,
+      "data_files": [
+        {
+          "path": "da-9-1/environment/data/NatureMed_CyTOF_metadata.csv",
+          "bytes": 25344
+        },
+        {
+          "path": "da-9-1/environment/data/NatureMed_CyTOF_select_cell_populations.csv",
+          "bytes": 93000
+        },
+        {
+          "path": "da-9-1/environment/data/PICI0002_ph2_clinical.csv",
+          "bytes": 26560
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-9-1/environment/Dockerfile",
+          "bytes": 463
+        },
+        {
+          "path": "da-9-1/instruction.md",
+          "bytes": 5469
+        },
+        {
+          "path": "da-9-1/task.toml",
+          "bytes": 605
+        },
+        {
+          "path": "da-9-1/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-9-1/tests/rubric.txt",
+          "bytes": 7408
+        },
+        {
+          "path": "da-9-1/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-12-2",
+      "data_bytes": 275487,
+      "data_files": [
+        {
+          "path": "da-12-2/environment/data/GSEA_gmt.gmt",
+          "bytes": 48690
+        },
+        {
+          "path": "da-12-2/environment/data/TS7.xlsx",
+          "bytes": 226797
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-12-2/environment/Dockerfile",
+          "bytes": 364
+        },
+        {
+          "path": "da-12-2/instruction.md",
+          "bytes": 4628
+        },
+        {
+          "path": "da-12-2/task.toml",
+          "bytes": 607
+        },
+        {
+          "path": "da-12-2/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-12-2/tests/rubric.txt",
+          "bytes": 6968
+        },
+        {
+          "path": "da-12-2/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-13-3",
+      "data_bytes": 295386,
+      "data_files": [
+        {
+          "path": "da-13-3/environment/data/41591_2025_4023_MOESM2_ESM(Supplementary Table 4).csv",
+          "bytes": 295386
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-13-3/environment/Dockerfile",
+          "bytes": 322
+        },
+        {
+          "path": "da-13-3/instruction.md",
+          "bytes": 4780
+        },
+        {
+          "path": "da-13-3/task.toml",
+          "bytes": 607
+        },
+        {
+          "path": "da-13-3/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-13-3/tests/rubric.txt",
+          "bytes": 8932
+        },
+        {
+          "path": "da-13-3/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-9-7",
+      "data_bytes": 391937,
+      "data_files": [
+        {
+          "path": "da-9-7/environment/data/NatureMed_CyTOF_metadata.csv",
+          "bytes": 25344
+        },
+        {
+          "path": "da-9-7/environment/data/NatureMed_CyTOF_select_MSI.csv",
+          "bytes": 29343
+        },
+        {
+          "path": "da-9-7/environment/data/NatureMed_CyTOF_select_cell_populations.csv",
+          "bytes": 93000
+        },
+        {
+          "path": "da-9-7/environment/data/NatureMed_Olink_metadata.csv",
+          "bytes": 17981
+        },
+        {
+          "path": "da-9-7/environment/data/NatureMed_Olink_select_proteins.csv",
+          "bytes": 199709
+        },
+        {
+          "path": "da-9-7/environment/data/PICI0002_ph2_clinical.csv",
+          "bytes": 26560
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-9-7/environment/Dockerfile",
+          "bytes": 621
+        },
+        {
+          "path": "da-9-7/instruction.md",
+          "bytes": 5890
+        },
+        {
+          "path": "da-9-7/task.toml",
+          "bytes": 607
+        },
+        {
+          "path": "da-9-7/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-9-7/tests/rubric.txt",
+          "bytes": 7455
+        },
+        {
+          "path": "da-9-7/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-13-5",
+      "data_bytes": 797000,
+      "data_files": [
+        {
+          "path": "da-13-5/environment/data/41591_2025_4023_MOESM2_ESM(Supplementary Table 1).csv",
+          "bytes": 328818
+        },
+        {
+          "path": "da-13-5/environment/data/41591_2025_4023_MOESM2_ESM(Supplementary Table 5).csv",
+          "bytes": 468182
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-13-5/environment/Dockerfile",
+          "bytes": 322
+        },
+        {
+          "path": "da-13-5/instruction.md",
+          "bytes": 5068
+        },
+        {
+          "path": "da-13-5/task.toml",
+          "bytes": 613
+        },
+        {
+          "path": "da-13-5/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-13-5/tests/rubric.txt",
+          "bytes": 10387
+        },
+        {
+          "path": "da-13-5/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-13-6",
+      "data_bytes": 1061761,
+      "data_files": [
+        {
+          "path": "da-13-6/environment/data/41591_2025_4023_MOESM2_ESM(Supplementary Table 1).csv",
+          "bytes": 328818
+        },
+        {
+          "path": "da-13-6/environment/data/41591_2025_4023_MOESM2_ESM(Supplementary Table 7).csv",
+          "bytes": 732943
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-13-6/environment/Dockerfile",
+          "bytes": 322
+        },
+        {
+          "path": "da-13-6/instruction.md",
+          "bytes": 5133
+        },
+        {
+          "path": "da-13-6/task.toml",
+          "bytes": 613
+        },
+        {
+          "path": "da-13-6/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-13-6/tests/rubric.txt",
+          "bytes": 10423
+        },
+        {
+          "path": "da-13-6/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-5-1",
+      "data_bytes": 2030898,
+      "data_files": [
+        {
+          "path": "da-5-1/environment/data/mmc2.xlsx",
+          "bytes": 360530
+        },
+        {
+          "path": "da-5-1/environment/data/mmc3.xlsx",
+          "bytes": 1670368
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-5-1/environment/Dockerfile",
+          "bytes": 363
+        },
+        {
+          "path": "da-5-1/instruction.md",
+          "bytes": 6159
+        },
+        {
+          "path": "da-5-1/task.toml",
+          "bytes": 610
+        },
+        {
+          "path": "da-5-1/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-5-1/tests/rubric.txt",
+          "bytes": 6874
+        },
+        {
+          "path": "da-5-1/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-14-1",
+      "data_bytes": 2307055,
+      "data_files": [
+        {
+          "path": "da-14-1/environment/data/subspace_score_table.csv",
+          "bytes": 2307055
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-14-1/environment/Dockerfile",
+          "bytes": 346
+        },
+        {
+          "path": "da-14-1/instruction.md",
+          "bytes": 5059
+        },
+        {
+          "path": "da-14-1/task.toml",
+          "bytes": 599
+        },
+        {
+          "path": "da-14-1/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-14-1/tests/rubric.txt",
+          "bytes": 13439
+        },
+        {
+          "path": "da-14-1/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-14-3",
+      "data_bytes": 2307055,
+      "data_files": [
+        {
+          "path": "da-14-3/environment/data/subspace_score_table.csv",
+          "bytes": 2307055
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-14-3/environment/Dockerfile",
+          "bytes": 346
+        },
+        {
+          "path": "da-14-3/instruction.md",
+          "bytes": 3998
+        },
+        {
+          "path": "da-14-3/task.toml",
+          "bytes": 609
+        },
+        {
+          "path": "da-14-3/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-14-3/tests/rubric.txt",
+          "bytes": 5365
+        },
+        {
+          "path": "da-14-3/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-5-3",
+      "data_bytes": 2459472,
+      "data_files": [
+        {
+          "path": "da-5-3/environment/data/mmc2.xlsx",
+          "bytes": 361506
+        },
+        {
+          "path": "da-5-3/environment/data/mmc4.xlsx",
+          "bytes": 2097966
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-5-3/environment/Dockerfile",
+          "bytes": 363
+        },
+        {
+          "path": "da-5-3/instruction.md",
+          "bytes": 6501
+        },
+        {
+          "path": "da-5-3/task.toml",
+          "bytes": 608
+        },
+        {
+          "path": "da-5-3/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-5-3/tests/rubric.txt",
+          "bytes": 7132
+        },
+        {
+          "path": "da-5-3/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-8-1",
+      "data_bytes": 2787337,
+      "data_files": [
+        {
+          "path": "da-8-1/environment/data/data_cgm.csv",
+          "bytes": 1234124
+        },
+        {
+          "path": "da-8-1/environment/data/data_meta.csv",
+          "bytes": 8036
+        },
+        {
+          "path": "da-8-1/environment/data/data_metabolomics.csv",
+          "bytes": 1545177
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-8-1/environment/Dockerfile",
+          "bytes": 412
+        },
+        {
+          "path": "da-8-1/instruction.md",
+          "bytes": 5749
+        },
+        {
+          "path": "da-8-1/task.toml",
+          "bytes": 606
+        },
+        {
+          "path": "da-8-1/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-8-1/tests/rubric.txt",
+          "bytes": 11298
+        },
+        {
+          "path": "da-8-1/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-8-3",
+      "data_bytes": 4078883,
+      "data_files": [
+        {
+          "path": "da-8-3/environment/data/data_cgm.csv",
+          "bytes": 1234124
+        },
+        {
+          "path": "da-8-3/environment/data/data_lipids.csv",
+          "bytes": 1291546
+        },
+        {
+          "path": "da-8-3/environment/data/data_meta.csv",
+          "bytes": 8036
+        },
+        {
+          "path": "da-8-3/environment/data/data_metabolomics.csv",
+          "bytes": 1545177
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-8-3/environment/Dockerfile",
+          "bytes": 449
+        },
+        {
+          "path": "da-8-3/instruction.md",
+          "bytes": 5646
+        },
+        {
+          "path": "da-8-3/task.toml",
+          "bytes": 612
+        },
+        {
+          "path": "da-8-3/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-8-3/tests/rubric.txt",
+          "bytes": 8821
+        },
+        {
+          "path": "da-8-3/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-15-8",
+      "data_bytes": 4360659,
+      "data_files": [
+        {
+          "path": "da-15-8/environment/data/401_2019_2093_MOESM2_ESM.xlsx",
+          "bytes": 744162
+        },
+        {
+          "path": "da-15-8/environment/data/401_2019_2093_MOESM5_ESM.xlsx",
+          "bytes": 36827
+        },
+        {
+          "path": "da-15-8/environment/data/Cervical_Spinal_Cord_DE_results.tsv",
+          "bytes": 3579670
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-15-8/environment/Dockerfile",
+          "bytes": 459
+        },
+        {
+          "path": "da-15-8/instruction.md",
+          "bytes": 5432
+        },
+        {
+          "path": "da-15-8/task.toml",
+          "bytes": 612
+        },
+        {
+          "path": "da-15-8/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-15-8/tests/rubric.txt",
+          "bytes": 10424
+        },
+        {
+          "path": "da-15-8/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-18-1",
+      "data_bytes": 5032324,
+      "data_files": [
+        {
+          "path": "da-18-1/environment/data/data_clinical_sample.txt",
+          "bytes": 742508
+        },
+        {
+          "path": "da-18-1/environment/data/data_cna.txt",
+          "bytes": 1856420
+        },
+        {
+          "path": "da-18-1/environment/data/data_mutations.txt",
+          "bytes": 2433396
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-18-1/environment/Dockerfile",
+          "bytes": 475
+        },
+        {
+          "path": "da-18-1/instruction.md",
+          "bytes": 6218
+        },
+        {
+          "path": "da-18-1/task.toml",
+          "bytes": 604
+        },
+        {
+          "path": "da-18-1/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-18-1/tests/rubric.txt",
+          "bytes": 5373
+        },
+        {
+          "path": "da-18-1/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-18-5",
+      "data_bytes": 5032324,
+      "data_files": [
+        {
+          "path": "da-18-5/environment/data/data_clinical_sample.txt",
+          "bytes": 742508
+        },
+        {
+          "path": "da-18-5/environment/data/data_cna.txt",
+          "bytes": 1856420
+        },
+        {
+          "path": "da-18-5/environment/data/data_mutations.txt",
+          "bytes": 2433396
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-18-5/environment/Dockerfile",
+          "bytes": 475
+        },
+        {
+          "path": "da-18-5/instruction.md",
+          "bytes": 6133
+        },
+        {
+          "path": "da-18-5/task.toml",
+          "bytes": 604
+        },
+        {
+          "path": "da-18-5/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-18-5/tests/rubric.txt",
+          "bytes": 5886
+        },
+        {
+          "path": "da-18-5/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-18-7",
+      "data_bytes": 5032324,
+      "data_files": [
+        {
+          "path": "da-18-7/environment/data/data_clinical_sample.txt",
+          "bytes": 742508
+        },
+        {
+          "path": "da-18-7/environment/data/data_cna.txt",
+          "bytes": 1856420
+        },
+        {
+          "path": "da-18-7/environment/data/data_mutations.txt",
+          "bytes": 2433396
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-18-7/environment/Dockerfile",
+          "bytes": 475
+        },
+        {
+          "path": "da-18-7/instruction.md",
+          "bytes": 6142
+        },
+        {
+          "path": "da-18-7/task.toml",
+          "bytes": 606
+        },
+        {
+          "path": "da-18-7/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-18-7/tests/rubric.txt",
+          "bytes": 5123
+        },
+        {
+          "path": "da-18-7/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-8-2",
+      "data_bytes": 5777638,
+      "data_files": [
+        {
+          "path": "da-8-2/environment/data/data_cgm.csv",
+          "bytes": 1234124
+        },
+        {
+          "path": "da-8-2/environment/data/data_meta.csv",
+          "bytes": 8036
+        },
+        {
+          "path": "da-8-2/environment/data/data_olink.csv",
+          "bytes": 4535478
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-8-2/environment/Dockerfile",
+          "bytes": 405
+        },
+        {
+          "path": "da-8-2/instruction.md",
+          "bytes": 5261
+        },
+        {
+          "path": "da-8-2/task.toml",
+          "bytes": 608
+        },
+        {
+          "path": "da-8-2/tests/__pycache__/llm_judge.cpython-312.pyc",
+          "bytes": 9283
+        },
+        {
+          "path": "da-8-2/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-8-2/tests/rubric.txt",
+          "bytes": 6650
+        },
+        {
+          "path": "da-8-2/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-19-1",
+      "data_bytes": 6884540,
+      "data_files": [
+        {
+          "path": "da-19-1/environment/data/processed_data/rnaseq/cuffdiff/gene_exp.diff",
+          "bytes": 6883031
+        },
+        {
+          "path": "da-19-1/environment/data/processed_data/rnaseq/cuffdiff/run.info",
+          "bytes": 460
+        },
+        {
+          "path": "da-19-1/environment/data/processed_data/rnaseq/rnaseq_alignment_manifest.tsv",
+          "bytes": 1049
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-19-1/environment/Dockerfile",
+          "bytes": 734
+        },
+        {
+          "path": "da-19-1/instruction.md",
+          "bytes": 5788
+        },
+        {
+          "path": "da-19-1/task.toml",
+          "bytes": 610
+        },
+        {
+          "path": "da-19-1/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-19-1/tests/rubric.txt",
+          "bytes": 10323
+        },
+        {
+          "path": "da-19-1/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-14-8",
+      "data_bytes": 11800498,
+      "data_files": [
+        {
+          "path": "da-14-8/environment/data/subspace_genes.csv",
+          "bytes": 9493443
+        },
+        {
+          "path": "da-14-8/environment/data/subspace_score_table.csv",
+          "bytes": 2307055
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-14-8/environment/Dockerfile",
+          "bytes": 386
+        },
+        {
+          "path": "da-14-8/instruction.md",
+          "bytes": 5376
+        },
+        {
+          "path": "da-14-8/task.toml",
+          "bytes": 610
+        },
+        {
+          "path": "da-14-8/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-14-8/tests/rubric.txt",
+          "bytes": 16231
+        },
+        {
+          "path": "da-14-8/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-3-4",
+      "data_bytes": 15276032,
+      "data_files": [
+        {
+          "path": "da-3-4/environment/data/supplementary_tables.xls",
+          "bytes": 15276032
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-3-4/environment/Dockerfile",
+          "bytes": 341
+        },
+        {
+          "path": "da-3-4/instruction.md",
+          "bytes": 5462
+        },
+        {
+          "path": "da-3-4/task.toml",
+          "bytes": 603
+        },
+        {
+          "path": "da-3-4/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-3-4/tests/rubric.txt",
+          "bytes": 6653
+        },
+        {
+          "path": "da-3-4/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-4-7",
+      "data_bytes": 15986325,
+      "data_files": [
+        {
+          "path": "da-4-7/environment/data/GSE243013_T_with_TCR_annotation.csv.gz",
+          "bytes": 15940803
+        },
+        {
+          "path": "da-4-7/environment/data/mmc1.csv",
+          "bytes": 45522
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-4-7/environment/Dockerfile",
+          "bytes": 390
+        },
+        {
+          "path": "da-4-7/instruction.md",
+          "bytes": 4779
+        },
+        {
+          "path": "da-4-7/task.toml",
+          "bytes": 600
+        },
+        {
+          "path": "da-4-7/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-4-7/tests/rubric.txt",
+          "bytes": 8109
+        },
+        {
+          "path": "da-4-7/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-15-1",
+      "data_bytes": 17000443,
+      "data_files": [
+        {
+          "path": "da-15-1/environment/data/Cervical_Spinal_Cord_gene_counts.tsv.gz",
+          "bytes": 8444867
+        },
+        {
+          "path": "da-15-1/environment/data/Cervical_Spinal_Cord_gene_tpm.tsv.gz",
+          "bytes": 8084174
+        },
+        {
+          "path": "da-15-1/environment/data/Cervical_Spinal_Cord_metadata.tsv.gz",
+          "bytes": 18915
+        },
+        {
+          "path": "da-15-1/environment/data/gencode.v30.gene_meta.tsv.gz",
+          "bytes": 452487
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-15-1/environment/Dockerfile",
+          "bytes": 527
+        },
+        {
+          "path": "da-15-1/instruction.md",
+          "bytes": 5460
+        },
+        {
+          "path": "da-15-1/task.toml",
+          "bytes": 611
+        },
+        {
+          "path": "da-15-1/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-15-1/tests/rubric.txt",
+          "bytes": 6532
+        },
+        {
+          "path": "da-15-1/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-24-3",
+      "data_bytes": 21388953,
+      "data_files": [
+        {
+          "path": "da-24-3/environment/data/discovery.summary.gz",
+          "bytes": 9594863
+        },
+        {
+          "path": "da-24-3/environment/data/metabolite.gz",
+          "bytes": 2036140
+        },
+        {
+          "path": "da-24-3/environment/data/replication.summary.gz",
+          "bytes": 9757950
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-24-3/environment/Dockerfile",
+          "bytes": 289
+        },
+        {
+          "path": "da-24-3/instruction.md",
+          "bytes": 4831
+        },
+        {
+          "path": "da-24-3/task.toml",
+          "bytes": 597
+        },
+        {
+          "path": "da-24-3/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-24-3/tests/rubric.txt",
+          "bytes": 5783
+        },
+        {
+          "path": "da-24-3/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-10-1",
+      "data_bytes": 22410296,
+      "data_files": [
+        {
+          "path": "da-10-1/environment/data/idr_ranges.xlsx",
+          "bytes": 1067490
+        },
+        {
+          "path": "da-10-1/environment/data/sequence_prediction_filtered.xlsx",
+          "bytes": 21342806
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-10-1/environment/Dockerfile",
+          "bytes": 392
+        },
+        {
+          "path": "da-10-1/instruction.md",
+          "bytes": 5064
+        },
+        {
+          "path": "da-10-1/task.toml",
+          "bytes": 613
+        },
+        {
+          "path": "da-10-1/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-10-1/tests/rubric.txt",
+          "bytes": 20042
+        },
+        {
+          "path": "da-10-1/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-6-2",
+      "data_bytes": 34845424,
+      "data_files": [
+        {
+          "path": "da-6-2/environment/data/paper_deg.xlsx",
+          "bytes": 34845424
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-6-2/environment/Dockerfile",
+          "bytes": 336
+        },
+        {
+          "path": "da-6-2/instruction.md",
+          "bytes": 4868
+        },
+        {
+          "path": "da-6-2/task.toml",
+          "bytes": 613
+        },
+        {
+          "path": "da-6-2/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-6-2/tests/rubric.txt",
+          "bytes": 6081
+        },
+        {
+          "path": "da-6-2/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-6-5",
+      "data_bytes": 34845424,
+      "data_files": [
+        {
+          "path": "da-6-5/environment/data/paper_deg.xlsx",
+          "bytes": 34845424
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-6-5/environment/Dockerfile",
+          "bytes": 336
+        },
+        {
+          "path": "da-6-5/instruction.md",
+          "bytes": 4798
+        },
+        {
+          "path": "da-6-5/task.toml",
+          "bytes": 616
+        },
+        {
+          "path": "da-6-5/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-6-5/tests/rubric.txt",
+          "bytes": 5678
+        },
+        {
+          "path": "da-6-5/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-15-7",
+      "data_bytes": 37481711,
+      "data_files": [
+        {
+          "path": "da-15-7/environment/data/Cervical_Spinal_Cord_gene_counts.tsv.gz",
+          "bytes": 8444867
+        },
+        {
+          "path": "da-15-7/environment/data/Cervical_Spinal_Cord_gene_tpm.tsv.gz",
+          "bytes": 8084174
+        },
+        {
+          "path": "da-15-7/environment/data/Cervical_Spinal_Cord_metadata.tsv.gz",
+          "bytes": 18915
+        },
+        {
+          "path": "da-15-7/environment/data/Lumbar_Spinal_Cord_gene_counts.tsv.gz",
+          "bytes": 7644488
+        },
+        {
+          "path": "da-15-7/environment/data/Lumbar_Spinal_Cord_gene_tpm.tsv.gz",
+          "bytes": 7186426
+        },
+        {
+          "path": "da-15-7/environment/data/Lumbar_Spinal_Cord_metadata.tsv.gz",
+          "bytes": 16807
+        },
+        {
+          "path": "da-15-7/environment/data/Thoracic_Spinal_Cord_gene_counts.tsv.gz",
+          "bytes": 2817330
+        },
+        {
+          "path": "da-15-7/environment/data/Thoracic_Spinal_Cord_gene_tpm.tsv.gz",
+          "bytes": 2809664
+        },
+        {
+          "path": "da-15-7/environment/data/Thoracic_Spinal_Cord_metadata.tsv.gz",
+          "bytes": 6553
+        },
+        {
+          "path": "da-15-7/environment/data/gencode.v30.gene_meta.tsv.gz",
+          "bytes": 452487
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-15-7/environment/Dockerfile",
+          "bytes": 875
+        },
+        {
+          "path": "da-15-7/instruction.md",
+          "bytes": 7136
+        },
+        {
+          "path": "da-15-7/task.toml",
+          "bytes": 609
+        },
+        {
+          "path": "da-15-7/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-15-7/tests/rubric.txt",
+          "bytes": 15705
+        },
+        {
+          "path": "da-15-7/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-12-4",
+      "data_bytes": 37868149,
+      "data_files": [
+        {
+          "path": "da-12-4/environment/data/TCGA_RNA-01A.csv",
+          "bytes": 37502767
+        },
+        {
+          "path": "da-12-4/environment/data/TCGA_microbiota-01A.csv",
+          "bytes": 365382
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-12-4/environment/Dockerfile",
+          "bytes": 383
+        },
+        {
+          "path": "da-12-4/instruction.md",
+          "bytes": 4445
+        },
+        {
+          "path": "da-12-4/task.toml",
+          "bytes": 605
+        },
+        {
+          "path": "da-12-4/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-12-4/tests/rubric.txt",
+          "bytes": 3923
+        },
+        {
+          "path": "da-12-4/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-4-1",
+      "data_bytes": 40701210,
+      "data_files": [
+        {
+          "path": "da-4-1/environment/data/GSE243013_NSCLC_immune_scRNA_metadata.csv.gz",
+          "bytes": 40701210
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-4-1/environment/Dockerfile",
+          "bytes": 366
+        },
+        {
+          "path": "da-4-1/instruction.md",
+          "bytes": 4672
+        },
+        {
+          "path": "da-4-1/task.toml",
+          "bytes": 596
+        },
+        {
+          "path": "da-4-1/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-4-1/tests/rubric.txt",
+          "bytes": 8339
+        },
+        {
+          "path": "da-4-1/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-16-1",
+      "data_bytes": 45714742,
+      "data_files": [
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998167_017-Ann-Daly_S1.counts.txt.gz",
+          "bytes": 212070
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998168_018-Ann-Daly_S2.counts.txt.gz",
+          "bytes": 211405
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998169_029-Ann-Daly_S4.counts.txt.gz",
+          "bytes": 212338
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998170_030-Ann-Daly_S5.counts.txt.gz",
+          "bytes": 213435
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998171_031-Ann-Daly_S6.counts.txt.gz",
+          "bytes": 213097
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998172_032-Ann-Daly_S7.counts.txt.gz",
+          "bytes": 211053
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998173_033-Ann-Daly_S8.counts.txt.gz",
+          "bytes": 212858
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998174_035-Ann-Daly_S10.counts.txt.gz",
+          "bytes": 211412
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998175_036-Ann-Daly_S11.counts.txt.gz",
+          "bytes": 208546
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998176_037-Ann-Daly_S12.counts.txt.gz",
+          "bytes": 210315
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998177_038-Ann-Daly_S13.counts.txt.gz",
+          "bytes": 211237
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998178_040-Ann-Daly_S14.counts.txt.gz",
+          "bytes": 210792
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998179_041-Ann-Daly_S15.counts.txt.gz",
+          "bytes": 210420
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998180_042-Ann-Daly_S16.counts.txt.gz",
+          "bytes": 210813
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998181_043-Ann-Daly_S1.counts.txt.gz",
+          "bytes": 210020
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998182_044-Ann-Daly_S2.counts.txt.gz",
+          "bytes": 210376
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998183_046-Ann-Daly_S3.counts.txt.gz",
+          "bytes": 209589
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998184_047-Ann-Daly_S4.counts.txt.gz",
+          "bytes": 211839
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998185_048-Ann-Daly_S5.counts.txt.gz",
+          "bytes": 211835
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998186_049-Ann-Daly_S6.counts.txt.gz",
+          "bytes": 211118
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998187_051-Ann-Daly_S7.counts.txt.gz",
+          "bytes": 211345
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998188_053-Ann-Daly_S9.counts.txt.gz",
+          "bytes": 212807
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998189_054-Ann-Daly_S10.counts.txt.gz",
+          "bytes": 211945
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998190_055-Ann-Daly_S11.counts.txt.gz",
+          "bytes": 210359
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998191_059-Ann-Daly_S12.counts.txt.gz",
+          "bytes": 213450
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998192_060-Ann-Daly_S13.counts.txt.gz",
+          "bytes": 210935
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998193_061-Ann-Daly_S14.counts.txt.gz",
+          "bytes": 210368
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998194_062-Ann-Daly_S15.counts.txt.gz",
+          "bytes": 210536
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998195_075-Ann-Daly_S16.counts.txt.gz",
+          "bytes": 212327
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998196_076-Ann-Daly_S3.counts.txt.gz",
+          "bytes": 210695
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998197_1_20.counts.txt.gz",
+          "bytes": 212835
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998198_10_352.counts.txt.gz",
+          "bytes": 213520
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998199_101-Ann-Daly_S1.counts.txt.gz",
+          "bytes": 213353
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998200_102-Ann-Daly_S2.counts.txt.gz",
+          "bytes": 212225
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998201_103-Ann-Daly_S3.counts.txt.gz",
+          "bytes": 212062
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998202_104-Ann-Daly_S4.counts.txt.gz",
+          "bytes": 211290
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998203_105-Ann-Daly_S5.counts.txt.gz",
+          "bytes": 211263
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998204_106-Ann-Daly_S6.counts.txt.gz",
+          "bytes": 209697
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998205_108-Ann-Daly_S8.counts.txt.gz",
+          "bytes": 210268
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998206_109-Ann-Daly_S1.counts.txt.gz",
+          "bytes": 212031
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998207_110-Ann-Daly_S2.counts.txt.gz",
+          "bytes": 212055
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998208_111-Ann-Daly_S3.counts.txt.gz",
+          "bytes": 210722
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998209_112-Ann-Daly_S4.counts.txt.gz",
+          "bytes": 212196
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998210_114-Ann-Daly_S5.counts.txt.gz",
+          "bytes": 210352
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998211_115-Ann-Daly_S6.counts.txt.gz",
+          "bytes": 210742
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998212_116-Ann-Daly_S7.counts.txt.gz",
+          "bytes": 211179
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998213_12_469.counts.txt.gz",
+          "bytes": 212433
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998214_120-Ann-Daly_S9.counts.txt.gz",
+          "bytes": 210570
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998215_124-Ann-Daly_S10.counts.txt.gz",
+          "bytes": 210645
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998216_127-Ann-Daly_S11.counts.txt.gz",
+          "bytes": 211612
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998217_128-Ann-Daly_S12.counts.txt.gz",
+          "bytes": 210134
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998218_129-Ann-Daly_S13.counts.txt.gz",
+          "bytes": 212158
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998219_13_470.counts.txt.gz",
+          "bytes": 211706
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998220_130-Ann-Daly_S14.counts.txt.gz",
+          "bytes": 210108
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998221_132-Ann-Daly_S15.counts.txt.gz",
+          "bytes": 209480
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998222_133-Ann-Daly_S16.counts.txt.gz",
+          "bytes": 210163
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998223_134-Ann-Daly_S1.counts.txt.gz",
+          "bytes": 211544
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998224_135-Ann-Daly_S2.counts.txt.gz",
+          "bytes": 209682
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998225_136-Ann-Daly_S1.counts.txt.gz",
+          "bytes": 216899
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998226_14_472.counts.txt.gz",
+          "bytes": 213376
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998227_141-Ann-Daly_S2.counts.txt.gz",
+          "bytes": 212547
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998228_15_473.counts.txt.gz",
+          "bytes": 212285
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998229_152-Ann-Daly_S3.counts.txt.gz",
+          "bytes": 211039
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998230_155-Ann-Daly_S4.counts.txt.gz",
+          "bytes": 208264
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998231_169-Ann-Daly_S5.counts.txt.gz",
+          "bytes": 210419
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998232_17_82.counts.txt.gz",
+          "bytes": 211593
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998233_172-Ann-Daly_S6.counts.txt.gz",
+          "bytes": 212925
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998234_176-Ann-Daly_S7.counts.txt.gz",
+          "bytes": 210263
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998235_177-Ann-Daly_S8.counts.txt.gz",
+          "bytes": 212794
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998236_179-Ann-Daly_S10.counts.txt.gz",
+          "bytes": 211480
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998237_184-Ann-Daly_S11.counts.txt.gz",
+          "bytes": 210420
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998238_185-Ann-Daly_S12.counts.txt.gz",
+          "bytes": 211442
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998239_186-Ann-Daly_S13.counts.txt.gz",
+          "bytes": 210297
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998240_187-Ann-Daly_S14.counts.txt.gz",
+          "bytes": 211073
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998241_188-Ann-Daly_S15.counts.txt.gz",
+          "bytes": 212040
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998242_19_138.counts.txt.gz",
+          "bytes": 210566
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998243_191-Ann-Daly_S1.counts.txt.gz",
+          "bytes": 211616
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998244_193-Ann-Daly_S2.counts.txt.gz",
+          "bytes": 211094
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998245_197-Ann-Daly_S3.counts.txt.gz",
+          "bytes": 212640
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998246_199-Ann-Daly_S4.counts.txt.gz",
+          "bytes": 212444
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998247_2_23.counts.txt.gz",
+          "bytes": 213211
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998248_200-Ann-Daly_S5.counts.txt.gz",
+          "bytes": 213241
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998249_201-Ann-Daly_S6.counts.txt.gz",
+          "bytes": 213630
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998250_202-Ann-Daly_S7.counts.txt.gz",
+          "bytes": 213466
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998251_204-Ann-Daly_S8.counts.txt.gz",
+          "bytes": 212983
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998252_205-Ann-Daly_S9.counts.txt.gz",
+          "bytes": 210707
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998253_207-Ann-Daly_S10.counts.txt.gz",
+          "bytes": 210425
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998254_208-Ann-Daly_S11.counts.txt.gz",
+          "bytes": 213750
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998255_211-Ann-Daly_S13.counts.txt.gz",
+          "bytes": 211599
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998256_214-Ann-Daly_S15.counts.txt.gz",
+          "bytes": 209857
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998257_215-Ann-Daly_S16.counts.txt.gz",
+          "bytes": 213400
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998258_216-Ann-Daly_S1.counts.txt.gz",
+          "bytes": 214621
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998259_22_151.counts.txt.gz",
+          "bytes": 207799
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998260_23_154.counts.txt.gz",
+          "bytes": 211963
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998261_233-Ann-Daly_S3.counts.txt.gz",
+          "bytes": 211520
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998262_234-Ann-Daly_S4.counts.txt.gz",
+          "bytes": 211456
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998263_235-Ann-Daly_S5.counts.txt.gz",
+          "bytes": 212385
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998264_236-Ann-Daly_S6.counts.txt.gz",
+          "bytes": 212405
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998265_237-Ann-Daly_S7.counts.txt.gz",
+          "bytes": 210640
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998266_238-Ann-Daly_S8.counts.txt.gz",
+          "bytes": 209732
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998267_239-Ann-Daly_S9.counts.txt.gz",
+          "bytes": 211575
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998268_24_160.counts.txt.gz",
+          "bytes": 209624
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998269_240-Ann-Daly_S1.counts.txt.gz",
+          "bytes": 211945
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998270_241-Ann-Daly_S2.counts.txt.gz",
+          "bytes": 212683
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998271_242-Ann-Daly_S10.counts.txt.gz",
+          "bytes": 213398
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998272_243-Ann-Daly_S11.counts.txt.gz",
+          "bytes": 210142
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998273_244-Ann-Daly_S12.counts.txt.gz",
+          "bytes": 207395
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998274_245-Ann-Daly_S13.counts.txt.gz",
+          "bytes": 210457
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998275_246-Ann-Daly_S14.counts.txt.gz",
+          "bytes": 210737
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998276_247-Ann-Daly_S15.counts.txt.gz",
+          "bytes": 210861
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998277_25_164.counts.txt.gz",
+          "bytes": 208018
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998278_252-Ann-Daly_S16.counts.txt.gz",
+          "bytes": 209076
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998279_255-Ann-Daly_S3.counts.txt.gz",
+          "bytes": 210255
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998280_26_171.counts.txt.gz",
+          "bytes": 206206
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998281_260-Ann-Daly_S4.counts.txt.gz",
+          "bytes": 212118
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998282_264-Ann-Daly_S5.counts.txt.gz",
+          "bytes": 211924
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998283_266-Ann-Daly_S7.counts.txt.gz",
+          "bytes": 207622
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998284_268-Ann-Daly_S8.counts.txt.gz",
+          "bytes": 209991
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998285_27_181.counts.txt.gz",
+          "bytes": 212490
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998286_274-Ann-Daly_S10.counts.txt.gz",
+          "bytes": 212490
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998287_277-Ann-Daly_S11.counts.txt.gz",
+          "bytes": 212606
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998288_278-Ann-Daly_S12.counts.txt.gz",
+          "bytes": 209861
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998289_279-Ann-Daly_S13.counts.txt.gz",
+          "bytes": 210711
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998290_280-Ann-Daly_S14.counts.txt.gz",
+          "bytes": 215599
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998291_281-Ann-Daly_S15.counts.txt.gz",
+          "bytes": 212439
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998292_282-Ann-Daly_S16.counts.txt.gz",
+          "bytes": 209808
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998293_284-Ann-Daly_S2.counts.txt.gz",
+          "bytes": 209275
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998294_285-Ann-Daly_S3.counts.txt.gz",
+          "bytes": 210349
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998295_286-Ann-Daly_S4.counts.txt.gz",
+          "bytes": 209971
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998296_287-Ann-Daly_S5.counts.txt.gz",
+          "bytes": 210631
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998297_288-Ann-Daly_S6.counts.txt.gz",
+          "bytes": 210304
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998298_289-Ann-Daly_S7.counts.txt.gz",
+          "bytes": 211780
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998299_29_474.counts.txt.gz",
+          "bytes": 210897
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998300_290-Ann-Daly_S8.counts.txt.gz",
+          "bytes": 212051
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998301_291-Ann-Daly_S9.counts.txt.gz",
+          "bytes": 212652
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998302_293-Ann-Daly_S10.counts.txt.gz",
+          "bytes": 211723
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998303_295-Ann-Daly_S11.counts.txt.gz",
+          "bytes": 211445
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998304_296-Ann-Daly_S12.counts.txt.gz",
+          "bytes": 211589
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998305_299-Ann-Daly_S13.counts.txt.gz",
+          "bytes": 212975
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998306_3_45.counts.txt.gz",
+          "bytes": 210697
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998307_300-Ann-Daly_S14.counts.txt.gz",
+          "bytes": 213411
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998308_303-Ann-Daly_S15.counts.txt.gz",
+          "bytes": 213166
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998309_304-Ann-Daly_S1.counts.txt.gz",
+          "bytes": 212121
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998310_306-Ann-Daly_S1.counts.txt.gz",
+          "bytes": 210015
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998311_31_477.counts.txt.gz",
+          "bytes": 213327
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998312_319-Ann-Daly_S2.counts.txt.gz",
+          "bytes": 212300
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998313_32_478.counts.txt.gz",
+          "bytes": 212100
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998314_345-Ann-Daly_S3.counts.txt.gz",
+          "bytes": 212635
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998315_350-Ann-Daly_S4.counts.txt.gz",
+          "bytes": 211655
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998316_354-Ann-Daly_S5.counts.txt.gz",
+          "bytes": 212413
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998317_355-Ann-Daly_S6.counts.txt.gz",
+          "bytes": 212603
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998318_361-Ann-Daly_S7.counts.txt.gz",
+          "bytes": 213155
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998319_373-Ann-Daly_S8.counts.txt.gz",
+          "bytes": 209613
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998320_384-Ann-Daly_S10.counts.txt.gz",
+          "bytes": 212506
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998321_4_67.counts.txt.gz",
+          "bytes": 212386
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998322_402-Ann-Daly_S11.counts.txt.gz",
+          "bytes": 212199
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998323_407-Ann-Daly_S13.counts.txt.gz",
+          "bytes": 210718
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998324_408-Ann-Daly_S14.counts.txt.gz",
+          "bytes": 213177
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998325_416-Ann-Daly_S2.counts.txt.gz",
+          "bytes": 212245
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998326_418-Ann-Daly_S15.counts.txt.gz",
+          "bytes": 211111
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998327_424-Ann-Daly_S16.counts.txt.gz",
+          "bytes": 214473
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998328_425-Ann-Daly_S3.counts.txt.gz",
+          "bytes": 213497
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998329_431-Ann-Daly_S4.counts.txt.gz",
+          "bytes": 212723
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998330_443-Ann-Daly_S5.counts.txt.gz",
+          "bytes": 208870
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998331_5_74.counts.txt.gz",
+          "bytes": 212959
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998332_6_139.counts.txt.gz",
+          "bytes": 215330
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998333_7_162.counts.txt.gz",
+          "bytes": 211732
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998334_8_344.counts.txt.gz",
+          "bytes": 213888
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998335_84-Ann-Daly_S9.counts.txt.gz",
+          "bytes": 210703
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998336_85-Ann-Daly_S10.counts.txt.gz",
+          "bytes": 210141
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998337_9_346.counts.txt.gz",
+          "bytes": 212129
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998338_98-Ann-Daly_S13.counts.txt.gz",
+          "bytes": 209816
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998339_s5_Olivier-Govaere_S5.counts.txt.gz",
+          "bytes": 214061
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998340_s2_Olivier-Govaere_S2.counts.txt.gz",
+          "bytes": 213290
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998341_078-Ann-Daly_S14.counts.txt.gz",
+          "bytes": 208196
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998342_085-Ann-Daly_S16.counts.txt.gz",
+          "bytes": 213018
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998343_C100-Ann-Daly_S1.counts.txt.gz",
+          "bytes": 208624
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998344_C101-Ann-Daly_S2.counts.txt.gz",
+          "bytes": 211124
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998345_C102-Ann-Daly_S3.counts.txt.gz",
+          "bytes": 209151
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998346_C103-Ann-Daly_S4.counts.txt.gz",
+          "bytes": 211867
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998347_C107-Ann-Daly_S5.counts.txt.gz",
+          "bytes": 211111
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998348_C108-Ann-Daly_S6.counts.txt.gz",
+          "bytes": 212201
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998349_C109-Ann-Daly_S7.counts.txt.gz",
+          "bytes": 212345
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998350_C110-Ann-Daly_S8.counts.txt.gz",
+          "bytes": 210942
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998351_C122-Ann-Daly_S10.counts.txt.gz",
+          "bytes": 211404
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998352_C123-Ann-Daly_S11.counts.txt.gz",
+          "bytes": 212770
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998353_C124-Ann-Daly_S12.counts.txt.gz",
+          "bytes": 209700
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998354_C125-Ann-Daly_S13.counts.txt.gz",
+          "bytes": 211682
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998355_C126-Ann-Daly_S14.counts.txt.gz",
+          "bytes": 211362
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998356_C128-Ann-Daly_S1.counts.txt.gz",
+          "bytes": 210704
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998357_C129-Ann-Daly_S2.counts.txt.gz",
+          "bytes": 210093
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998358_C131-Ann-Daly_S3.counts.txt.gz",
+          "bytes": 212867
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998359_C133-Ann-Daly_S4.counts.txt.gz",
+          "bytes": 214777
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998360_C134_S5.counts.txt.gz",
+          "bytes": 209627
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998361_C135-Ann-Daly_S6.counts.txt.gz",
+          "bytes": 207904
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998362_C136-Ann-Daly_S7.counts.txt.gz",
+          "bytes": 209240
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998363_C137-Ann-Daly_S8.counts.txt.gz",
+          "bytes": 210958
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998364_C139-Ann-Daly_S9.counts.txt.gz",
+          "bytes": 210807
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998365_C143-Ann-Daly_S11.counts.txt.gz",
+          "bytes": 212447
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998366_C145-Ann-Daly_S12.counts.txt.gz",
+          "bytes": 210749
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998367_C150-Ann-Daly_S13.counts.txt.gz",
+          "bytes": 212231
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998368_C171-Ann-Daly_S16.counts.txt.gz",
+          "bytes": 212304
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998369_C173-Ann-Daly_S16.counts.txt.gz",
+          "bytes": 208795
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998370_C18-Ann-Daly_S3.counts.txt.gz",
+          "bytes": 214589
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998371_C29-Ann-Daly_S4.counts.txt.gz",
+          "bytes": 212196
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998372_C61-Ann-Daly_S5.counts.txt.gz",
+          "bytes": 213131
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998373_C68-Ann-Daly_S6.counts.txt.gz",
+          "bytes": 211404
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998374_C69-Ann-Daly_S7.counts.txt.gz",
+          "bytes": 211289
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998375_C73-Ann-Daly_S8.counts.txt.gz",
+          "bytes": 212294
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998376_C76-Ann-Daly_S9.counts.txt.gz",
+          "bytes": 212397
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998377_C81-Ann-Daly_S10.counts.txt.gz",
+          "bytes": 213210
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998378_C82-Ann-Daly_S11.counts.txt.gz",
+          "bytes": 212034
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998379_C90-Ann-Daly_S12.counts.txt.gz",
+          "bytes": 213256
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998380_C93-Ann-Daly_S13.counts.txt.gz",
+          "bytes": 212756
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998381_C94-Ann-Daly_S15.counts.txt.gz",
+          "bytes": 212494
+        },
+        {
+          "path": "da-16-1/environment/data/GSE135251/GSM3998382_C99-Ann-Daly_S16.counts.txt.gz",
+          "bytes": 214497
+        },
+        {
+          "path": "da-16-1/environment/data/geo/GSE135251_family.soft.gz",
+          "bytes": 14162
+        },
+        {
+          "path": "da-16-1/environment/data/geo/GSE135251_series_matrix.txt.gz",
+          "bytes": 11529
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-16-1/environment/Dockerfile",
+          "bytes": 240
+        },
+        {
+          "path": "da-16-1/instruction.md",
+          "bytes": 5501
+        },
+        {
+          "path": "da-16-1/task.toml",
+          "bytes": 598
+        },
+        {
+          "path": "da-16-1/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-16-1/tests/rubric.txt",
+          "bytes": 10278
+        },
+        {
+          "path": "da-16-1/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-10-3",
+      "data_bytes": 46623536,
+      "data_files": [
+        {
+          "path": "da-10-3/environment/data/List_of_proteins_for_comparing_MLO_enrichment.xlsx",
+          "bytes": 208157
+        },
+        {
+          "path": "da-10-3/environment/data/h_combined_with_flags.xlsx",
+          "bytes": 1040332
+        },
+        {
+          "path": "da-10-3/environment/data/sequence_prediction.xlsx",
+          "bytes": 45375047
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-10-3/environment/Dockerfile",
+          "bytes": 466
+        },
+        {
+          "path": "da-10-3/instruction.md",
+          "bytes": 5937
+        },
+        {
+          "path": "da-10-3/task.toml",
+          "bytes": 613
+        },
+        {
+          "path": "da-10-3/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-10-3/tests/rubric.txt",
+          "bytes": 13104
+        },
+        {
+          "path": "da-10-3/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-19-6",
+      "data_bytes": 53991318,
+      "data_files": [
+        {
+          "path": "da-19-6/environment/data/data/sample_sheet_all.tsv",
+          "bytes": 3790
+        },
+        {
+          "path": "da-19-6/environment/data/processed_data/atacseq/peaks/GSM2715541_atac_peaks.narrowPeak",
+          "bytes": 5544895
+        },
+        {
+          "path": "da-19-6/environment/data/processed_data/atacseq/peaks/GSM2715541_atac_peaks.xls",
+          "bytes": 5992328
+        },
+        {
+          "path": "da-19-6/environment/data/processed_data/atacseq/peaks/GSM2715541_atac_summits.bed",
+          "bytes": 3925676
+        },
+        {
+          "path": "da-19-6/environment/data/processed_data/atacseq/peaks/GSM2715542_atac_peaks.narrowPeak",
+          "bytes": 5371398
+        },
+        {
+          "path": "da-19-6/environment/data/processed_data/atacseq/peaks/GSM2715542_atac_peaks.xls",
+          "bytes": 5804337
+        },
+        {
+          "path": "da-19-6/environment/data/processed_data/atacseq/peaks/GSM2715542_atac_summits.bed",
+          "bytes": 3807022
+        },
+        {
+          "path": "da-19-6/environment/data/processed_data/atacseq/peaks/GSM2715543_atac_peaks.narrowPeak",
+          "bytes": 4036672
+        },
+        {
+          "path": "da-19-6/environment/data/processed_data/atacseq/peaks/GSM2715543_atac_peaks.xls",
+          "bytes": 4362945
+        },
+        {
+          "path": "da-19-6/environment/data/processed_data/atacseq/peaks/GSM2715543_atac_summits.bed",
+          "bytes": 2853447
+        },
+        {
+          "path": "da-19-6/environment/data/processed_data/atacseq/peaks/GSM2715544_atac_peaks.narrowPeak",
+          "bytes": 4408062
+        },
+        {
+          "path": "da-19-6/environment/data/processed_data/atacseq/peaks/GSM2715544_atac_peaks.xls",
+          "bytes": 4765111
+        },
+        {
+          "path": "da-19-6/environment/data/processed_data/atacseq/peaks/GSM2715544_atac_summits.bed",
+          "bytes": 3114556
+        },
+        {
+          "path": "da-19-6/environment/data/processed_data/atacseq/peaks/atacseq_peak_calls.tsv",
+          "bytes": 1079
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-19-6/environment/Dockerfile",
+          "bytes": 2209
+        },
+        {
+          "path": "da-19-6/instruction.md",
+          "bytes": 7603
+        },
+        {
+          "path": "da-19-6/task.toml",
+          "bytes": 608
+        },
+        {
+          "path": "da-19-6/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-19-6/tests/rubric.txt",
+          "bytes": 10441
+        },
+        {
+          "path": "da-19-6/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-3-5",
+      "data_bytes": 76404011,
+      "data_files": [
+        {
+          "path": "da-3-5/environment/data/CGAN_mmc3.xlsx",
+          "bytes": 4907673
+        },
+        {
+          "path": "da-3-5/environment/data/Hodis_mmc2.txt",
+          "bytes": 56220306
+        },
+        {
+          "path": "da-3-5/environment/data/supplementary_tables.xls",
+          "bytes": 15276032
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-3-5/environment/Dockerfile",
+          "bytes": 419
+        },
+        {
+          "path": "da-3-5/instruction.md",
+          "bytes": 6336
+        },
+        {
+          "path": "da-3-5/task.toml",
+          "bytes": 605
+        },
+        {
+          "path": "da-3-5/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-3-5/tests/rubric.txt",
+          "bytes": 7604
+        },
+        {
+          "path": "da-3-5/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-15-2",
+      "data_bytes": 77607405,
+      "data_files": [
+        {
+          "path": "da-15-2/environment/data/Cervical_Spinal_Cord_gene_counts.tsv.gz",
+          "bytes": 8444867
+        },
+        {
+          "path": "da-15-2/environment/data/Cervical_Spinal_Cord_gene_tpm.tsv.gz",
+          "bytes": 8084174
+        },
+        {
+          "path": "da-15-2/environment/data/Cervical_Spinal_Cord_metadata.tsv.gz",
+          "bytes": 18915
+        },
+        {
+          "path": "da-15-2/environment/data/Lumbar_Spinal_Cord_gene_counts.tsv.gz",
+          "bytes": 7644488
+        },
+        {
+          "path": "da-15-2/environment/data/Lumbar_Spinal_Cord_gene_tpm.tsv.gz",
+          "bytes": 7186426
+        },
+        {
+          "path": "da-15-2/environment/data/Lumbar_Spinal_Cord_metadata.tsv.gz",
+          "bytes": 16807
+        },
+        {
+          "path": "da-15-2/environment/data/Mathys_single_nucleus.RData",
+          "bytes": 3615
+        },
+        {
+          "path": "da-15-2/environment/data/Thoracic_Spinal_Cord_gene_counts.tsv.gz",
+          "bytes": 2817330
+        },
+        {
+          "path": "da-15-2/environment/data/Thoracic_Spinal_Cord_gene_tpm.tsv.gz",
+          "bytes": 2809664
+        },
+        {
+          "path": "da-15-2/environment/data/Thoracic_Spinal_Cord_metadata.tsv.gz",
+          "bytes": 6553
+        },
+        {
+          "path": "da-15-2/environment/data/gencode.v30.annotation.gtf.gz",
+          "bytes": 40122079
+        },
+        {
+          "path": "da-15-2/environment/data/gencode.v30.gene_meta.tsv.gz",
+          "bytes": 452487
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-15-2/environment/Dockerfile",
+          "bytes": 975
+        },
+        {
+          "path": "da-15-2/instruction.md",
+          "bytes": 7470
+        },
+        {
+          "path": "da-15-2/task.toml",
+          "bytes": 612
+        },
+        {
+          "path": "da-15-2/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-15-2/tests/rubric.txt",
+          "bytes": 5059
+        },
+        {
+          "path": "da-15-2/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-13-1",
+      "data_bytes": 106236926,
+      "data_files": [
+        {
+          "path": "da-13-1/environment/data/GAHT_pregnancy_metadata_SDRF.tsv",
+          "bytes": 11768
+        },
+        {
+          "path": "da-13-1/environment/data/Olink_CPA_SPIRO_GAHT_and_pregnancy.npx.csv",
+          "bytes": 106225158
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-13-1/environment/Dockerfile",
+          "bytes": 418
+        },
+        {
+          "path": "da-13-1/instruction.md",
+          "bytes": 5403
+        },
+        {
+          "path": "da-13-1/task.toml",
+          "bytes": 611
+        },
+        {
+          "path": "da-13-1/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-13-1/tests/rubric.txt",
+          "bytes": 7408
+        },
+        {
+          "path": "da-13-1/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-11-1",
+      "data_bytes": 106256677,
+      "data_files": [
+        {
+          "path": "da-11-1/environment/data/GSE193442_RAW/GSM5820724_MS01092019_counts.txt.gz",
+          "bytes": 10657215
+        },
+        {
+          "path": "da-11-1/environment/data/GSE193442_RAW/GSM5820725_MS08162018_counts.txt.gz",
+          "bytes": 9872472
+        },
+        {
+          "path": "da-11-1/environment/data/GSE193442_RAW/GSM5820726_MS09102018_counts.txt.gz",
+          "bytes": 12332649
+        },
+        {
+          "path": "da-11-1/environment/data/GSE193442_RAW/GSM5820727_MS11132018_counts.txt.gz",
+          "bytes": 12118557
+        },
+        {
+          "path": "da-11-1/environment/data/GSE193442_RAW/GSM5820728_MS658_counts.txt.gz",
+          "bytes": 10633692
+        },
+        {
+          "path": "da-11-1/environment/data/GSE193442_RAW/GSM5820729_MS9020_counts.txt.gz",
+          "bytes": 9757930
+        },
+        {
+          "path": "da-11-1/environment/data/GSE193442_RAW/GSM5820730_HC11_counts.txt.gz",
+          "bytes": 8997435
+        },
+        {
+          "path": "da-11-1/environment/data/GSE193442_RAW/GSM5820731_HC12_counts.txt.gz",
+          "bytes": 10269329
+        },
+        {
+          "path": "da-11-1/environment/data/GSE193442_RAW/GSM5820732_HC13_counts.txt.gz",
+          "bytes": 10808431
+        },
+        {
+          "path": "da-11-1/environment/data/GSE193442_RAW/GSM5820733_HC14_counts.txt.gz",
+          "bytes": 10808967
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-11-1/environment/Dockerfile",
+          "bytes": 350
+        },
+        {
+          "path": "da-11-1/instruction.md",
+          "bytes": 5037
+        },
+        {
+          "path": "da-11-1/task.toml",
+          "bytes": 612
+        },
+        {
+          "path": "da-11-1/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-11-1/tests/rubric.txt",
+          "bytes": 11062
+        },
+        {
+          "path": "da-11-1/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-20-3",
+      "data_bytes": 137251076,
+      "data_files": [
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_aortic_smooth_muscle_cells_Brefeldin-A_28.5.csv",
+          "bytes": 1972506
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_aortic_smooth_muscle_cells_Brefeldin-A_300.csv",
+          "bytes": 2007446
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_aortic_smooth_muscle_cells_Brefeldin-A_3000.csv",
+          "bytes": 1966808
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_aortic_smooth_muscle_cells_Brefeldin-A_9.5.csv",
+          "bytes": 1874410
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_aortic_smooth_muscle_cells_Brefeldin-A_900.csv",
+          "bytes": 2019720
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_aortic_smooth_muscle_cells_Brefeldin-A_95.csv",
+          "bytes": 1935881
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_aortic_smooth_muscle_cells_Dexamethasone_28.5.csv",
+          "bytes": 1913111
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_aortic_smooth_muscle_cells_Dexamethasone_300.csv",
+          "bytes": 1926642
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_aortic_smooth_muscle_cells_Dexamethasone_3000.csv",
+          "bytes": 1878699
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_aortic_smooth_muscle_cells_Dexamethasone_9.5.csv",
+          "bytes": 1914199
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_aortic_smooth_muscle_cells_Dexamethasone_900.csv",
+          "bytes": 1912827
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_aortic_smooth_muscle_cells_Dexamethasone_95.csv",
+          "bytes": 1850753
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_aortic_smooth_muscle_cells_Trichostatin A_28.5.csv",
+          "bytes": 1899066
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_aortic_smooth_muscle_cells_Trichostatin A_300.csv",
+          "bytes": 1938774
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_aortic_smooth_muscle_cells_Trichostatin A_3000.csv",
+          "bytes": 2158038
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_aortic_smooth_muscle_cells_Trichostatin A_9.5.csv",
+          "bytes": 1941421
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_aortic_smooth_muscle_cells_Trichostatin A_900.csv",
+          "bytes": 2140495
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_aortic_smooth_muscle_cells_Trichostatin A_95.csv",
+          "bytes": 1866117
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_dermal_fibroblast_Brefeldin-A_28.5.csv",
+          "bytes": 1872178
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_dermal_fibroblast_Brefeldin-A_300.csv",
+          "bytes": 1855387
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_dermal_fibroblast_Brefeldin-A_3000.csv",
+          "bytes": 1853017
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_dermal_fibroblast_Brefeldin-A_9.5.csv",
+          "bytes": 1699363
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_dermal_fibroblast_Brefeldin-A_900.csv",
+          "bytes": 1861895
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_dermal_fibroblast_Brefeldin-A_95.csv",
+          "bytes": 1817962
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_dermal_fibroblast_Dexamethasone_28.5.csv",
+          "bytes": 1835382
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_dermal_fibroblast_Dexamethasone_300.csv",
+          "bytes": 1701687
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_dermal_fibroblast_Dexamethasone_3000.csv",
+          "bytes": 1761009
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_dermal_fibroblast_Dexamethasone_9.5.csv",
+          "bytes": 1836112
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_dermal_fibroblast_Dexamethasone_900.csv",
+          "bytes": 1757066
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_dermal_fibroblast_Dexamethasone_95.csv",
+          "bytes": 1788374
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_dermal_fibroblast_Trichostatin A_28.5.csv",
+          "bytes": 1808308
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_dermal_fibroblast_Trichostatin A_300.csv",
+          "bytes": 1905502
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_dermal_fibroblast_Trichostatin A_3000.csv",
+          "bytes": 2042267
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_dermal_fibroblast_Trichostatin A_9.5.csv",
+          "bytes": 1739684
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_dermal_fibroblast_Trichostatin A_900.csv",
+          "bytes": 2049696
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_dermal_fibroblast_Trichostatin A_95.csv",
+          "bytes": 1800934
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_epithelial_melanocytes_Brefeldin-A_28.5.csv",
+          "bytes": 1908537
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_epithelial_melanocytes_Brefeldin-A_300.csv",
+          "bytes": 1931246
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_epithelial_melanocytes_Brefeldin-A_3000.csv",
+          "bytes": 1940812
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_epithelial_melanocytes_Brefeldin-A_9.5.csv",
+          "bytes": 1921645
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_epithelial_melanocytes_Brefeldin-A_900.csv",
+          "bytes": 1947860
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_epithelial_melanocytes_Brefeldin-A_95.csv",
+          "bytes": 1897551
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_epithelial_melanocytes_Dexamethasone_28.5.csv",
+          "bytes": 1947133
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_epithelial_melanocytes_Dexamethasone_300.csv",
+          "bytes": 1872231
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_epithelial_melanocytes_Dexamethasone_3000.csv",
+          "bytes": 1853098
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_epithelial_melanocytes_Dexamethasone_9.5.csv",
+          "bytes": 1938027
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_epithelial_melanocytes_Dexamethasone_900.csv",
+          "bytes": 1868929
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_epithelial_melanocytes_Dexamethasone_95.csv",
+          "bytes": 1895601
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_epithelial_melanocytes_Trichostatin A_28.5.csv",
+          "bytes": 1939222
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_epithelial_melanocytes_Trichostatin A_300.csv",
+          "bytes": 2133376
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_epithelial_melanocytes_Trichostatin A_3000.csv",
+          "bytes": 2128595
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_epithelial_melanocytes_Trichostatin A_9.5.csv",
+          "bytes": 1907954
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_epithelial_melanocytes_Trichostatin A_900.csv",
+          "bytes": 2181508
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_epithelial_melanocytes_Trichostatin A_95.csv",
+          "bytes": 2032118
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_skeletal_muscle_myoblasts_Brefeldin-A_28.5.csv",
+          "bytes": 1909851
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_skeletal_muscle_myoblasts_Brefeldin-A_300.csv",
+          "bytes": 1920342
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_skeletal_muscle_myoblasts_Brefeldin-A_3000.csv",
+          "bytes": 1902815
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_skeletal_muscle_myoblasts_Brefeldin-A_9.5.csv",
+          "bytes": 1748113
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_skeletal_muscle_myoblasts_Brefeldin-A_900.csv",
+          "bytes": 1953034
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_skeletal_muscle_myoblasts_Brefeldin-A_95.csv",
+          "bytes": 1869581
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_skeletal_muscle_myoblasts_Dexamethasone_28.5.csv",
+          "bytes": 1896538
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_skeletal_muscle_myoblasts_Dexamethasone_300.csv",
+          "bytes": 1859025
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_skeletal_muscle_myoblasts_Dexamethasone_3000.csv",
+          "bytes": 1868874
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_skeletal_muscle_myoblasts_Dexamethasone_9.5.csv",
+          "bytes": 1866320
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_skeletal_muscle_myoblasts_Dexamethasone_900.csv",
+          "bytes": 1889752
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_skeletal_muscle_myoblasts_Dexamethasone_95.csv",
+          "bytes": 1839000
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_skeletal_muscle_myoblasts_Trichostatin A_28.5.csv",
+          "bytes": 1792224
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_skeletal_muscle_myoblasts_Trichostatin A_300.csv",
+          "bytes": 1862289
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_skeletal_muscle_myoblasts_Trichostatin A_3000.csv",
+          "bytes": 2026512
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_skeletal_muscle_myoblasts_Trichostatin A_9.5.csv",
+          "bytes": 1888106
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_skeletal_muscle_myoblasts_Trichostatin A_900.csv",
+          "bytes": 1985869
+        },
+        {
+          "path": "da-20-3/environment/data/pos_de_res/DE_results_human_skeletal_muscle_myoblasts_Trichostatin A_95.csv",
+          "bytes": 1824652
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-20-3/environment/Dockerfile",
+          "bytes": 12841
+        },
+        {
+          "path": "da-20-3/instruction.md",
+          "bytes": 17522
+        },
+        {
+          "path": "da-20-3/task.toml",
+          "bytes": 614
+        },
+        {
+          "path": "da-20-3/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-20-3/tests/rubric.txt",
+          "bytes": 8638
+        },
+        {
+          "path": "da-20-3/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-25-1",
+      "data_bytes": 232463645,
+      "data_files": [
+        {
+          "path": "da-25-1/environment/data/GSE118435_RAW.tar",
+          "bytes": 28170240
+        },
+        {
+          "path": "da-25-1/environment/data/GSE120741_Porto_ge_table.txt.gz",
+          "bytes": 7492027
+        },
+        {
+          "path": "da-25-1/environment/data/GSE126078_CRPC.zip",
+          "bytes": 69044102
+        },
+        {
+          "path": "da-25-1/environment/data/data_clinical_patient_TCGA.txt",
+          "bytes": 387144
+        },
+        {
+          "path": "da-25-1/environment/data/data_mrna_seq_v2_rsem_TCGA.txt",
+          "bytes": 87308566
+        },
+        {
+          "path": "da-25-1/environment/data/data_mutations_TCGA.txt",
+          "bytes": 40061566
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-25-1/environment/Dockerfile",
+          "bytes": 449
+        },
+        {
+          "path": "da-25-1/instruction.md",
+          "bytes": 5981
+        },
+        {
+          "path": "da-25-1/task.toml",
+          "bytes": 606
+        },
+        {
+          "path": "da-25-1/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-25-1/tests/rubric.txt",
+          "bytes": 6781
+        },
+        {
+          "path": "da-25-1/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-26-2",
+      "data_bytes": 235366470,
+      "data_files": [
+        {
+          "path": "da-26-2/environment/data/sub_CCLE_TCGA_ID_meta.csv",
+          "bytes": 323582
+        },
+        {
+          "path": "da-26-2/environment/data/sub_CCLE_depmapscore.txt",
+          "bytes": 66856157
+        },
+        {
+          "path": "da-26-2/environment/data/sub_CCLE_exp.Rdata",
+          "bytes": 39179056
+        },
+        {
+          "path": "da-26-2/environment/data/sub_TCGA_depmapscore.txt",
+          "bytes": 88279539
+        },
+        {
+          "path": "da-26-2/environment/data/sub_TCGA_exp.txt",
+          "bytes": 40728136
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-26-2/environment/Dockerfile",
+          "bytes": 385
+        },
+        {
+          "path": "da-26-2/instruction.md",
+          "bytes": 5316
+        },
+        {
+          "path": "da-26-2/task.toml",
+          "bytes": 606
+        },
+        {
+          "path": "da-26-2/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-26-2/tests/rubric.txt",
+          "bytes": 5399
+        },
+        {
+          "path": "da-26-2/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-26-4",
+      "data_bytes": 240725159,
+      "data_files": [
+        {
+          "path": "da-26-4/environment/data/BRCA_damaging_mut.csv",
+          "bytes": 5358689
+        },
+        {
+          "path": "da-26-4/environment/data/sub_CCLE_TCGA_ID_meta.csv",
+          "bytes": 323582
+        },
+        {
+          "path": "da-26-4/environment/data/sub_CCLE_depmapscore.txt",
+          "bytes": 66856157
+        },
+        {
+          "path": "da-26-4/environment/data/sub_CCLE_exp.Rdata",
+          "bytes": 39179056
+        },
+        {
+          "path": "da-26-4/environment/data/sub_TCGA_depmapscore.txt",
+          "bytes": 88279539
+        },
+        {
+          "path": "da-26-4/environment/data/sub_TCGA_exp.txt",
+          "bytes": 40728136
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-26-4/environment/Dockerfile",
+          "bytes": 428
+        },
+        {
+          "path": "da-26-4/instruction.md",
+          "bytes": 5588
+        },
+        {
+          "path": "da-26-4/task.toml",
+          "bytes": 606
+        },
+        {
+          "path": "da-26-4/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-26-4/tests/rubric.txt",
+          "bytes": 6337
+        },
+        {
+          "path": "da-26-4/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-20-1",
+      "data_bytes": 574607987,
+      "data_files": [
+        {
+          "path": "da-20-1/environment/data/GDPx2-GeneCounts.h5",
+          "bytes": 569401878
+        },
+        {
+          "path": "da-20-1/environment/data/Metadata.csv",
+          "bytes": 5206109
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-20-1/environment/Dockerfile",
+          "bytes": 407
+        },
+        {
+          "path": "da-20-1/instruction.md",
+          "bytes": 5355
+        },
+        {
+          "path": "da-20-1/task.toml",
+          "bytes": 604
+        },
+        {
+          "path": "da-20-1/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-20-1/tests/rubric.txt",
+          "bytes": 8458
+        },
+        {
+          "path": "da-20-1/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-20-4",
+      "data_bytes": 574610967,
+      "data_files": [
+        {
+          "path": "da-20-4/environment/data/GDPx2-GeneCounts.h5",
+          "bytes": 569401878
+        },
+        {
+          "path": "da-20-4/environment/data/Metadata.csv",
+          "bytes": 5206109
+        },
+        {
+          "path": "da-20-4/environment/data/utils.R",
+          "bytes": 2980
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-20-4/environment/Dockerfile",
+          "bytes": 443
+        },
+        {
+          "path": "da-20-4/instruction.md",
+          "bytes": 5555
+        },
+        {
+          "path": "da-20-4/task.toml",
+          "bytes": 612
+        },
+        {
+          "path": "da-20-4/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-20-4/tests/rubric.txt",
+          "bytes": 7316
+        },
+        {
+          "path": "da-20-4/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-19-3",
+      "data_bytes": 1186536782,
+      "data_files": [
+        {
+          "path": "da-19-3/environment/data/data/genes.gtf",
+          "bytes": 1175571066
+        },
+        {
+          "path": "da-19-3/environment/data/processed_data/chipseq/peaks/GSM2715535_vs_input_peaks.narrowPeak",
+          "bytes": 5101432
+        },
+        {
+          "path": "da-19-3/environment/data/processed_data/chipseq/peaks/GSM2715536_vs_input_peaks.narrowPeak",
+          "bytes": 4952462
+        },
+        {
+          "path": "da-19-3/environment/data/processed_data/chipseq/peaks/GSM2715537_vs_input_peaks.narrowPeak",
+          "bytes": 114244
+        },
+        {
+          "path": "da-19-3/environment/data/processed_data/chipseq/peaks/GSM2715538_vs_input_peaks.narrowPeak",
+          "bytes": 796348
+        },
+        {
+          "path": "da-19-3/environment/data/processed_data/chipseq/peaks/chipseq_peak_calls.tsv",
+          "bytes": 1230
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-19-3/environment/Dockerfile",
+          "bytes": 1163
+        },
+        {
+          "path": "da-19-3/instruction.md",
+          "bytes": 6170
+        },
+        {
+          "path": "da-19-3/task.toml",
+          "bytes": 608
+        },
+        {
+          "path": "da-19-3/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-19-3/tests/rubric.txt",
+          "bytes": 9225
+        },
+        {
+          "path": "da-19-3/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-19-4",
+      "data_bytes": 3626020596,
+      "data_files": [
+        {
+          "path": "da-19-4/environment/data/data/genes.gtf",
+          "bytes": 1175571066
+        },
+        {
+          "path": "da-19-4/environment/data/processed_data/chipseq/bam/GSM2715535.q20.rmdup.bam",
+          "bytes": 1152597512
+        },
+        {
+          "path": "da-19-4/environment/data/processed_data/chipseq/bam/GSM2715535.q20.rmdup.bam.bai",
+          "bytes": 2792552
+        },
+        {
+          "path": "da-19-4/environment/data/processed_data/chipseq/bam/GSM2715536.q20.rmdup.bam",
+          "bytes": 1281714038
+        },
+        {
+          "path": "da-19-4/environment/data/processed_data/chipseq/bam/GSM2715536.q20.rmdup.bam.bai",
+          "bytes": 2379712
+        },
+        {
+          "path": "da-19-4/environment/data/processed_data/chipseq/peaks/GSM2715535_vs_input_peaks.narrowPeak",
+          "bytes": 5101432
+        },
+        {
+          "path": "da-19-4/environment/data/processed_data/chipseq/peaks/GSM2715536_vs_input_peaks.narrowPeak",
+          "bytes": 4952462
+        },
+        {
+          "path": "da-19-4/environment/data/processed_data/chipseq/peaks/GSM2715537_vs_input_peaks.narrowPeak",
+          "bytes": 114244
+        },
+        {
+          "path": "da-19-4/environment/data/processed_data/chipseq/peaks/GSM2715538_vs_input_peaks.narrowPeak",
+          "bytes": 796348
+        },
+        {
+          "path": "da-19-4/environment/data/processed_data/chipseq/peaks/chipseq_peak_calls.tsv",
+          "bytes": 1230
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-19-4/environment/Dockerfile",
+          "bytes": 1725
+        },
+        {
+          "path": "da-19-4/instruction.md",
+          "bytes": 6977
+        },
+        {
+          "path": "da-19-4/task.toml",
+          "bytes": 606
+        },
+        {
+          "path": "da-19-4/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-19-4/tests/rubric.txt",
+          "bytes": 10727
+        },
+        {
+          "path": "da-19-4/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-17-1",
+      "data_bytes": 12218251667,
+      "data_files": [
+        {
+          "path": "da-17-1/environment/data/4118e166-34f5-4c1f-9eed-c64b90a3dace.h5ad",
+          "bytes": 12218251667
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-17-1/environment/Dockerfile",
+          "bytes": 363
+        },
+        {
+          "path": "da-17-1/instruction.md",
+          "bytes": 4490
+        },
+        {
+          "path": "da-17-1/task.toml",
+          "bytes": 607
+        },
+        {
+          "path": "da-17-1/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-17-1/tests/rubric.txt",
+          "bytes": 6986
+        },
+        {
+          "path": "da-17-1/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-17-5",
+      "data_bytes": 12218251667,
+      "data_files": [
+        {
+          "path": "da-17-5/environment/data/4118e166-34f5-4c1f-9eed-c64b90a3dace.h5ad",
+          "bytes": 12218251667
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-17-5/environment/Dockerfile",
+          "bytes": 363
+        },
+        {
+          "path": "da-17-5/instruction.md",
+          "bytes": 4451
+        },
+        {
+          "path": "da-17-5/task.toml",
+          "bytes": 605
+        },
+        {
+          "path": "da-17-5/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-17-5/tests/rubric.txt",
+          "bytes": 8615
+        },
+        {
+          "path": "da-17-5/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-17-3",
+      "data_bytes": 12218252018,
+      "data_files": [
+        {
+          "path": "da-17-3/environment/data/4118e166-34f5-4c1f-9eed-c64b90a3dace.h5ad",
+          "bytes": 12218251667
+        },
+        {
+          "path": "da-17-3/environment/data/type1_isg_signature.txt",
+          "bytes": 351
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-17-3/environment/Dockerfile",
+          "bytes": 408
+        },
+        {
+          "path": "da-17-3/instruction.md",
+          "bytes": 4608
+        },
+        {
+          "path": "da-17-3/task.toml",
+          "bytes": 612
+        },
+        {
+          "path": "da-17-3/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-17-3/tests/rubric.txt",
+          "bytes": 7236
+        },
+        {
+          "path": "da-17-3/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-1-3",
+      "data_bytes": 19315199231,
+      "data_files": [
+        {
+          "path": "da-1-3/environment/data/GSE236581_CRC-ICB_metadata.txt",
+          "bytes": 108122935
+        },
+        {
+          "path": "da-1-3/environment/data/GSE236581_barcodes.tsv",
+          "bytes": 27122075
+        },
+        {
+          "path": "da-1-3/environment/data/GSE236581_counts.mtx",
+          "bytes": 19178745260
+        },
+        {
+          "path": "da-1-3/environment/data/GSE236581_features.tsv",
+          "bytes": 1182020
+        },
+        {
+          "path": "da-1-3/environment/data/clinical.xlsx",
+          "bytes": 26941
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-1-3/environment/Dockerfile",
+          "bytes": 517
+        },
+        {
+          "path": "da-1-3/instruction.md",
+          "bytes": 5329
+        },
+        {
+          "path": "da-1-3/task.toml",
+          "bytes": 602
+        },
+        {
+          "path": "da-1-3/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-1-3/tests/rubric.txt",
+          "bytes": 14494
+        },
+        {
+          "path": "da-1-3/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    },
+    {
+      "task": "da-1-4",
+      "data_bytes": 19315199231,
+      "data_files": [
+        {
+          "path": "da-1-4/environment/data/GSE236581_CRC-ICB_metadata.txt",
+          "bytes": 108122935
+        },
+        {
+          "path": "da-1-4/environment/data/GSE236581_barcodes.tsv",
+          "bytes": 27122075
+        },
+        {
+          "path": "da-1-4/environment/data/GSE236581_counts.mtx",
+          "bytes": 19178745260
+        },
+        {
+          "path": "da-1-4/environment/data/GSE236581_features.tsv",
+          "bytes": 1182020
+        },
+        {
+          "path": "da-1-4/environment/data/clinical.xlsx",
+          "bytes": 26941
+        }
+      ],
+      "other_files": [
+        {
+          "path": "da-1-4/environment/Dockerfile",
+          "bytes": 517
+        },
+        {
+          "path": "da-1-4/instruction.md",
+          "bytes": 5309
+        },
+        {
+          "path": "da-1-4/task.toml",
+          "bytes": 605
+        },
+        {
+          "path": "da-1-4/tests/llm_judge.py",
+          "bytes": 8824
+        },
+        {
+          "path": "da-1-4/tests/rubric.txt",
+          "bytes": 11703
+        },
+        {
+          "path": "da-1-4/tests/test.sh",
+          "bytes": 912
+        }
+      ]
+    }
+  ],
+  "sample_release_files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 2504
+    },
+    {
+      "path": "README.md",
+      "bytes": 2352
+    },
+    {
+      "path": "da-13-3/environment/Dockerfile",
+      "bytes": 322
+    },
+    {
+      "path": "da-13-3/environment/data/41591_2025_4023_MOESM2_ESM(Supplementary Table 4).csv",
+      "bytes": 295386
+    },
+    {
+      "path": "da-13-3/instruction.md",
+      "bytes": 4780
+    },
+    {
+      "path": "da-13-3/task.toml",
+      "bytes": 390
+    },
+    {
+      "path": "da-13-3/tests/llm_judge.py",
+      "bytes": 8348
+    },
+    {
+      "path": "da-13-3/tests/rubric.txt",
+      "bytes": 8932
+    },
+    {
+      "path": "da-13-3/tests/test.sh",
+      "bytes": 912
+    },
+    {
+      "path": "da-14-1/environment/Dockerfile",
+      "bytes": 346
+    },
+    {
+      "path": "da-14-1/environment/data/subspace_score_table.csv",
+      "bytes": 2307055
+    },
+    {
+      "path": "da-14-1/instruction.md",
+      "bytes": 5059
+    },
+    {
+      "path": "da-14-1/task.toml",
+      "bytes": 382
+    },
+    {
+      "path": "da-14-1/tests/llm_judge.py",
+      "bytes": 8348
+    },
+    {
+      "path": "da-14-1/tests/rubric.txt",
+      "bytes": 13439
+    },
+    {
+      "path": "da-14-1/tests/test.sh",
+      "bytes": 912
+    },
+    {
+      "path": "da-4-6/environment/Dockerfile",
+      "bytes": 330
+    },
+    {
+      "path": "da-4-6/environment/data/mmc5.csv",
+      "bytes": 134173
+    },
+    {
+      "path": "da-4-6/instruction.md",
+      "bytes": 5158
+    },
+    {
+      "path": "da-4-6/task.toml",
+      "bytes": 389
+    },
+    {
+      "path": "da-4-6/tests/llm_judge.py",
+      "bytes": 8348
+    },
+    {
+      "path": "da-4-6/tests/rubric.txt",
+      "bytes": 6631
+    },
+    {
+      "path": "da-4-6/tests/test.sh",
+      "bytes": 912
+    }
+  ],
+  "access_checks": [
+    {
+      "repo": "BiomniBench-DA",
+      "gated": "auto",
+      "sha": "e1c8ca5e11a620087bc48d97888eb69176a1f235"
+    },
+    {
+      "repo": "BiomniBench-DA-sample",
+      "gated": "auto",
+      "sha": "b7974a1febb8345e451608f2a64e13a1325a72c4",
+      "instruction_access": [
+        {
+          "task": "da-13-3",
+          "url": "https://huggingface.co/datasets/phylobio/BiomniBench-DA-sample/resolve/main/da-13-3/instruction.md",
+          "error": "HTTP Error 401: Unauthorized"
+        },
+        {
+          "task": "da-14-1",
+          "url": "https://huggingface.co/datasets/phylobio/BiomniBench-DA-sample/resolve/main/da-14-1/instruction.md",
+          "error": "HTTP Error 401: Unauthorized"
+        },
+        {
+          "task": "da-4-6",
+          "url": "https://huggingface.co/datasets/phylobio/BiomniBench-DA-sample/resolve/main/da-4-6/instruction.md",
+          "error": "HTTP Error 401: Unauthorized"
+        }
+      ]
+    }
+  ],
+  "access_checked_at_utc": "2026-10-30T06:34:22Z",
+  "published_runtime_context": {
+    "source": "https://xbench.org/profession/biomnibench",
+    "metric_label": "Turns",
+    "values": [
+      15,
+      16,
+      24,
+      20,
+      20,
+      22,
+      31,
+      13,
+      12
+    ],
+    "notice": "Published leaderboard values are agent turns, not verified per-task function-call counts. Task-specific raw tool-call counts remain unverified."
+  },
+  "trace_file_metadata": []
+}

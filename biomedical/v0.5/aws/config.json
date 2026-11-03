@@ -1,0 +1,38 @@
+{
+  "version": "0.5.0-dev.16",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "low",
+  "review": "manual",
+  "tasks": {
+    "T01": {
+      "prepare": "prepare-v04-t01.R"
+    },
+    "T02": {
+      "prepare": "prepare-v04-t02.R"
+    },
+    "T03": {
+      "prepare": "prepare-v04-t03.py"
+    },
+    "T04": {
+      "prepare": "prepare-v04-t04.R"
+    },
+    "T05": {
+      "prepare": "prepare-v04-t05.R"
+    },
+    "T06": {
+      "prepare": "prepare-v04-t06.py"
+    },
+    "T07": {
+      "prepare": "prepare-v04-t07.R"
+    },
+    "T08": {
+      "prepare": "prepare-v04-t08.py"
+    },
+    "T09": {
+      "prepare": "prepare-v04-t09.R"
+    },
+    "T10": {
+      "prepare": "prepare-v04-t10.R"
+    }
+  }
+}

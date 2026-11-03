@@ -1,0 +1,668 @@
+{
+  "report_edition": "0.4",
+  "updated_at_utc": "2026-10-30T05:57:35Z",
+  "description": "Post-hoc descriptive timing analysis; no new experimental runs.",
+  "case": [
+    "A1-2",
+    "C1-3"
+  ],
+  "phase_rule": "A1: user message_end to final assistant message_end per user request; C1: turn.started to turn.completed per user request. Gaps and initialization remain outside request bars. Old completion-to-completion allocation retained separately for audit.",
+  "tool_rule": "Nonoverlapping start/end intervals, keyed by turn and tool/item ID. Includes file_change for C1.",
+  "gantt_rule": "A1 trace shifted by measured startup+load; wall timestamps independently agree within 5 ms. C1 trace starts at codex_run entry; outer residual is below 1 ms.",
+  "execution_related_rule": "A1 startup+input load+R tool intervals; C1 command/file tool intervals. Different instrumentation boundaries; descriptive, not pure R compute or causal attribution.",
+  "sources_sha256": {
+    "runs/gse236581-v0.3/A1-1/trace.jsonl": "53332895d9456a9cf0953d6e09b9321436c5d365efab49edac2e2dd7452e70ce",
+    "runs/gse236581-v0.3/A1-1/result.json": "a250e6f984eb7ead843dd0f54bcd0635bb2e6dc729cb217c28db3aaff54c98f4",
+    "runs/gse236581-v0.3/A1-2/trace.jsonl": "4f058964b5b51c7ed1c38ad043b865c8deb18596cca00d220486f33a61ba93f8",
+    "runs/gse236581-v0.3/A1-2/result.json": "859de82769c383cb00a6729ef2a1d14796b8a69bbd9f587dd29e435d302312d0",
+    "runs/gse236581-v0.3/A1-3/trace.jsonl": "9b1a742fca5e40b3a98d4045b4bf5b8046084858df3c99ea8f7524f2bd66163f",
+    "runs/gse236581-v0.3/A1-3/result.json": "b2b794b5bc267be2d5f38e3ddbc9d7df9958688436dd4e4d385711bdc9e750bc",
+    "runs/gse236581-v0.3/C1-1/trace.jsonl": "1977edc85c7fa8491a4337609ea8b8acb23f649cd266af95b159f51267119ad4",
+    "runs/gse236581-v0.3/C1-1/result.json": "eeb2126a7fc64cea5c337f9091e407d69ab24386c7584e4517ad7dd03323b5c1",
+    "runs/gse236581-v0.3/C1-2/trace.jsonl": "913373d51c5a4dccf0e66ca9300dfda8049b53578610e1d38f9e4dbb5caa5936",
+    "runs/gse236581-v0.3/C1-2/result.json": "71e1f56bb4f8b257b441894541c9d7635c8e8e11a17a0908eaf32c5615c58dff",
+    "runs/gse236581-v0.3/C1-3/trace.jsonl": "ef430dbc5b9d7b51085494704e3e50404be61be1495a935fa231741a1822c0fe",
+    "runs/gse236581-v0.3/C1-3/result.json": "b0bf15aca98fb07440acf7071cd244c25fef87e20f97a58f87a04b26dce5e4cc"
+  },
+  "runs": [
+    {
+      "arm": "A1",
+      "trial": 1,
+      "total_s": 61.93117545900168,
+      "tool_s": 4.613000000000005,
+      "startup_s": 2.14263916015625,
+      "load_s": 2.2740000000000005,
+      "execution_related_s": 9.029639160156256,
+      "other_s": 52.90153629884542,
+      "trace_offset_s": 4.416639160156251,
+      "tools": [
+        {
+          "turn": 1,
+          "kind": "r",
+          "start_s": 11.795,
+          "end_s": 12.506,
+          "duration_s": 0.7110000000000003
+        },
+        {
+          "turn": 1,
+          "kind": "r",
+          "start_s": 24.545,
+          "end_s": 26.919,
+          "duration_s": 2.3739999999999988
+        },
+        {
+          "turn": 2,
+          "kind": "r",
+          "start_s": 39.589,
+          "end_s": 40.453,
+          "duration_s": 0.8640000000000043
+        },
+        {
+          "turn": 3,
+          "kind": "r",
+          "start_s": 53.827,
+          "end_s": 54.491,
+          "duration_s": 0.6640000000000015
+        }
+      ],
+      "sampled_peak_rss_mib": 3731.921875,
+      "requests": [
+        {
+          "turn": 1,
+          "start_s": 6.96563916015625,
+          "end_s": 34.89463916015625,
+          "duration_s": 27.929000000000002,
+          "start_event": "message_end",
+          "end_event": "message_end",
+          "tool_calls": 2,
+          "before_first_tool_s": 9.246000000000002,
+          "tools_total_s": 3.084999999999999,
+          "between_tools_s": 12.039000000000001,
+          "after_last_tool_s": 3.559000000000001
+        },
+        {
+          "turn": 2,
+          "start_s": 35.52063916015625,
+          "end_s": 47.87663916015625,
+          "duration_s": 12.356000000000002,
+          "start_event": "message_end",
+          "end_event": "message_end",
+          "tool_calls": 1,
+          "before_first_tool_s": 8.485,
+          "tools_total_s": 0.8640000000000043,
+          "between_tools_s": 0,
+          "after_last_tool_s": 3.006999999999998
+        },
+        {
+          "turn": 3,
+          "start_s": 48.19363916015625,
+          "end_s": 61.66563916015625,
+          "duration_s": 13.472000000000001,
+          "start_event": "message_end",
+          "end_event": "message_end",
+          "tool_calls": 1,
+          "before_first_tool_s": 10.049999999999997,
+          "tools_total_s": 0.6640000000000015,
+          "between_tools_s": 0,
+          "after_last_tool_s": 2.7580000000000027
+        }
+      ],
+      "before_request1_s": 6.96563916015625,
+      "between_requests_s": [
+        0.6259999999999977,
+        0.31700000000000017
+      ],
+      "after_request3_s": 0.26553629884542573,
+      "non_request_s": 8.174175459001674,
+      "completion_partition_v01": {
+        "qc_s": 30.456,
+        "baseline_s": 12.968999999999998,
+        "revision_s": 13.814,
+        "outside_trace_s": 4.692175459001682,
+        "trace_tail_s": 0.27553629884543085
+      }
+    },
+    {
+      "arm": "A1",
+      "trial": 2,
+      "total_s": 61.850687833008124,
+      "tool_s": 5.256999999999998,
+      "startup_s": 2.1181020736694336,
+      "load_s": 2.334,
+      "execution_related_s": 9.709102073669431,
+      "other_s": 52.141585759338696,
+      "trace_offset_s": 4.452102073669433,
+      "tools": [
+        {
+          "turn": 1,
+          "kind": "r",
+          "start_s": 10.282,
+          "end_s": 10.974,
+          "duration_s": 0.6920000000000002
+        },
+        {
+          "turn": 1,
+          "kind": "r",
+          "start_s": 23.609,
+          "end_s": 26.704,
+          "duration_s": 3.094999999999999
+        },
+        {
+          "turn": 2,
+          "kind": "r",
+          "start_s": 42.189,
+          "end_s": 43.102,
+          "duration_s": 0.9129999999999967
+        },
+        {
+          "turn": 3,
+          "kind": "r",
+          "start_s": 54.329,
+          "end_s": 54.886,
+          "duration_s": 0.5570000000000022
+        }
+      ],
+      "sampled_peak_rss_mib": 4050.75,
+      "requests": [
+        {
+          "turn": 1,
+          "start_s": 6.996102073669434,
+          "end_s": 35.24410207366944,
+          "duration_s": 28.248000000000005,
+          "start_event": "message_end",
+          "end_event": "message_end",
+          "tool_calls": 2,
+          "before_first_tool_s": 7.7379999999999995,
+          "tools_total_s": 3.786999999999999,
+          "between_tools_s": 12.635000000000002,
+          "after_last_tool_s": 4.0880000000000045
+        },
+        {
+          "turn": 2,
+          "start_s": 35.932102073669434,
+          "end_s": 50.801102073669426,
+          "duration_s": 14.868999999999993,
+          "start_event": "message_end",
+          "end_event": "message_end",
+          "tool_calls": 1,
+          "before_first_tool_s": 10.708999999999996,
+          "tools_total_s": 0.9129999999999967,
+          "between_tools_s": 0,
+          "after_last_tool_s": 3.2469999999999963
+        },
+        {
+          "turn": 3,
+          "start_s": 51.10310207366943,
+          "end_s": 61.65610207366943,
+          "duration_s": 10.552999999999997,
+          "start_event": "message_end",
+          "end_event": "message_end",
+          "tool_calls": 1,
+          "before_first_tool_s": 7.677999999999997,
+          "tools_total_s": 0.5570000000000022,
+          "between_tools_s": 0,
+          "after_last_tool_s": 2.3179999999999943
+        }
+      ],
+      "before_request1_s": 6.996102073669434,
+      "between_requests_s": [
+        0.6879999999999953,
+        0.3020000000000067
+      ],
+      "after_request3_s": 0.19458575933869326,
+      "non_request_s": 8.180687833008129,
+      "completion_partition_v01": {
+        "qc_s": 30.768,
+        "baseline_s": 15.548000000000002,
+        "revision_s": 10.878999999999998,
+        "outside_trace_s": 4.655687833008123,
+        "trace_tail_s": 0.20358575933869005
+      }
+    },
+    {
+      "arm": "A1",
+      "trial": 3,
+      "total_s": 58.649057667003945,
+      "tool_s": 4.093999999999998,
+      "startup_s": 2.069216728210449,
+      "load_s": 2.1220000000000003,
+      "execution_related_s": 8.285216728210447,
+      "other_s": 50.3638409387935,
+      "trace_offset_s": 4.191216728210449,
+      "tools": [
+        {
+          "turn": 1,
+          "kind": "r",
+          "start_s": 11.788,
+          "end_s": 12.482,
+          "duration_s": 0.6939999999999991
+        },
+        {
+          "turn": 1,
+          "kind": "r",
+          "start_s": 22.783,
+          "end_s": 24.786,
+          "duration_s": 2.003
+        },
+        {
+          "turn": 2,
+          "kind": "r",
+          "start_s": 38.593,
+          "end_s": 39.368,
+          "duration_s": 0.7749999999999986
+        },
+        {
+          "turn": 3,
+          "kind": "r",
+          "start_s": 50.818,
+          "end_s": 51.44,
+          "duration_s": 0.6219999999999999
+        }
+      ],
+      "sampled_peak_rss_mib": 3592.234375,
+      "requests": [
+        {
+          "turn": 1,
+          "start_s": 6.58121672821045,
+          "end_s": 32.708216728210445,
+          "duration_s": 26.126999999999995,
+          "start_event": "message_end",
+          "end_event": "message_end",
+          "tool_calls": 2,
+          "before_first_tool_s": 9.398,
+          "tools_total_s": 2.696999999999999,
+          "between_tools_s": 10.301000000000002,
+          "after_last_tool_s": 3.7309999999999945
+        },
+        {
+          "turn": 2,
+          "start_s": 33.33521672821045,
+          "end_s": 46.20221672821045,
+          "duration_s": 12.867000000000004,
+          "start_event": "message_end",
+          "end_event": "message_end",
+          "tool_calls": 1,
+          "before_first_tool_s": 9.449000000000005,
+          "tools_total_s": 0.7749999999999986,
+          "between_tools_s": 0,
+          "after_last_tool_s": 2.6430000000000007
+        },
+        {
+          "turn": 3,
+          "start_s": 46.55721672821045,
+          "end_s": 58.44521672821045,
+          "duration_s": 11.887999999999998,
+          "start_event": "message_end",
+          "end_event": "message_end",
+          "tool_calls": 1,
+          "before_first_tool_s": 8.451999999999998,
+          "tools_total_s": 0.6219999999999999,
+          "between_tools_s": 0,
+          "after_last_tool_s": 2.814
+        }
+      ],
+      "before_request1_s": 6.58121672821045,
+      "between_requests_s": [
+        0.6270000000000024,
+        0.3549999999999969
+      ],
+      "after_request3_s": 0.20384093879349763,
+      "non_request_s": 7.767057667003947,
+      "completion_partition_v01": {
+        "qc_s": 28.495,
+        "baseline_s": 13.483,
+        "revision_s": 12.266999999999996,
+        "outside_trace_s": 4.404057667003947,
+        "trace_tail_s": 0.21284093879349797
+      }
+    },
+    {
+      "arm": "C1",
+      "trial": 1,
+      "total_s": 70.19138308402034,
+      "tool_s": 20.108973124006297,
+      "startup_s": null,
+      "load_s": null,
+      "execution_related_s": 20.108973124006297,
+      "other_s": 50.08240996001405,
+      "trace_offset_s": 0,
+      "tools": [
+        {
+          "turn": 1,
+          "kind": "command_execution",
+          "start_s": 4.8712782909860834,
+          "end_s": 4.872077123989584,
+          "duration_s": 0.0007988330035004765
+        },
+        {
+          "turn": 1,
+          "kind": "command_execution",
+          "start_s": 4.9359060829738155,
+          "end_s": 4.936247207981069,
+          "duration_s": 0.0003411250072531402
+        },
+        {
+          "turn": 1,
+          "kind": "command_execution",
+          "start_s": 10.273384290980175,
+          "end_s": 12.989203748962609,
+          "duration_s": 2.715819457982434
+        },
+        {
+          "turn": 1,
+          "kind": "file_change",
+          "start_s": 24.856912915973226,
+          "end_s": 24.89275337397703,
+          "duration_s": 0.03584045800380409
+        },
+        {
+          "turn": 1,
+          "kind": "command_execution",
+          "start_s": 25.050539748976007,
+          "end_s": 31.335295165976277,
+          "duration_s": 6.2847554170002695
+        },
+        {
+          "turn": 2,
+          "kind": "file_change",
+          "start_s": 47.42364166697371,
+          "end_s": 47.45595687496825,
+          "duration_s": 0.032315207994543016
+        },
+        {
+          "turn": 2,
+          "kind": "command_execution",
+          "start_s": 47.614074874989456,
+          "end_s": 53.30316591699375,
+          "duration_s": 5.689091042004293
+        },
+        {
+          "turn": 3,
+          "kind": "command_execution",
+          "start_s": 61.496939707983984,
+          "end_s": 66.84695129099418,
+          "duration_s": 5.3500115830102
+        }
+      ],
+      "sampled_peak_rss_mib": 3959.90625,
+      "requests": [
+        {
+          "turn": 1,
+          "start_s": 0.7131963739811908,
+          "end_s": 34.67994395797723,
+          "duration_s": 33.96674758399604,
+          "start_event": "turn.started",
+          "end_event": "turn.completed",
+          "tool_calls": 5,
+          "before_first_tool_s": 4.158081917004893,
+          "tools_total_s": 9.037555290997261,
+          "between_tools_s": 17.426461583992932,
+          "after_last_tool_s": 3.344648792000953
+        },
+        {
+          "turn": 2,
+          "start_s": 36.64221620798344,
+          "end_s": 55.30377691698959,
+          "duration_s": 18.661560709006153,
+          "start_event": "turn.started",
+          "end_event": "turn.completed",
+          "tool_calls": 2,
+          "before_first_tool_s": 10.78142545899027,
+          "tools_total_s": 5.721406249998836,
+          "between_tools_s": 0.15811800002120435,
+          "after_last_tool_s": 2.0006109999958426
+        },
+        {
+          "turn": 3,
+          "start_s": 57.17918829098926,
+          "end_s": 69.12203933298588,
+          "duration_s": 11.942851041996619,
+          "start_event": "turn.started",
+          "end_event": "turn.completed",
+          "tool_calls": 1,
+          "before_first_tool_s": 4.317751416994724,
+          "tools_total_s": 5.3500115830102,
+          "between_tools_s": 0,
+          "after_last_tool_s": 2.275088041991694
+        }
+      ],
+      "before_request1_s": 0.7131963739811908,
+      "between_requests_s": [
+        1.9622722500062082,
+        1.8754113739996683
+      ],
+      "after_request3_s": 1.0693437510344665,
+      "non_request_s": 5.620223749021534,
+      "completion_partition_v01": {
+        "qc_s": 34.67994395797723,
+        "baseline_s": 20.62383295901236,
+        "revision_s": 13.818262415996287,
+        "outside_trace_s": 1.0693437510344665,
+        "trace_tail_s": 1.0693437510344665
+      }
+    },
+    {
+      "arm": "C1",
+      "trial": 2,
+      "total_s": 94.57282816601219,
+      "tool_s": 22.519829291006317,
+      "startup_s": null,
+      "load_s": null,
+      "execution_related_s": 22.519829291006317,
+      "other_s": 72.05299887500587,
+      "trace_offset_s": 0,
+      "tools": [
+        {
+          "turn": 1,
+          "kind": "command_execution",
+          "start_s": 4.766397333005443,
+          "end_s": 4.767364458006341,
+          "duration_s": 0.000967125000897795
+        },
+        {
+          "turn": 1,
+          "kind": "command_execution",
+          "start_s": 4.829454082995653,
+          "end_s": 4.834034791012527,
+          "duration_s": 0.004580708016874269
+        },
+        {
+          "turn": 1,
+          "kind": "command_execution",
+          "start_s": 8.90626325001358,
+          "end_s": 13.747021207993384,
+          "duration_s": 4.840757957979804
+        },
+        {
+          "turn": 1,
+          "kind": "command_execution",
+          "start_s": 37.100103250006214,
+          "end_s": 42.55486245799693,
+          "duration_s": 5.454759207990719
+        },
+        {
+          "turn": 1,
+          "kind": "command_execution",
+          "start_s": 46.81077725000796,
+          "end_s": 46.9941592910036,
+          "duration_s": 0.18338204099563882
+        },
+        {
+          "turn": 2,
+          "kind": "command_execution",
+          "start_s": 64.34521900000982,
+          "end_s": 70.57734583402635,
+          "duration_s": 6.232126834016526
+        },
+        {
+          "turn": 3,
+          "kind": "command_execution",
+          "start_s": 83.94597670799703,
+          "end_s": 89.74923212500289,
+          "duration_s": 5.8032554170058575
+        }
+      ],
+      "sampled_peak_rss_mib": 2748.96875,
+      "requests": [
+        {
+          "turn": 1,
+          "start_s": 1.040483624994522,
+          "end_s": 50.978219083015574,
+          "duration_s": 49.93773545802105,
+          "start_event": "turn.started",
+          "end_event": "turn.completed",
+          "tool_calls": 5,
+          "before_first_tool_s": 3.7259137080109213,
+          "tools_total_s": 10.484447039983934,
+          "between_tools_s": 31.74331491801422,
+          "after_last_tool_s": 3.9840597920119762
+        },
+        {
+          "turn": 2,
+          "start_s": 52.616767542029265,
+          "end_s": 73.40690441703191,
+          "duration_s": 20.790136875002645,
+          "start_event": "turn.started",
+          "end_event": "turn.completed",
+          "tool_calls": 1,
+          "before_first_tool_s": 11.728451457980555,
+          "tools_total_s": 6.232126834016526,
+          "between_tools_s": 0,
+          "after_last_tool_s": 2.8295585830055643
+        },
+        {
+          "turn": 3,
+          "start_s": 75.00210149999475,
+          "end_s": 93.37762225000188,
+          "duration_s": 18.375520750007126,
+          "start_event": "turn.started",
+          "end_event": "turn.completed",
+          "tool_calls": 1,
+          "before_first_tool_s": 8.943875208002282,
+          "tools_total_s": 5.8032554170058575,
+          "between_tools_s": 0,
+          "after_last_tool_s": 3.6283901249989867
+        }
+      ],
+      "before_request1_s": 1.040483624994522,
+      "between_requests_s": [
+        1.6385484590136912,
+        1.5951970829628408
+      ],
+      "after_request3_s": 1.195205916010309,
+      "non_request_s": 5.469435082981363,
+      "completion_partition_v01": {
+        "qc_s": 50.978219083015574,
+        "baseline_s": 22.428685334016336,
+        "revision_s": 19.970717832969967,
+        "outside_trace_s": 1.195205916010309,
+        "trace_tail_s": 1.195205916010309
+      }
+    },
+    {
+      "arm": "C1",
+      "trial": 3,
+      "total_s": 72.6916546249995,
+      "tool_s": 19.6166554170195,
+      "startup_s": null,
+      "load_s": null,
+      "execution_related_s": 19.6166554170195,
+      "other_s": 53.07499920798,
+      "trace_offset_s": 0,
+      "tools": [
+        {
+          "turn": 1,
+          "kind": "command_execution",
+          "start_s": 5.959724998974707,
+          "end_s": 5.9615374579734635,
+          "duration_s": 0.0018124589987564832
+        },
+        {
+          "turn": 1,
+          "kind": "command_execution",
+          "start_s": 6.119021582999267,
+          "end_s": 8.691461165988585,
+          "duration_s": 2.5724395829893183
+        },
+        {
+          "turn": 1,
+          "kind": "command_execution",
+          "start_s": 26.578334123973036,
+          "end_s": 32.662459457991645,
+          "duration_s": 6.0841253340186086
+        },
+        {
+          "turn": 2,
+          "kind": "command_execution",
+          "start_s": 47.31491858296795,
+          "end_s": 52.89286495797569,
+          "duration_s": 5.577946375007741
+        },
+        {
+          "turn": 3,
+          "kind": "command_execution",
+          "start_s": 62.74845524999546,
+          "end_s": 68.12878691600054,
+          "duration_s": 5.380331666005077
+        }
+      ],
+      "sampled_peak_rss_mib": 2969.1875,
+      "requests": [
+        {
+          "turn": 1,
+          "start_s": 0.9151100829767529,
+          "end_s": 36.07610887399642,
+          "duration_s": 35.160998791019665,
+          "start_event": "turn.started",
+          "end_event": "turn.completed",
+          "tool_calls": 3,
+          "before_first_tool_s": 5.044614915997954,
+          "tools_total_s": 8.658377376006683,
+          "between_tools_s": 18.044357083010254,
+          "after_last_tool_s": 3.4136494160047732
+        },
+        {
+          "turn": 2,
+          "start_s": 37.5357089159661,
+          "end_s": 55.76534254098078,
+          "duration_s": 18.229633625014685,
+          "start_event": "turn.started",
+          "end_event": "turn.completed",
+          "tool_calls": 1,
+          "before_first_tool_s": 9.779209667001851,
+          "tools_total_s": 5.577946375007741,
+          "between_tools_s": 0,
+          "after_last_tool_s": 2.872477583005093
+        },
+        {
+          "turn": 3,
+          "start_s": 57.425869124999736,
+          "end_s": 71.89013545800117,
+          "duration_s": 14.464266333001433,
+          "start_event": "turn.started",
+          "end_event": "turn.completed",
+          "tool_calls": 1,
+          "before_first_tool_s": 5.322586124995723,
+          "tools_total_s": 5.380331666005077,
+          "between_tools_s": 0,
+          "after_last_tool_s": 3.7613485420006327
+        }
+      ],
+      "before_request1_s": 0.9151100829767529,
+      "between_requests_s": [
+        1.4596000419696793,
+        1.6605265840189531
+      ],
+      "after_request3_s": 0.8015191669983324,
+      "non_request_s": 4.836755875963718,
+      "completion_partition_v01": {
+        "qc_s": 36.07610887399642,
+        "baseline_s": 19.689233666984364,
+        "revision_s": 16.124792917020386,
+        "outside_trace_s": 0.8015191669983324,
+        "trace_tail_s": 0.8015191669983324
+      }
+    }
+  ],
+  "request_boundary_notice": "Only visible user-request and tool boundaries are reconstructed. Model server requests and pure reasoning latency are not independently timed."
+}

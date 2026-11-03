@@ -1,0 +1,44 @@
+{
+  "checked_at_utc": "2026-10-30T05:38:56Z",
+  "model": "gpt-6.1-sol",
+  "catalog_default_reasoning_level": "low",
+  "catalog_fetched_at": "2026-10-30T05:37:46.720232Z",
+  "catalog_client_version": "0.165.0",
+  "catalog_source": "~/.codex/models_cache.json",
+  "catalog_source_sha256": "7f71e57a561dd02cce11a9d400f93a394ba1e9b08424c45cb29b682017181c75",
+  "historical_condition": "Benchmark did not explicitly override reasoning effort. The original formal manifest did not snapshot the resolved reasoning level. Current catalog default is evidence about the current default, not an independently captured historical resolved value.",
+  "historical_sessions": [
+    {
+      "run": "A1-2",
+      "session_file": "rollout-2026-10-28T15-24-21-01a1849d-4361-7c00-bcb4-02d8ce1aceb6.jsonl",
+      "cli_version": "0.165.0",
+      "models": [
+        "gpt-6.1-sol",
+        "gpt-6.1-sol",
+        "gpt-6.1-sol"
+      ],
+      "collaboration_mode_reasoning_effort": [
+        null,
+        null,
+        null
+      ],
+      "workspace_matches_benchmark_result": true
+    },
+    {
+      "run": "C1-3",
+      "session_file": "rollout-2026-10-28T15-27-05-01a1849f-c3e9-73b3-a57c-7fb001168632.jsonl",
+      "cli_version": "0.165.0",
+      "models": [
+        "gpt-6.1-sol",
+        "gpt-6.1-sol",
+        "gpt-6.1-sol"
+      ],
+      "collaboration_mode_reasoning_effort": [
+        null,
+        null,
+        null
+      ],
+      "workspace_matches_benchmark_result": true
+    }
+  ]
+}

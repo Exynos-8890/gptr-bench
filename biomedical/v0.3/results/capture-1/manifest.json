@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "task": "single-cell",
+  "live": false,
+  "arms": [
+    "A2"
+  ],
+  "benchmark_version": "0.3.1",
+  "plan_updated_at": "2026-10-28T22:39:33Z",
+  "started_at": "2026-10-28T22:46:14Z",
+  "dataset": {
+    "accession": "GSE236581",
+    "source_updated": "2024-07-29",
+    "source_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE236nnn/GSE236581/suppl/",
+    "source_cells": 975275,
+    "source_genes": 36027,
+    "source_nonzero": 1310816895,
+    "selected_cells": 100000,
+    "selected_nonzero": 134275503,
+    "selection": "unique(round(seq(1, source_cells, length.out = min(cells, source_cells))))",
+    "representation": "fully resident dgCMatrix; all genes; original nonzero counts",
+    "sources": [
+      {
+        "file": "GSE236581_counts.mtx.gz",
+        "sha256": "360a81fd6a5c0414b243269539cd6936347696fa71c3789b42b5d7690db3f63b",
+        "bytes": 4232498668,
+        "retrieved_at": "2026-10-28T21:57:02Z"
+      },
+      {
+        "file": "GSE236581_barcodes.tsv.gz",
+        "sha256": "c43723bb3ace3df055c6d1d6716a43e8cf81ab182ee7219ee92c60af5bee71d5",
+        "bytes": 4749382,
+        "retrieved_at": "2026-10-28T21:48:48Z"
+      },
+      {
+        "file": "GSE236581_features.tsv.gz",
+        "sha256": "9fa791c7c082a66d2a7567620dd66dbbc82bcda1dbb0ceb145a4ce1c25540fc4",
+        "bytes": 249385,
+        "retrieved_at": "2026-10-28T21:48:49Z"
+      },
+      {
+        "file": "GSE236581_CRC-ICB_metadata.txt.gz",
+        "sha256": "7ecdb3b24e7e40e41676fd18f2b4ef5615506c06cb218c0a961dcfbe49e622c6",
+        "bytes": 13343514,
+        "retrieved_at": "2026-10-28T21:48:51Z"
+      }
+    ],
+    "prepared_at": "2026-10-28T22:13:36Z"
+  },
+  "gptr_revision": "7e48449126ad65b54f6e624e3c49b24afd3b174c",
+  "python": "3.14.5",
+  "source_sha256": "5f4f3934aa1cd1241b9408903fd553cead7207f316882d8da61c21b42131a83d",
+  "model": null,
+  "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+  "psutil": "7.2.2",
+  "repeats": 1,
+  "rows": null,
+  "timeout_seconds": 1800.0,
+  "seed": 20261027,
+  "replays": 10,
+  "token_limit": 1000000,
+  "cost_limit": 5,
+  "budget_policy": "provider usage checked at turn boundaries; unknown CLI cost cannot be enforced",
+  "codex_version": null,
+  "cache_policy": "uncontrolled OS cache; serial runs; no cold-cache claim",
+  "initial_load": "included",
+  "rds_compression": false,
+  "dataset_sha256": "b4d5c80715241c712d5cef4081eed444fed2e962cb93db3dbcfda4fbba8b03a9",
+  "replay_trace_sha256": "53332895d9456a9cf0953d6e09b9321436c5d365efab49edac2e2dd7452e70ce",
+  "environment": {
+    "r": "R version 4.5.1 (2025-06-13)",
+    "packages": {
+      "Matrix": "1.7.3",
+      "survival": "3.8.3",
+      "jsonlite": "2.0.0",
+      "pkgload": "1.5.3",
+      "processx": "3.8.6",
+      "ps": "1.9.1"
+    }
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "version": "1.0",
+  "checked_at_utc": "2026-10-31T08:13:30+00:00",
+  "region": "us-east-1",
+  "scope": "read_only_describe_get_only_no_cloud_resource_mutations",
+  "results": {
+    "identity": {
+      "started_at_utc": "2026-10-31T08:13:24+00:00",
+      "exit_code": 0,
+      "operation": "sts get-caller-identity",
+      "status": "ok",
+      "principal_fingerprint": "28d2e0e46da3dffe",
+      "principal_kind": "user"
+    },
+    "instance_type": {
+      "started_at_utc": "2026-10-31T08:13:24+00:00",
+      "exit_code": 0,
+      "operation": "ec2 describe-instance-types",
+      "status": "ok",
+      "instance_type": "r6a.large",
+      "vcpus": 2,
+      "memory_mib": 16384,
+      "architectures": [
+        "x86_64"
+      ],
+      "ebs_optimized_support": "default",
+      "burstable": false
+    },
+    "offerings": {
+      "started_at_utc": "2026-10-31T08:13:24+00:00",
+      "exit_code": 0,
+      "operation": "ec2 describe-instance-type-offerings",
+      "status": "ok",
+      "availability_zones": [
+        "us-east-1a",
+        "us-east-1b",
+        "us-east-1c",
+        "us-east-1d",
+        "us-east-1f"
+      ]
+    },
+    "quota": {
+      "started_at_utc": "2026-10-31T08:13:24+00:00",
+      "exit_code": 0,
+      "operation": "service-quotas get-service-quota",
+      "status": "ok",
+      "code": "L-1216C47A",
+      "name": "Running On-Demand Standard (A, C, D, H, I, M, R, T, Z) instances",
+      "value": 256.0,
+      "unit": "None",
+      "adjustable": true,
+      "available_quota_not_proven": true
+    },
+    "default_vpc": {
+      "started_at_utc": "2026-10-31T08:13:24+00:00",
+      "exit_code": 0,
+      "operation": "ec2 describe-vpcs",
+      "status": "ok",
+      "count": 1
+    },
+    "ubuntu_ami": {
+      "started_at_utc": "2026-10-31T08:13:24+00:00",
+      "exit_code": 0,
+      "operation": "ssm get-parameter",
+      "status": "ok",
+      "parameter_name": "/aws/service/canonical/ubuntu/server/24.04/stable/current/amd64/hvm/ebs-gp3/ami-id",
+      "parameter_version": 80,
+      "parameter_last_modified": "2026-10-23T04:05:59.044000-07:00",
+      "image_id": "ami-0d6dd9e8265d48906"
+    },
+    "key_pairs": {
+      "started_at_utc": "2026-10-31T08:13:26+00:00",
+      "exit_code": 0,
+      "operation": "ec2 describe-key-pairs",
+      "status": "ok",
+      "count": 1,
+      "matching_local_private_key_not_verified": true
+    },
+    "instances": {
+      "started_at_utc": "2026-10-31T08:13:26+00:00",
+      "exit_code": 0,
+      "operation": "ec2 describe-instances",
+      "status": "ok",
+      "state_counts": {}
+    },
+    "ubuntu_image_details": {
+      "started_at_utc": "2026-10-31T08:13:27+00:00",
+      "exit_code": 0,
+      "operation": "ec2 describe-images",
+      "status": "ok",
+      "image_id": "ami-0d6dd9e8265d48906",
+      "image_name": "ubuntu/images/hvm-ssd-gp3/ubuntu-noble-24.04-amd64-server-20261023",
+      "image_state": "available",
+      "architecture": "x86_64",
+      "root_device_type": "ebs",
+      "root_device_name": "/dev/sda1",
+      "creation_date": "2026-10-23T10:42:34.000Z",
+      "owner_is_canonical": true,
+      "virtualization_type": "hvm"
+    },
+    "subnets": {
+      "started_at_utc": "2026-10-31T08:13:28+00:00",
+      "exit_code": 0,
+      "operation": "ec2 describe-subnets",
+      "status": "ok",
+      "count": 6,
+      "summary": [
+        {
+          "availability_zone": "us-east-1f",
+          "default_for_az": true,
+          "map_public_ip_on_launch": true,
+          "available_ip_count": 4091,
+          "instance_type_offered": true,
+          "state": "available"
+        },
+        {
+          "availability_zone": "us-east-1e",
+          "default_for_az": true,
+          "map_public_ip_on_launch": true,
+          "available_ip_count": 4091,
+          "instance_type_offered": false,
+          "state": "available"
+        },
+        {
+          "availability_zone": "us-east-1d",
+          "default_for_az": true,
+          "map_public_ip_on_launch": true,
+          "available_ip_count": 4091,
+          "instance_type_offered": true,
+          "state": "available"
+        },
+        {
+          "availability_zone": "us-east-1a",
+          "default_for_az": true,
+          "map_public_ip_on_launch": true,
+          "available_ip_count": 4091,
+          "instance_type_offered": true,
+          "state": "available"
+        },
+        {
+          "availability_zone": "us-east-1b",
+          "default_for_az": true,
+          "map_public_ip_on_launch": true,
+          "available_ip_count": 4091,
+          "instance_type_offered": true,
+          "state": "available"
+        },
+        {
+          "availability_zone": "us-east-1c",
+          "default_for_az": true,
+          "map_public_ip_on_launch": true,
+          "available_ip_count": 4091,
+          "instance_type_offered": true,
+          "state": "available"
+        }
+      ]
+    },
+    "security_groups": {
+      "started_at_utc": "2026-10-31T08:13:28+00:00",
+      "exit_code": 0,
+      "operation": "ec2 describe-security-groups",
+      "status": "ok",
+      "count": 3,
+      "default_group_exists": true,
+      "ssh_groups_count": 3,
+      "inbound_ssh_to_client_verified": false,
+      "ssh_groups_count_note": "Includes any SSH-capable protocol rule, potentially group-restricted; does not prove client access."
+    },
+    "route_tables": {
+      "started_at_utc": "2026-10-31T08:13:28+00:00",
+      "exit_code": 0,
+      "operation": "ec2 describe-route-tables",
+      "status": "ok",
+      "count": 1,
+      "active_internet_default_routes": 1
+    },
+    "internet_gateways": {
+      "started_at_utc": "2026-10-31T08:13:28+00:00",
+      "exit_code": 0,
+      "operation": "ec2 describe-internet-gateways",
+      "status": "ok",
+      "count": 1
+    },
+    "nacl": {
+      "started_at_utc": "2026-10-31T08:13:28+00:00",
+      "exit_code": 0,
+      "operation": "ec2 describe-network-acls",
+      "status": "ok",
+      "count": 1,
+      "end_to_end_access_not_verified": true
+    }
+  },
+  "not_verified": [
+    "ec2_run_permission",
+    "available_instantaneous_capacity",
+    "specific_subnet_route_NACL_SSH_end_to_end",
+    "remaining_standard_vcpu_quota",
+    "remote_R_and_Codex_environment",
+    "250000_cell_full_input_workflow_fit"
+  ],
+  "resources_created": false
+}

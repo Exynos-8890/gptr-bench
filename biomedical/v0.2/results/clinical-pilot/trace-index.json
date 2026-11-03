@@ -1,0 +1,20 @@
+[
+  {
+    "trial": 1,
+    "raw_sha256": "bc57ce00128275fda24df3079d92fdd730caf56d3d7b9a9f0d5f967ef4bff90a",
+    "reviewed_sha256": "df9ae886fbc83ba76e68d94ac91e7bd0af4f8b0e34e6db87e56b7f35d7226a6e",
+    "r_calls": 4
+  },
+  {
+    "trial": 2,
+    "raw_sha256": "023192771f1f3afa21bb203868e1b3e9ac4161154f864ee84248fd509546ade0",
+    "reviewed_sha256": "6738bf0c4e03bc5eca474c39c28d986bf90ecf2136da2a8f40a8c061a790c485",
+    "r_calls": 5
+  },
+  {
+    "trial": 3,
+    "raw_sha256": "2fe9da0ce51c67b39335c0a2b104d63eac59332d5bb6f055d42ba80fea0c8441",
+    "reviewed_sha256": "55c9d6a7a40e6869d9bb41b0b4b030c861d129b56de2f61a78f690ab50be2272",
+    "r_calls": 4
+  }
+]

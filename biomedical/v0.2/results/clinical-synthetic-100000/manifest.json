@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "task": "clinical",
+  "live": false,
+  "arms": [
+    "A2",
+    "C2",
+    "C3"
+  ],
+  "gptr_revision": "5c7f7339fa6f947ea989f6278b4f3282ee85f971",
+  "python": "3.14.5",
+  "source_sha256": "bf8610c239e4812c92fa4640cd9dfc438c20c335a77aa950275408758f988628",
+  "model": null,
+  "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+  "psutil": "7.2.2",
+  "repeats": 1,
+  "rows": 100000,
+  "timeout_seconds": 900,
+  "seed": 20261027,
+  "replays": 1,
+  "token_limit": 1000000,
+  "cost_limit": 5,
+  "budget_policy": "provider usage checked at turn boundaries; unknown CLI cost cannot be enforced",
+  "codex_version": null,
+  "cache_policy": "uncontrolled OS cache; serial runs; no cold-cache claim",
+  "initial_load": "included",
+  "rds_compression": false,
+  "dataset_sha256": "bcbc2c1d0895a1bfd30419cc2fae5c1833e4e090a265144204605bb3ada04fca",
+  "environment": {
+    "r": "R version 4.5.1 (2025-06-13)",
+    "packages": {
+      "survival": "3.8.3",
+      "jsonlite": "2.0.0",
+      "pkgload": "1.5.3",
+      "processx": "3.8.6",
+      "ps": "1.9.1"
+    }
+  }
+}

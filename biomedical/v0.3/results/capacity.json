@@ -1,0 +1,12 @@
+{
+  "observed_at": "2026-10-28T21:57:48.117377+00:00",
+  "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+  "ram_total_bytes": 34359738368,
+  "ram_available_bytes": 8930885632,
+  "disk_free_bytes": 379752488960,
+  "full_sparse_array_lower_bound_bytes": 15733703844,
+  "full_preflight_budget_bytes": 40057342280,
+  "full_tier_eligible": false,
+  "full_tier_reason": "Full in-memory parse, copies, agent and independent evaluation exceed available RAM; full tier is capacity-gated, not measured.",
+  "primary_real_cells": 100000
+}

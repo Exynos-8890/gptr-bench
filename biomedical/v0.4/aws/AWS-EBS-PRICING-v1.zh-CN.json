@@ -1,0 +1,80 @@
+{
+  "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/us-east-1/index.csv",
+  "found": [
+    {
+      "SKU": "7Q58NR58VQEASA4W",
+      "RateCode": "7Q58NR58VQEASA4W.JRTCKXETXF.6YS6EN2CT7",
+      "TermType": "OnDemand",
+      "PriceDescription": "$0.005 per provisioned IOPS-month of gp3 - US East (N. Virginia)",
+      "EffectiveDate": "2026-10-01",
+      "Unit": "IOPS-Mo",
+      "PricePerUnit": "0.0050000000",
+      "Currency": "USD",
+      "Product Family": "System Operation",
+      "Location": "US East (N. Virginia)",
+      "usageType": "EBS:VolumeP-IOPS.gp3",
+      "Volume API Name": "gp3"
+    },
+    {
+      "SKU": "JG3KUJMBRGHV3N8G",
+      "RateCode": "JG3KUJMBRGHV3N8G.JRTCKXETXF.6YS6EN2CT7",
+      "TermType": "OnDemand",
+      "PriceDescription": "$0.08 per GB-month of General Purpose (gp3) provisioned storage - US East (N. Virginia)",
+      "EffectiveDate": "2026-10-01",
+      "Unit": "GB-Mo",
+      "PricePerUnit": "0.0800000000",
+      "Currency": "USD",
+      "Product Family": "Storage",
+      "Location": "US East (N. Virginia)",
+      "usageType": "EBS:VolumeUsage.gp3",
+      "Volume API Name": "gp3"
+    },
+    {
+      "SKU": "SQUFRQX4K92S4SBB",
+      "RateCode": "SQUFRQX4K92S4SBB.JRTCKXETXF.6YS6EN2CT7",
+      "TermType": "OnDemand",
+      "PriceDescription": "$0.04 per provisioned MiBps-month of gp3 - US East (N. Virginia)",
+      "EffectiveDate": "2026-10-01",
+      "Unit": "GiBps-mo",
+      "PricePerUnit": "40.9600000000",
+      "Currency": "USD",
+      "Product Family": "Provisioned Throughput",
+      "Location": "US East (N. Virginia)",
+      "usageType": "EBS:VolumeP-Throughput.gp3",
+      "Volume API Name": "gp3"
+    }
+  ],
+  "retrieved_at_utc": "2026-10-31T05:40:45.428628+00:00",
+  "verified_region": "us-east-1",
+  "gp3_mibps_month_usd": 0.04,
+  "recommendation": {
+    "instance_type": "x8i.2xlarge",
+    "ec2_usd_per_hour": 0.87532,
+    "ec2_pricing_source": "https://b0.p.awsstatic.com/pricing/2.0/meteredUnitMaps/ec2/USD/current/ec2-ondemand-without-sec-sel/US%20East%20(N.%20Virginia)/Linux/index.json",
+    "ec2_record": {
+      "rateCode": "TVBUMBK2UCNQ4WWQ.JRTCKXETXF.6YS6EN2CT7",
+      "price": "0.8753200000",
+      "Location": "US East (N. Virginia)",
+      "Instance Family": "Memory optimized",
+      "vCPU": "8",
+      "Instance Type": "x8i.2xlarge",
+      "Memory": "128 GiB",
+      "Storage": "EBS only",
+      "Network Performance": "Up to 15000 Megabit",
+      "plc:OperatingSystem": "Linux",
+      "plc:InstanceFamily": "Memory Optimized",
+      "Operating System": "Linux",
+      "Pre Installed S/W": "NA",
+      "License Model": "No License required"
+    },
+    "data_volume_gib": 2048,
+    "root_volume_gib": 100,
+    "data_throughput_mibps": 250,
+    "data_iops": 3000,
+    "ebs_monthly_usd": 176.84,
+    "monthly_assumption_days": 30,
+    "total_7days_usd": 189.15642666666665,
+    "total_14days_usd": 378.3128533333333,
+    "total_30days_usd": 810.6704
+  }
+}

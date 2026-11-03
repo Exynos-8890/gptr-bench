@@ -1,0 +1,69 @@
+{
+  "checked_at_utc": "2026-10-31T05:44:12.402765+00:00",
+  "ec2_catalog_manifest": {
+    "serviceId": "ec2",
+    "accessType": "publish",
+    "hawkFilePublicationDate": "2026-10-29T17:56:34Z",
+    "ETLIngestionTriggerDate": "2026-10-29T17:56:34Z",
+    "currencyCode": "USD",
+    "source": "ec2-ondemand-without-sec-sel"
+  },
+  "ec2_source": "https://b0.p.awsstatic.com/pricing/2.0/meteredUnitMaps/ec2/USD/current/ec2-ondemand-without-sec-sel/US%20East%20(N.%20Virginia)/Linux/index.json",
+  "candidates": [
+    {
+      "rateCode": "P788WTZHXVS7MXZW.JRTCKXETXF.6YS6EN2CT7",
+      "price": "0.8336300000",
+      "Location": "US East (N. Virginia)",
+      "Instance Family": "Memory optimized",
+      "vCPU": "4",
+      "Instance Type": "x2iedn.xlarge",
+      "Memory": "128 GiB",
+      "Storage": "1 x 118 NVMe SSD",
+      "Network Performance": "Up to 25 Gigabit",
+      "plc:OperatingSystem": "Linux",
+      "plc:InstanceFamily": "Memory Optimized",
+      "Operating System": "Linux",
+      "Pre Installed S/W": "NA",
+      "License Model": "No License required"
+    },
+    {
+      "rateCode": "TVBUMBK2UCNQ4WWQ.JRTCKXETXF.6YS6EN2CT7",
+      "price": "0.8753200000",
+      "Location": "US East (N. Virginia)",
+      "Instance Family": "Memory optimized",
+      "vCPU": "8",
+      "Instance Type": "x8i.2xlarge",
+      "Memory": "128 GiB",
+      "Storage": "EBS only",
+      "Network Performance": "Up to 15000 Megabit",
+      "plc:OperatingSystem": "Linux",
+      "plc:InstanceFamily": "Memory Optimized",
+      "Operating System": "Linux",
+      "Pre Installed S/W": "NA",
+      "License Model": "No License required"
+    },
+    {
+      "rateCode": "5M855X9DEAQ34B56.JRTCKXETXF.6YS6EN2CT7",
+      "price": "0.4376600000",
+      "Location": "US East (N. Virginia)",
+      "Instance Family": "Memory optimized",
+      "vCPU": "4",
+      "Instance Type": "x8i.xlarge",
+      "Memory": "64 GiB",
+      "Storage": "EBS only",
+      "Network Performance": "Up to 12500 Megabit",
+      "plc:OperatingSystem": "Linux",
+      "plc:InstanceFamily": "Memory Optimized",
+      "Operating System": "Linux",
+      "Pre Installed S/W": "NA",
+      "License Model": "No License required"
+    }
+  ],
+  "ebs_evidence": "AWS-EBS-PRICING-v1.zh-CN.json",
+  "recommendation": "1 x x8i.2xlarge,128GiB,8vCPU/4cores,14days,USD500 allocation",
+  "user_preference": "One machine; fewer cores; longer runtime acceptable",
+  "execution_status": "User-paused; no benchmark processes active when checked; no AWS resources created",
+  "report_version": "1.1",
+  "memory_estimate_evidence": "AWS-MEMORY-v1.zh-CN.json",
+  "removed_section": "Original32-core rationale deleted at user request"
+}

@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "task": "single-cell",
+  "live": true,
+  "arms": [
+    "A1",
+    "C1",
+    "A2",
+    "C2",
+    "C3"
+  ],
+  "benchmark_version": "0.3.0",
+  "plan_updated_at": "2026-10-28T21:51:38Z",
+  "started_at": "2026-10-28T22:16:41Z",
+  "dataset": {
+    "accession": "GSE236581",
+    "source_updated": "2024-07-29",
+    "source_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE236nnn/GSE236581/suppl/",
+    "source_cells": 975275,
+    "source_genes": 36027,
+    "source_nonzero": 1310816895,
+    "selected_cells": 10000,
+    "selected_nonzero": 13395576,
+    "selection": "10000 evenly spread columns from the frozen 100000-real-cell subset",
+    "representation": "fully resident dgCMatrix; all genes; original nonzero counts",
+    "sources": [
+      {
+        "file": "GSE236581_counts.mtx.gz",
+        "sha256": "360a81fd6a5c0414b243269539cd6936347696fa71c3789b42b5d7690db3f63b",
+        "bytes": 4232498668,
+        "retrieved_at": "2026-10-28T21:57:02Z"
+      },
+      {
+        "file": "GSE236581_barcodes.tsv.gz",
+        "sha256": "c43723bb3ace3df055c6d1d6716a43e8cf81ab182ee7219ee92c60af5bee71d5",
+        "bytes": 4749382,
+        "retrieved_at": "2026-10-28T21:48:48Z"
+      },
+      {
+        "file": "GSE236581_features.tsv.gz",
+        "sha256": "9fa791c7c082a66d2a7567620dd66dbbc82bcda1dbb0ceb145a4ce1c25540fc4",
+        "bytes": 249385,
+        "retrieved_at": "2026-10-28T21:48:49Z"
+      },
+      {
+        "file": "GSE236581_CRC-ICB_metadata.txt.gz",
+        "sha256": "7ecdb3b24e7e40e41676fd18f2b4ef5615506c06cb218c0a961dcfbe49e622c6",
+        "bytes": 13343514,
+        "retrieved_at": "2026-10-28T21:48:51Z"
+      }
+    ],
+    "prepared_at": "2026-10-28T22:16:18Z",
+    "parent_selected_cells": 100000
+  },
+  "gptr_revision": "03ac9d41f99f5280084b0b1f9b8ae2f8173653be",
+  "python": "3.14.5",
+  "source_sha256": "b6dfb71d26f578acee81a9e1ae678cd2228934ecf179be8acbf96790cab25028",
+  "model": {
+    "configured": "gpt-6.1-sol",
+    "gptr": "codex/gpt-6.1-sol",
+    "codex": "gpt-6.1-sol",
+    "reasoning": "CLI model default; user config ignored"
+  },
+  "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+  "psutil": "7.2.2",
+  "repeats": 1,
+  "rows": null,
+  "timeout_seconds": 1800.0,
+  "seed": 20261027,
+  "replays": 1,
+  "token_limit": 1000000,
+  "cost_limit": 5,
+  "budget_policy": "provider usage checked at turn boundaries; unknown CLI cost cannot be enforced",
+  "codex_version": "codex-cli 0.165.0",
+  "cache_policy": "uncontrolled OS cache; serial runs; no cold-cache claim",
+  "initial_load": "included",
+  "rds_compression": false,
+  "dataset_sha256": "11aa4083750b74bd1472c3f0b6ab05730a84182e73ea1585e8e21899202a800d",
+  "environment": {
+    "r": "R version 4.5.1 (2025-06-13)",
+    "packages": {
+      "Matrix": "1.7.3",
+      "survival": "3.8.3",
+      "jsonlite": "2.0.0",
+      "pkgload": "1.5.3",
+      "processx": "3.8.6",
+      "ps": "1.9.1"
+    }
+  }
+}

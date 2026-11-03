@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "task": "clinical",
+  "live": true,
+  "arms": [
+    "A1",
+    "C1",
+    "A2",
+    "C2",
+    "C3"
+  ],
+  "gptr_revision": "2f88160e6459ab83ec7a8286f8f097f1d6637ead",
+  "python": "3.14.5",
+  "source_sha256": "008091f63171c73e64726b362d111aa0e0fd886f396c03b1d339c0e74d6188b8",
+  "model": {
+    "configured": "codex/default",
+    "gptr": "codex/gpt-6-sol",
+    "codex": "gpt-6-sol",
+    "reasoning": "CLI model default; user config ignored"
+  },
+  "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+  "psutil": "7.2.2",
+  "repeats": 3,
+  "rows": null,
+  "timeout_seconds": 900,
+  "seed": 20261027,
+  "replays": 10,
+  "token_limit": 1000000,
+  "cost_limit": 5,
+  "budget_policy": "provider usage checked at turn boundaries; unknown CLI cost cannot be enforced",
+  "codex_version": "codex-cli 0.165.0",
+  "cache_policy": "uncontrolled OS cache; serial runs; no cold-cache claim",
+  "initial_load": "included",
+  "rds_compression": false,
+  "dataset_sha256": "c7440e0cf19a50596ada468008dd0cb7aee46c3d702a994d29232d9c0698d60d",
+  "environment": {
+    "r": "R version 4.5.1 (2025-06-13)",
+    "packages": {
+      "survival": "3.8.3",
+      "jsonlite": "2.0.0",
+      "pkgload": "1.5.3",
+      "processx": "3.8.6",
+      "ps": "1.9.1"
+    }
+  }
+}

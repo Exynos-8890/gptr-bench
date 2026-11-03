@@ -1,0 +1,32 @@
+testthat::test_that("the clinical workflow produces independently checked survival results", {
+  source(testthat::test_path("..", "tasks", "clinical.R"), local = TRUE)
+  source(testthat::test_path("..", "evaluate.R"), local = TRUE)
+  task = clinical_task()
+  testthat::expect_length(task$prompts, 3L)
+  testthat::expect_length(task$steps, 3L)
+  raw = clinical_data()
+  testthat::expect_equal(nrow(raw), 137L)
+  workspace = withr::local_tempdir()
+  withr::local_dir(workspace)
+  home = new.env(parent = globalenv())
+  home$raw = raw
+  for (step in task$steps) eval(parse(text = step$code), envir = home)
+  testthat::expect_true(check_artifacts(workspace, raw)$ok)
+  qc = utils::read.csv("qc.csv")
+  testthat::expect_equal(qc$n, 137L)
+  testthat::expect_equal(qc$events, 128L)
+  km = utils::read.csv("km.csv")
+  testthat::expect_equal(nrow(km), 114L)
+  utils::write.csv(km[rev(seq_len(nrow(km))), ], "km.csv", row.names = FALSE)
+  testthat::expect_true(check_artifacts(workspace, raw)$ok)
+  revised = utils::read.csv("revised.csv")
+  revised$estimate[1L] = revised$estimate[1L] + 1
+  utils::write.csv(revised, "revised.csv", row.names = FALSE)
+  result = check_artifacts(workspace, raw)
+  testthat::expect_false(result$ok)
+  testthat::expect_match(paste(result$errors, collapse = " "), "revised.csv")
+  names(km)[1L] = "wrong_column"
+  utils::write.csv(km, "km.csv", row.names = FALSE)
+  testthat::expect_match(paste(check_artifacts(workspace, raw)$errors, collapse = " "),
+                         "column names")
+})

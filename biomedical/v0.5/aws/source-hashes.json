@@ -1,0 +1,8 @@
+{
+  "T01": {
+    "GSE236581_counts.mtx.gz": "360a81fd6a5c0414b243269539cd6936347696fa71c3789b42b5d7690db3f63b",
+    "GSE236581_barcodes.tsv.gz": "c43723bb3ace3df055c6d1d6716a43e8cf81ab182ee7219ee92c60af5bee71d5",
+    "GSE236581_features.tsv.gz": "9fa791c7c082a66d2a7567620dd66dbbc82bcda1dbb0ceb145a4ce1c25540fc4",
+    "GSE236581_CRC-ICB_metadata.txt.gz": "7ecdb3b24e7e40e41676fd18f2b4ef5615506c06cb218c0a961dcfbe49e622c6"
+  }
+}

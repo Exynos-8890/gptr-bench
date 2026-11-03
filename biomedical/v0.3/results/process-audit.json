@@ -1,0 +1,113 @@
+{
+  "method": "Reviewed the six real trajectories: full raw counts are multiplied by sparse group membership before marker extraction at both thresholds.",
+  "trials": [
+    {
+      "arm": "A1",
+      "trial": 1,
+      "aggregations": [
+        {
+          "turn": 2,
+          "all_gene_product": [
+            "baseline_all_genes = raw$counts %*% baseline_membership"
+          ]
+        },
+        {
+          "turn": 3,
+          "all_gene_product": [
+            "revised_all_genes = raw$counts %*% revised_membership"
+          ]
+        }
+      ]
+    },
+    {
+      "arm": "C1",
+      "trial": 1,
+      "aggregations": [
+        {
+          "script": "baseline.R",
+          "all_gene_product": [
+            "all_gene_sums <- raw$counts %*% membership"
+          ]
+        },
+        {
+          "script": "revised.R",
+          "all_gene_product": [
+            "all_gene_sums <- raw$counts %*% membership"
+          ]
+        }
+      ]
+    },
+    {
+      "arm": "A1",
+      "trial": 2,
+      "aggregations": [
+        {
+          "turn": 2,
+          "all_gene_product": [
+            "baseline_all_genes = raw$counts %*% baseline_membership"
+          ]
+        },
+        {
+          "turn": 3,
+          "all_gene_product": [
+            "revised_all_genes = raw$counts %*% revised_membership"
+          ]
+        }
+      ]
+    },
+    {
+      "arm": "C1",
+      "trial": 2,
+      "aggregations": [
+        {
+          "script": "baseline.R",
+          "all_gene_product": [
+            "all_gene_counts <- raw$counts %*% assignment"
+          ]
+        },
+        {
+          "script": "revised.R",
+          "all_gene_product": [
+            "all_gene_counts <- raw$counts %*% assignment"
+          ]
+        }
+      ]
+    },
+    {
+      "arm": "A1",
+      "trial": 3,
+      "aggregations": [
+        {
+          "turn": 2,
+          "all_gene_product": [
+            "baseline_all_genes = raw$counts %*% baseline_design"
+          ]
+        },
+        {
+          "turn": 3,
+          "all_gene_product": [
+            "revised_all_genes = raw$counts %*% revised_design"
+          ]
+        }
+      ]
+    },
+    {
+      "arm": "C1",
+      "trial": 3,
+      "aggregations": [
+        {
+          "script": "baseline.R",
+          "all_gene_product": [
+            "all_gene_sums <- raw$counts %*% design"
+          ]
+        },
+        {
+          "script": "revised.R",
+          "all_gene_product": [
+            "all_gene_sums <- raw$counts %*% design"
+          ]
+        }
+      ]
+    }
+  ]
+}

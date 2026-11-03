@@ -1,0 +1,50 @@
+[
+  {
+    "trial": 1,
+    "raw_sha256": "53332895d9456a9cf0953d6e09b9321436c5d365efab49edac2e2dd7452e70ce",
+    "reviewed_sha256": "c7f2239326882e004cb83db270ccd1e3eb1747a621ac158a6a859960b215d0bc",
+    "r_calls": 4,
+    "compatibility": {
+      "ok": true,
+      "validation": "ok",
+      "synthetic_request_grouping": true
+    },
+    "initial_validation": {
+      "ok": false,
+      "validation": "error",
+      "synthetic_request_grouping": true
+    }
+  },
+  {
+    "trial": 2,
+    "raw_sha256": "4f058964b5b51c7ed1c38ad043b865c8deb18596cca00d220486f33a61ba93f8",
+    "reviewed_sha256": "9ef58fb1b9e10a0a085ca2533f7e014434a6967954848c148079ed2661ba9668",
+    "r_calls": 4,
+    "compatibility": {
+      "ok": true,
+      "validation": "ok",
+      "synthetic_request_grouping": true
+    },
+    "initial_validation": {
+      "ok": true,
+      "validation": "ok",
+      "synthetic_request_grouping": true
+    }
+  },
+  {
+    "trial": 3,
+    "raw_sha256": "9b1a742fca5e40b3a98d4045b4bf5b8046084858df3c99ea8f7524f2bd66163f",
+    "reviewed_sha256": "205ad6114c8e8d7571b8ae9ce9afb4743c25e1950cabb151d11739bd6a6eb895",
+    "r_calls": 4,
+    "compatibility": {
+      "ok": true,
+      "validation": "ok",
+      "synthetic_request_grouping": true
+    },
+    "initial_validation": {
+      "ok": false,
+      "validation": "error",
+      "synthetic_request_grouping": true
+    }
+  }
+]
