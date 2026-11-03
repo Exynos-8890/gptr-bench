@@ -9,7 +9,8 @@ __pycache__/
 biomedical/data/
 biomedical/runs/
 LOCAL_SETUP.md
-# Machine-specific migration views remain local.
-/EXTRACTION.zh-CN.*
-/biomedical/OPEN-IN-VSCODE.zh-CN.*
-/biomedical/VERSION-LAYOUT.zh-CN.json
+# Local Chinese-language documents/assets and HTML previews.
+*.[zZ][hH]-[cC][nN]*
+*.[zZ][hH][cC][nN]*
+*.[hH][tT][mM][lL]
+*.[hH][tT][mM]
