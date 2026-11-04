@@ -1,0 +1,15 @@
+{
+  "data/additive-mean-differences.csv": "fcc7a00a2818b86b7bcb334e5ce08d4bcb6cb267249e17580eb62464772f18af",
+  "data/all-attempts.csv": "9ddd884bb8dc41b5641f13982ef8e117ab754b9080227f2c99db1bc614adb4bc",
+  "data/group-statistics.csv": "cde11bed7b7d2ba073bdaae603d0243b72fd7811b233b6385c6ee5c5b200daba",
+  "data/request-stages.csv": "59bd48ea35f28b5420c52b92d72e3a77087f9db1d14eaa1a539c437cdd76d566",
+  "data/timeline.csv": "436ec2997b1d770bb51b1b189b2f5a5a17d1805f096b8129aaf5d16cbb47464a",
+  "trace/all-run-intervals.csv": "954913ef0d8269d6151299cdfa3c6564113eee66ba0f7fac51ee91426e531c32",
+  "trace/execution-audit.json": "0293cea02724e1fdc3c30776484b40f676c68f9f0db6c07ed0a626852abae344",
+  "trace/final-review.json": "03fd04165d83f21642fee639661db94f5c4a64e3c041d8bcd50356c823cbe85e",
+  "trace/key-events.jsonl": "f7e88dcee78412d637b097a098b85350a7d1070d56609d4f85ebbe5f5da901a1",
+  "trace/numerical-review.json": "05adf5ca8012bdd132c66f7c4ae4013da710a0dcc65f71720efc70de92836d55",
+  "trace/provenance.json": "b4cde9a27247db08fa56e969a8c28147588adcf35565142a44676eb18b676878",
+  "trace/shared-prompts-T08.json": "ff7ae4b709d424333dfe4f0843849342531450b9c0fd49049f32d92f86ce858e",
+  "trace/tool-calls.csv": "5da2339909fc0a291c033d6ad6a9e3db43bd1a721efa9f99ff9cc747851d31ec"
+}

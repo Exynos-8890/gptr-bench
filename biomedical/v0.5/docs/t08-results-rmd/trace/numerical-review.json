@@ -1,0 +1,190 @@
+{
+  "reference": {
+    "input-audit.csv": [
+      {
+        "n_spectra": 307590,
+        "total_peaks": 512278842,
+        "n_ms1": 3889,
+        "n_ms2": 303701,
+        "min_retention_time": 0,
+        "max_retention_time": 2333.3556089999997
+      }
+    ],
+    "signal-summary.csv": [
+      {
+        "ms_level": 1,
+        "n_spectra": 3889,
+        "total_intensity": 7477633690913.7676,
+        "mean_spectrum_tic": 1922765155.8019459,
+        "median_spectrum_tic": 1024145179.84375,
+        "min_spectrum_tic": 798778.03173828125,
+        "max_spectrum_tic": 21423551431.359375
+      },
+      {
+        "ms_level": 2,
+        "n_spectra": 303701,
+        "total_intensity": 631168835812.35852,
+        "mean_spectrum_tic": 2078257.3511854054,
+        "median_spectrum_tic": 1116290.7566986084,
+        "min_spectrum_tic": 0,
+        "max_spectrum_tic": 575459453.11621094
+      }
+    ],
+    "peak-summary.csv": [
+      {
+        "ms_level": 1,
+        "n_spectra": 3889,
+        "total_peaks": 7552933,
+        "median_peaks": 1869,
+        "min_peaks": 91,
+        "max_peaks": 4576,
+        "mean_base_peak": 410324806.11072898,
+        "median_base_peak": 98604488,
+        "min_base_peak": 61454.59375,
+        "max_base_peak": 7726734848
+      },
+      {
+        "ms_level": 2,
+        "n_spectra": 303701,
+        "total_peaks": 504725909,
+        "median_peaks": 1684,
+        "min_peaks": 0,
+        "max_peaks": 5719,
+        "mean_base_peak": 237950.4463994395,
+        "median_base_peak": 29381.16015625,
+        "min_base_peak": 0,
+        "max_base_peak": 111765496
+      }
+    ]
+  },
+  "checks": {
+    "A1-1": {
+      "input-audit.csv": {
+        "pass": true,
+        "columns": true,
+        "shape": true,
+        "max_relative_error": 1.948898612506621e-16
+      },
+      "signal-summary.csv": {
+        "pass": true,
+        "columns": true,
+        "shape": true,
+        "max_relative_error": 2.2406334183884077e-15
+      },
+      "peak-summary.csv": {
+        "pass": true,
+        "columns": true,
+        "shape": true,
+        "max_relative_error": 2.0792779557720484e-15
+      },
+      "report_exists": true
+    },
+    "A1-2": {
+      "input-audit.csv": {
+        "pass": true,
+        "columns": true,
+        "shape": true,
+        "max_relative_error": 1.948898612506621e-16
+      },
+      "signal-summary.csv": {
+        "pass": true,
+        "columns": true,
+        "shape": true,
+        "max_relative_error": 2.2406334183884077e-15
+      },
+      "peak-summary.csv": {
+        "pass": true,
+        "columns": true,
+        "shape": true,
+        "max_relative_error": 2.0792779557720484e-15
+      },
+      "report_exists": true
+    },
+    "A1-3": {
+      "input-audit.csv": {
+        "pass": true,
+        "columns": true,
+        "shape": true,
+        "max_relative_error": 1.948898612506621e-16
+      },
+      "signal-summary.csv": {
+        "pass": true,
+        "columns": true,
+        "shape": true,
+        "max_relative_error": 2.2406334183884077e-15
+      },
+      "peak-summary.csv": {
+        "pass": true,
+        "columns": true,
+        "shape": true,
+        "max_relative_error": 2.0792779557720484e-15
+      },
+      "report_exists": true
+    },
+    "C1-1": {
+      "input-audit.csv": {
+        "pass": true,
+        "columns": true,
+        "shape": true,
+        "max_relative_error": 1.948898612506621e-16
+      },
+      "signal-summary.csv": {
+        "pass": true,
+        "columns": true,
+        "shape": true,
+        "max_relative_error": 2.2406334183884077e-15
+      },
+      "peak-summary.csv": {
+        "pass": true,
+        "columns": true,
+        "shape": true,
+        "max_relative_error": 2.0792779557720484e-15
+      },
+      "report_exists": true
+    },
+    "C1-2": {
+      "input-audit.csv": {
+        "pass": true,
+        "columns": true,
+        "shape": true,
+        "max_relative_error": 1.948898612506621e-16
+      },
+      "signal-summary.csv": {
+        "pass": true,
+        "columns": true,
+        "shape": true,
+        "max_relative_error": 2.2406334183884077e-15
+      },
+      "peak-summary.csv": {
+        "pass": true,
+        "columns": true,
+        "shape": true,
+        "max_relative_error": 2.0792779557720484e-15
+      },
+      "report_exists": true
+    },
+    "C1-3": {
+      "input-audit.csv": {
+        "pass": true,
+        "columns": true,
+        "shape": true,
+        "max_relative_error": 1.948898612506621e-16
+      },
+      "signal-summary.csv": {
+        "pass": true,
+        "columns": true,
+        "shape": true,
+        "max_relative_error": 2.2406334183884077e-15
+      },
+      "peak-summary.csv": {
+        "pass": true,
+        "columns": true,
+        "shape": true,
+        "max_relative_error": 2.0792779557720484e-15
+      },
+      "report_exists": true
+    }
+  },
+  "scope": "Full input cardinality and all requested numerical CSV summaries; narrative and execution policy reviewed separately.",
+  "tolerance": 1e-10
+}

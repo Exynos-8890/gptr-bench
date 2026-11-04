@@ -1,0 +1,240 @@
+---
+title: "T08 Results: Full-File mzML Reading and Cross-Request Reuse"
+subtitle: "GPT-R Bench v0.5 dev.24 · Six completed runs"
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+    self_contained: true
+  github_document:
+    toc: true
+    html_preview: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE,
+  fig.width = 11, fig.height = 6, dpi = 180, fig.path = "figures/", fig.align = "center")
+library(ggplot2)
+library(patchwork)
+
+# Data
+runs = read.csv("data/all-attempts.csv")
+requests = read.csv("data/request-stages.csv")
+intervals = read.csv("trace/all-run-intervals.csv")
+statistics = read.csv("data/group-statistics.csv")
+phases = c("file_read_s", "tool_nonread_s", "harness_model_s")
+phase_labels = c("File reads", "Tools excluding reads", "Harness + model + network")
+arm_colors = c(A1 = "#2776B9", C1 = "#D77B35")
+phase_colors = setNames(c("#27836C", "#2776B9", "#B8C2CC"), phase_labels)
+summary = subset(statistics, metric %in% c("wall_s", "actual_calls"))
+summary$arm = factor(summary$arm, c("C1", "A1"))
+request_means = aggregate(requests[phases], requests[c("request", "arm")], mean)
+stages = reshape(request_means, varying = phases, v.names = "seconds",
+  timevar = "phase", times = phase_labels, direction = "long")
+stages$phase = factor(stages$phase, phase_labels)
+stages$arm = factor(stages$arm, c("C1", "A1"))
+stages$request = paste("Request", stages$request)
+request_means$total = rowSums(request_means[phases])
+request_means$request = paste("Request", request_means$request)
+v = sapply(c(phases, "wall_s"), function(m)
+  mean(runs[runs$arm == "C1", m]) - mean(runs[runs$arm == "A1", m]))
+waterfall = data.frame(label = c(phase_labels, "Net difference"), value = v,
+  start = c(0, cumsum(v)[1:2], 0), end = c(cumsum(v)[1:3], v[4]), y = 4:1)
+selected_trials = sapply(c("A1", "C1"), function(a) {
+  z = runs[runs$arm == a, ]; z$trial[order(z$wall_s)][2]
+})
+timeline = do.call(rbind, lapply(names(selected_trials), function(a)
+  subset(intervals, arm == a & trial == selected_trials[[a]])))
+# Split tool activity at read boundaries; keep only its non-reading portions.
+tools = subset(timeline, kind == "execution")
+nonread = do.call(rbind, lapply(seq_len(nrow(tools)), function(i) {
+  z = tools[i, ]; reads = subset(timeline, arm == z$arm & kind == "read")
+  cuts = sort(unique(c(z$start, z$finish,
+    pmax(z$start, pmin(z$finish, c(reads$start, reads$finish))))))
+  a = head(cuts, -1); b = tail(cuts, -1); mid = (a + b) / 2
+  keep = !vapply(mid, function(t) any(t >= reads$start & t < reads$finish), logical(1))
+  out = z[rep(1, sum(keep)), ]; out$start = a[keep]; out$finish = b[keep]; out
+}))
+gantt = rbind(subset(timeline, kind != "execution"), nonread)
+gantt$lane = c(request = 3, execution = 2, read = 1)[gantt$kind]
+gantt$color = ifelse(gantt$kind == "request", arm_colors[gantt$arm],
+  ifelse(gantt$kind == "read", phase_colors[1], phase_colors[2]))
+
+# Tables and headline values
+results_table = subset(statistics, metric %in% c("wall_s", "actual_calls",
+  "r_execution_calls", "input_reads", "peak_gib"))
+tokens_table = subset(statistics, grepl("tokens", metric))
+reads_table = aggregate(input_reads ~ request + arm, requests,
+  function(x) c(median = median(x), min = min(x), max = max(x)))
+provenance = jsonlite::fromJSON("trace/provenance.json")
+manifest = provenance$manifest
+conditions = unlist(manifest[c("benchmark_version", "model", "reasoning_effort",
+  "codex_version", "codex_r_execution_policy", "platform", "python")])
+conditions_table = data.frame(condition = names(conditions), value = unname(conditions))
+input_table = as.data.frame(manifest$dataset[c("input_format", "input_bytes", "spectra", "total_peaks")])
+wall = tapply(runs$wall_s, runs$arm, median)
+f = function(x) formatC(x, format = "f", digits = 2, big.mark = ",")
+```
+
+[Methods](method.md)
+
+## A Total wall time and tool calls
+
+**Median wall time: A1 `r f(wall[["A1"]])` s; C1 `r f(wall[["C1"]])` s.**
+A1 takes `r f(wall[['C1']] - wall[['A1']])` seconds less, a `r f(100 * (1 - wall[['A1']] / wall[['C1']]))`% reduction relative to C1's median.
+Each arm has three runs; we show the median, minimum, and maximum.
+We show no confidence intervals and make no population-level significance claim.
+
+```{r comparison, fig.height=7}
+base_theme = theme_minimal(base_size = 14) + theme(
+  panel.grid.minor = element_blank(), panel.grid.major.y = element_blank(),
+  plot.title = element_text(face = "bold"), legend.position = "top",
+  legend.title = element_blank(), strip.text = element_text(face = "bold", hjust = 0),
+  plot.margin = margin(12, 18, 12, 12))
+comparison_plot = function(metric_name, title, axis_label) {
+  z = subset(summary, metric == metric_name)
+  ggplot(z, aes(x = median, y = arm, fill = arm)) +
+    geom_col(width = .5) +
+    geom_segment(aes(x = minimum, xend = maximum, yend = arm), linewidth = 1) +
+    geom_point(aes(x = minimum), shape = 124, size = 7) +
+    geom_point(aes(x = maximum), shape = 124, size = 7) +
+    geom_point(shape = 21, size = 4, fill = "white") +
+    geom_text(aes(x = maximum, label = sprintf("  %.2f [%.2f, %.2f]", median, minimum, maximum)),
+      hjust = 0, size = 4) +
+    scale_fill_manual(values = arm_colors) +
+    scale_x_continuous(limits = c(0, max(z$maximum) * 1.65), expand = expansion(mult = 0)) +
+    labs(title = title, x = axis_label, y = NULL) + base_theme + theme(legend.position = "none")
+}
+comparison_plot("wall_s", "Total wall time", "Seconds") /
+  comparison_plot("actual_calls", "Actual tool calls", "Calls") +
+  plot_annotation(subtitle = "Median [minimum, maximum] · Three runs per arm")
+```
+
+Wall time is in seconds; peak memory is in GiB.
+
+```{r results-table}
+results_table
+```
+
+C1 calls include commands, file edits, and polling; outer exec wrappers are not counted twice.
+
+C1 polling waits for finite Rscript processes to finish.
+A1 R executions count R tool calls; C1 R executions count separate Rscript processes.
+
+## B Where does the time saving come from?
+
+**File reads account for the main mean difference: C1 spends `r f(v[["file_read_s"]])` seconds more.**
+Other tool activity and harness/model time together offset this by `r f(-sum(v[c("tool_nonread_s", "harness_model_s")]))` seconds.
+The net mean difference is `r f(v[["wall_s"]])` seconds.
+
+```{r request-stages, fig.height=7}
+ggplot(stages, aes(seconds, arm, fill = phase)) +
+  geom_col(width = .55, position = position_stack(reverse = TRUE)) +
+  geom_text(data = request_means, aes(total, arm, label = sprintf("  %.2f s", total)),
+    inherit.aes = FALSE, hjust = 0, size = 4) +
+  facet_grid(request ~ .) + scale_fill_manual(values = phase_colors) +
+  scale_x_continuous(expand = expansion(mult = c(0, .18))) +
+  labs(title = "Time per request", x = "Seconds · Mean of three runs", y = NULL) + base_theme
+```
+
+Each request has three non-overlapping time categories.
+Stacked bars use means across three runs, so their parts sum to mean request time.
+
+File reads include mzML opening, metadata parsing, peak decoding, and recorded result-table reads.
+Other tool activity includes computation, output writing, and tool overhead.
+The residual combines harness, model thinking, generation, and network waiting.
+
+mzR peaks calls header internally; we take the union of all read intervals.
+Finite C1 Rscript activity counts even when it spans multiple polling calls.
+We allocate read time first, then other tool activity, then the residual.
+The residual is not a separate measurement of model thinking time.
+
+```{r signed-time, fig.height=4.5}
+ggplot(waterfall) +
+  geom_vline(xintercept = 0, color = "#8799AA") +
+  geom_rect(aes(xmin = pmin(start, end), xmax = pmax(start, end),
+    ymin = y - .25, ymax = y + .25, fill = label)) +
+  geom_segment(data = waterfall[1:2, ], aes(x = end, xend = end, y = y - .25, yend = y - .75),
+    linetype = "dashed", color = "#8799AA") +
+  geom_text(aes(x = pmax(start, end) + 5, y = y, label = sprintf("%+.2f s", value)), hjust = 0) +
+  scale_fill_manual(values = c(phase_colors, "Net difference" = arm_colors[["C1"]])) +
+  scale_y_continuous(breaks = 4:1, labels = waterfall$label) +
+  scale_x_continuous(expand = expansion(mult = c(.02, .28))) +
+  labs(title = "Where the time difference comes from", subtitle = "C1 minus A1 · Positive means C1 is slower",
+    x = "Seconds · Difference between means", y = NULL) + base_theme + theme(legend.position = "none")
+```
+
+Positive values mean C1 is slower; negative values mean C1 is faster.
+This chart uses additive mean differences; Part A uses the difference between medians.
+Startup, inter-request gaps, and cleanup belong to the whole-episode residual.
+We do not assign time outside requests to individual requests.
+
+## C Gantt chart and repeated reads
+
+```{r gantt, fig.height=6.5}
+ggplot(gantt) +
+  geom_rect(aes(xmin = start, xmax = finish, ymin = lane - .25, ymax = lane + .25, fill = color)) +
+  geom_segment(data = subset(gantt, kind == "execution" & finish - start < .4),
+    aes(x = start, xend = start, y = lane - .25, yend = lane + .25), color = arm_colors[["A1"]]) +
+  geom_segment(data = subset(gantt, kind == "request"),
+    aes(x = start, xend = start, y = 2.75, yend = 3.25), color = "white", linewidth = .35) +
+  geom_text(data = subset(gantt, kind == "request"),
+    aes((start + finish) / 2, lane, label = paste0("R", request)), color = "white", fontface = "bold") +
+  facet_grid(arm ~ .) + scale_fill_identity() +
+  scale_y_continuous(breaks = 1:3, labels = c("File reads", "Tools excl. reads", "Requests")) +
+  scale_x_continuous(expand = expansion(mult = c(.01, .02))) +
+  labs(title = "Actual timeline of each arm's median-duration run",
+    subtitle = "Green: reads · Blue: tools excluding reads · Thin ticks: short tool activity",
+    x = "Seconds since run start", y = NULL) + base_theme
+```
+
+Representative runs: A1 trial `r selected_trials[["A1"]]` and C1 trial `r selected_trials[["C1"]]`.
+Green bars show file reads; blue bars show tool activity excluding reads.
+Intervals retain their actual durations. Short activities appear as thin ticks.
+Overlapping tool activity is merged, so bar counts do not represent call counts.
+
+The requests perform a full-load audit, an intensity summary, and a peak-count/base-peak summary.
+Each request requires the complete spectra and peak arrays in R memory.
+A1 can retain objects in memory; C1 uses finite native Rscript processes that exit after execution.
+Both arms prohibit extra intermediate data and state caches on disk.
+Scientific outputs comprise three small summary tables and one text report.
+
+Complete peak-array reads per request:
+
+```{r reads-table}
+reads_table
+```
+
+[Per-request timing](data/request-stages.csv) · [Full timeline](data/timeline.csv)
+
+## D Tokens, conditions, and validation
+
+```{r tokens-table}
+tokens_table
+```
+
+Cached input tokens are a subset of input tokens; reasoning tokens are a subset of output tokens.
+Token counts do not measure thinking time.
+
+[MassIVE MSV000100943](https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?task=39baaabaea894f3a9835e00a5e756431): one native plasma-proteomics mzML file (CC0).
+Both arms ran on the same 16 GiB / 2 vCPU host.
+Timing excludes input copying, downloads, and installation.
+OS caches were not cleared; this is not a cold-disk benchmark.
+
+```{r conditions-table}
+conditions_table
+input_table
+```
+
+**All six runs completed and passed numerical and execution-policy review.**
+Review covered full-data scope, three result tables, scripts, artifacts, and execution traces for all six runs.
+Independent full-data recomputation checked every requested summary at a tolerance of 1e-10.
+This experiment adds no protein identification, clinical inference, or downstream biological analysis.
+
+This benchmark measures full-file reading and memory reuse across requests.
+Its results apply to this scenario, not to every task.
+
+Input SHA256: `r manifest$dataset_sha256`.
+Raw batch: `r provenance$run_id`.
+[All six runs](data/all-attempts.csv) · [Provenance and hashes](trace/provenance.json) · [Local validation record](trace/final-review.json)
+

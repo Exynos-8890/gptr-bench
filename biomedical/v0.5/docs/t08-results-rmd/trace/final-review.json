@@ -1,0 +1,72 @@
+{
+  "accepted": true,
+  "summary_zh": "六次均完成，全部数值汇总与执行策略复核通过",
+  "scope": "T08 full-file native read/reuse scenario only; no downstream biology validation or population significance claim",
+  "input_scope": {
+    "spectra": 307590,
+    "peaks": 512278842,
+    "bytes": 6415611632
+  },
+  "full_reads_by_request": {
+    "C1-1": [
+      1,
+      1,
+      1
+    ],
+    "A1-1": [
+      1,
+      0,
+      0
+    ],
+    "A1-2": [
+      1,
+      0,
+      0
+    ],
+    "C1-2": [
+      1,
+      1,
+      1
+    ],
+    "C1-3": [
+      1,
+      1,
+      1
+    ],
+    "A1-3": [
+      1,
+      0,
+      0
+    ]
+  },
+  "shared_prompt_sha256": "5b8622f03165b2faa025ce6a974aa692830786ac5d9caa6f75ac4569a02086b9",
+  "source_archive_sha256": "aac04ba9ba89db0a11889dab7dfeae9cf74868675f3b0d7d212fd6587e0dc827",
+  "numerical_tolerance": 1e-10,
+  "manual_review": {
+    "all_six_trajectories_reviewed": true,
+    "full_peak_arrays_no_scan_selection": true,
+    "no_unrequested_disk_cache": true,
+    "narratives_within_scope": true,
+    "native_tool_counts_verified": true,
+    "evidence": [
+      "A1-1..A1-3 tool input code and final narratives",
+      "C1-1..C1-3 request1.R/request2.R/request3.R, narratives and native tool-call source",
+      "Only requested result CSV/Markdown and execution R scripts in completed workspaces",
+      "C1 native calls explicitly enumerate exec_command/apply_patch/write_stdin; outer exec is not double counted"
+    ],
+    "notes": [
+      "A1-1 corrected a rounded retention-time sentence during the measured run; final prose agrees with the CSV.",
+      "R assignment style differs in generated scripts but does not change execution or data-reuse policy.",
+      "Runtime package RDS reads are outside task workspaces; no scientific RDS/cache was created."
+    ],
+    "record_transfer": {
+      "archive_sha256": "fc14ad555ec5ce02a666bcfef2d2a285ad2b565ef8c80bcebaf6bc333d9a62df",
+      "excluded": [
+        "native input mzML (retained on AWS with hash)",
+        "runtime private/.aws/.codex/.agents/.git directories"
+      ]
+    },
+    "scope": "Execution/data-completeness and requested aggregate output review; no new downstream biomedical analysis"
+  },
+  "raw_records_modified": false
+}
