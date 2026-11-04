@@ -1,205 +1,101 @@
 ---
-title: T01 Agent Benchmark — Wall Time and Tool Calls
-subtitle: dev.15 experiment · shared efficiency instructions · three runs per arm
+title: T01 Experiment Results — A1 vs C1
+subtitle: v0.5 dev.20 · 450,000 real cells · three runs per arm · three requests per run
 lang: en
 template: doc
 theme: paper
 outline: left
+cols: 1
 ---
-A1 used **6 tool calls in every run**. C1 used **13, 11 and 14 calls**.
-Median wall times differed by **4.35 seconds**.
+## A Total wall time and actual tool calls
 
-## A Total time for three requests
+**A1's median wall time was 38.64 seconds lower, a 13.6% reduction relative to C1.**
+A1 finished sooner in all three matched pairs.
 
-A1 median: **211.31 seconds**. C1 median: **215.66 seconds**.
+![Total wall time and actual tool calls: bars and white dots show medians; black ranges show minimum to maximum](t01-results-current/comparison.png)
 
-A1 uses Peter with a persistent R session. C1 uses native Codex.
-All six runs appear below in execution order.
+| Whole run | A1 · Peter | C1 · Native Codex |
+|---|---:|---:|
+| Median wall time | **246.51 s** | **285.15 s** |
+| Minimum–maximum | 239.21–280.74 s | 283.14–294.90 s |
+| Median actual tool calls | **5** | **21** |
+| Call minimum–maximum | 4–6 | 20–22 |
+| Original input reads | Once per run | Three times per run |
 
-```chart bar horizontal unit=s
-A1-1 | 211.31
-C1-1 | 215.66
-C1-2 | 204.17
-A1-2 | 210.35
-A1-3 | 222.58
-C1-3 | 235.85
-```
+Wall time includes startup, input loading and cleanup; workspace input staging is excluded.
+A1 counts Peter tool dispatches; C1 counts internal native tool invocations, including polling.
+Outer exec wrappers are excluded from C1 counts.
+These are observed results from three runs per arm, without runtime confidence intervals or a population significance claim.
 
-Wall time includes startup, input loading, model interaction, tool execution and finalization.
-This report focuses on agent execution behavior.
-Three runs per arm do not establish a consistent performance advantage.
+## B Where the time difference comes from
 
-## B Actual function / tool call counts
+![Additive time differences: C1 minus A1; positive contributions favor A1](t01-results-current/signed-time.png)
 
-```chart bar horizontal unit=calls
-A1-1 | 6
-C1-1 | 13
-C1-2 | 11
-A1-2 | 6
-A1-3 | 6
-C1-3 | 14
-```
+Original input reads and other RDS operations together favor A1 by **57.07 seconds**.
+Other components offset 24.82 seconds, leaving a **32.25-second mean net difference**.
+This chart uses means of paired differences so its components add up.
+Panel A uses group medians for the main outcome.
 
-```chart bar horizontal unit=calls
- | R execution | Shell commands | stdin / polling | File writes | Image viewing
-A1-1 | 5 | 0 | 0 | 1 | 0
-C1-1 | 0 | 7 | 6 | 0 | 0
-C1-2 | 0 | 7 | 4 | 0 | 0
-A1-2 | 5 | 0 | 0 | 1 | 0
-A1-3 | 5 | 0 | 0 | 1 | 0
-C1-3 | 0 | 8 | 6 | 0 | 0
-```
+Reads include decompression and deserialization.
+R execution intervals include adapter and framework overhead.
+Remaining time includes model activity, network waits, startup and other tools; it does not isolate model reasoning time.
+This accounting describes observed behavior and does not establish a causal effect of persistent state alone.
 
-A1 counts actual gptr tool dispatches. C1 counts internal tool invocations from the original Codex session.
-Outer exec wrappers are not counted again. Progress queries count as tool calls.
+## C Execution Gantt chart
 
-C1's additional calls cover environment discovery, stdin interaction or polling, and error recovery.
-Each C1 run had one recovered tool error. A1 had none.
-Each A1 run still included one separate final validation call.
+![Actual median-duration runs: request, R execution and original input-read lanes](t01-results-current/gantt.png)
 
-These are neither internal R function counts nor model API request counts.
-One C1 shell command can compute, plot and write a report.
-Equal call counts therefore need not represent equal amounts of work.
+Both group medians correspond to trial 3.
+Each timeline starts at episode launch, and requests execute sequentially: 1 → 2 → 3.
 
-## C Calls and time by request
+A1 retains R objects after loading.
+C1 uses finite, one-shot Rscript processes and reuses completed files between executions.
+The native Codex conversation retains text history.
 
-**A1: calls per request**
+All three C1 runs read the original input **2 / 0 / 1** times across the three requests.
+Request 1 first inspects the data, then reloads it for computation.
+Request 2 reads derived files; request 3 reloads the matrix for marker analysis.
 
-```chart bar horizontal unit=calls
- | Request 1 | Request 2 | Request 3
-A1-1 | 2 | 1 | 3
-A1-2 | 2 | 1 | 3
-A1-3 | 2 | 1 | 3
-```
+Green bars show only `input.rds` reads.
+R execution and read intervals overlap; do not add them together.
 
-**A1: seconds per request**
+## D Configuration, tokens and verification
 
-```chart bar horizontal unit=s
- | Request 1 | Request 2 | Request 3
-A1-1 | 56.11 | 41.45 | 104.45
-A1-2 | 61.21 | 41.06 | 98.79
-A1-3 | 56.62 | 40.93 | 115.75
-```
+| Setting | Shared by both arms |
+|---|---|
+| Data | GSE236581 subset: 450,000 real cells, 36,027 genes, gzip RDS |
+| Scientific requests | QC and composition → paired patient analysis → longitudinal, sensitivity and markers |
+| User prompts | The same frozen three-request prompt profile |
+| Model | gpt-6.1-sol, low reasoning effort |
+| Hardware | 16 GiB RAM / 2 vCPU; 10 GiB R vector-heap limit |
+| Budget | 2 million tokens and 1,200 seconds per run |
+| Paired execution order | C1→A1; A1→C1; C1→A1 |
 
-**C1: calls per request**
+The C1 execution condition is recorded separately from the shared scientific prompts.
+Interactive R, retained R processes, PTY command loops and R services are prohibited.
+Empty polling of a finite Rscript job and reuse of completed files are allowed.
 
-```chart bar horizontal unit=calls
- | Request 1 | Request 2 | Request 3
-C1-1 | 8 | 3 | 2
-C1-2 | 7 | 1 | 3
-C1-3 | 9 | 1 | 4
-```
+| Tokens: median [minimum–maximum] | A1 | C1 |
+|---|---:|---:|
+| Input, including cached input | 352,959 [255,142–454,044] | 522,046 [482,998–541,476] |
+| Cached input subset | 299,136 [237,440–406,528] | 473,856 [461,184–509,696] |
+| Output | 7,458 [6,968–8,913] | 8,596 [8,038–9,094] |
 
-**C1: seconds per request**
+Tokens are cumulative for each run; they do not directly measure cost or model execution seconds.
 
-```chart bar horizontal unit=s
- | Request 1 | Request 2 | Request 3
-C1-1 | 77.18 | 43.27 | 95.21
-C1-2 | 74.22 | 38.0 | 91.94
-C1-3 | 84.78 | 38.67 | 112.41
-```
-
-Request durations already include tool execution. Do not add them together.
-Time outside recorded tool intervals includes generation, network delays and service waits.
-Those gaps cannot all be labeled model thinking time.
-
-**A1: tool execution accounts for a small part of wall time**
-
-```chart bar horizontal unit=s
- | Sum of tool intervals | Total wall time
-A1-1 | 12.27 | 211.31
-A1-2 | 14.59 | 210.35
-A1-3 | 14.27 | 222.58
-```
-
-Fewer calls do not guarantee a proportional reduction in wall time.
-Input loading, generation, networking and service waits also contribute.
-The records do not separate model reasoning from network latency precisely.
-C1 uses asynchronous processes, so A1's interval-sum method is not directly comparable.
-
-## D Three-lane Gantt overview
-
-Representative runs: **A1-1 and C1-1**, the median-duration run in each arm.
-
-![User requests, tool execution and original input.rds reads](t01-formal-current/request-tools-gantt.png)
-
-Each arm has three lanes: requests, tools and original input reads.
-Only intervals with both recorded endpoints are drawn. Missing endpoints are not inferred.
-
-C1's tool lane shows command lifetimes, including interactive-process waits.
-It does not measure pure compute time. Individual stdin queries are not drawn in that lane.
-Short calls can be hard to see; counting visible bars will undercount tool calls.
-
-Actual counts: **6 for A1-1**, **13 for C1-1**.
-The input lane shows only input.rds reads, excluding other cache files.
-
-## E Recovery and cache overhead
-
-**Tool errors, including errors that were later recovered**
-
-```chart bar horizontal unit=errors
-A1-1 | 0
-C1-1 | 1
-C1-2 | 1
-A1-2 | 0
-A1-3 | 0
-C1-3 | 1
-```
-
-**Recorded RDS operations, including cache files**
-
-```chart bar horizontal unit=s
- | Read / deserialize | Write / serialize
-A1-1 | 4.33 | 0
-C1-1 | 8.14 | 0
-C1-2 | 12.57 | 6.82
-A1-2 | 4.31 | 0
-A1-3 | 4.33 | 0
-C1-3 | 21.09 | 10.46
-```
-
-These durations are already included in wall time.
-They cover recorded RDS operations, including serialization, rather than pure disk I/O.
+Three fresh-process gzip reads took **23.569, 23.584 and 23.561 seconds**.
 The operating system cache was not cleared.
+All six runs completed.
 
-**A1: 6 calls in each run.**
-Request 1 inspects input, then combines validation, QC, aggregation and output writing.
-Request 2 combines paired analysis and plotting while reusing session objects.
-Request 3 combines analysis and outputs, writes the report, then performs a separate final check.
-None of the three runs required tool-error recovery.
+Independent checks covered QC, compositions, effects, P values, FDR, markers and primary, longitudinal and sensitivity bootstrap intervals.
+Artifact coverage, plots and narratives were reviewed; optional audit columns and individual pixels were not exhaustively reconstructed.
+All 12 observed C1 Rscript jobs ended within their respective requests, with native commands and generated R scripts also reviewed.
 
-**C1-1: 13 calls, split 8 / 3 / 2.**
-Request 3 already combined related operations.
-Request 2 failed to reuse an interactive R process from the preceding request: the process ID was no longer available.
-The agent recovered by starting a new Rscript process and reading the saved composition CSV.
-The original input was read again in Request 3.
+Run identifier: `v05-T01-dev20-one-shot-confirmation-20261104T065528Z`.
+The measured source is **dev.20**; the cleaned repository runner is dev.21 and has no new live measurements in this report.
+Earlier dev.15 and unrestricted dev.18/19 results are excluded from these summaries.
 
-**C1-2: 11 calls, split 7 / 1 / 3.**
-An existence check found R's built-in raw function instead of the intended data object.
-The agent corrected the check and reran the computation.
-It read input.rds once, but read a saved copy of the large matrix twice more.
-Counting only input.rds reads would overstate data reuse.
+[All six attempts](t01-results-current/all-attempts.csv) · [Group statistics](t01-results-current/group-statistics.csv) · [Additive differences](t01-results-current/additive-mean-differences.csv) · [Source hashes and review scope](t01-results-current/provenance.json) · [Exact shared prompts](t01-results-current/shared-prompts.json)
 
-**C1-3: 14 calls: 8 commands and 6 progress queries.**
-Request 1 incorrectly rejected the stored matrix class through an identical comparison.
-The agent changed the class-membership check and reran the step.
-Request 3 reread the original matrix and queried progress three times.
-
-## F Scope and supporting data
-
-Both arms received the same user prompts, model and input data.
-Source code stayed fixed across the six runs. No run was replaced by a later attempt.
-Collection included lightweight status queries and downloads of completed artifacts.
-
-This experiment used dev.15 before the repository extraction; the current runner is dev.16.
-Run identifier: `v05-T01-formal-20261103T204530Z`.
-Model: `gpt-6.1-sol`, low reasoning effort.
-
-Biomedical result scoring is outside this report's focus.
-Execution completion does not establish scientific correctness: A1-1 used QC-filtered cells for marker evidence.
-The six results were not independently recomputed in full. This report does not claim that all scientific outputs passed review.
-
-[Metric data](t01-formal-current/agent-metrics.csv) · [Request timings](t01-formal-current/request-timings.csv) · [Shared prompts](../aws/prompts.json)
-
-The public files contain aggregate measurements without machine-specific paths or raw session transcripts.
-Full raw records remain in the local, Git-ignored runs directory.
+Raw experimental records remain at their original paths in the local, Git-ignored runs directory.
+The public files contain aggregate measurements and source hashes, without raw session transcripts or patient records.

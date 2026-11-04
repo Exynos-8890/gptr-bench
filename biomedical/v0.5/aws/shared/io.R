@@ -11,6 +11,7 @@ bench_io_start = function(path, arm, request = 0L) {
     bytes = if (file.exists(filename)) unname(file.info(filename)$size) else NULL
     event = list(operation = operation, arm = state$arm, request = state$request,
                  pid = Sys.getpid(), file = filename, bytes = bytes,
+                 program_id = Sys.getenv("GPTR_BENCH_PROGRAM_ID", ""),
                  started_unix = started_unix, finished_unix = as.numeric(Sys.time()),
                  success = success,
                  duration_ms = 1000 * (proc.time()[["elapsed"]] - started),

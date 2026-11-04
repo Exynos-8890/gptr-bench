@@ -4,6 +4,13 @@ Current policy: run Peter (A1) and native Codex (C1) on the same three user prom
 Review the produced data, statistics, figures and claims manually with Codex afterward.
 `status=ok` means execution completed; `review_status=pending` means correctness has not been reviewed.
 
+C1 uses native Codex with finite one-shot Rscript processes (dev.20 user requirement).
+Every R execution exits; no interactive R, PTY R loop, service or live R heap reuse
+is allowed. Completed files may be read by later scripts. The app-server retains
+conversation text only. Shared scientific user prompts stay identical across arms;
+the C1 execution condition is recorded separately. Historical dev.18/19 permitted
+live R retention and are not pooled with this condition. See the [runbook](RUNBOOK.md).
+
 ## Files
 
 ```
@@ -26,7 +33,7 @@ Native R document replay is not part of this simplified runner yet; raw executio
 
 ## Run
 
-From the repository root (`/data/gptr` on AWS):
+From the independent repository root (`/data/gptr-bench` on AWS), with `GPTR_SOURCE=/data/gptr`:
 
 ```bash
 b=biomedical/v0.5/aws
@@ -39,6 +46,12 @@ T01 and `data/v05-150000` are the defaults. `pilot` runs each live arm once; `fo
 runs each three times, alternating arm order between repetitions. Both require the explicit
 live environment variable. This code change itself does not launch a real model experiment.
 `--task`, `--input-root`, `--output` and `--timeout` select other inputs and destinations.
+`--prompt-file` freezes a shared experimental profile into the run directory before either arm;
+the manifest records its SHA256. `--first-arm C1` reverses the alternating arm order.
+Default scientific prompts are unchanged. The final 450k experiment used the frozen
+profile published with the report. Input/read probes and collection support remain
+under `experiments/t01-state-reuse/`; unused workload variants and the historical
+exec/resume transport have been removed. See RUNBOOK.md for the measured settings.
 
 Results are under `runs/v05-.../A1-1/` or `C1-1/`: `trace.jsonl`, logs, usage,
 `result.json`, and `workspace/` containing the model's scripts, tables, figures and report.

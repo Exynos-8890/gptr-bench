@@ -15,7 +15,7 @@ process = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(process)
 
 
-def launchers(directory, runtime=None):
+def launchers(directory, runtime=None, one_shot=False):
     """Pin reasoning in children without editing user config or package internals."""
     directory.mkdir(parents=True, exist_ok=True)
     codex = shutil.which("codex")
@@ -35,7 +35,7 @@ def launchers(directory, runtime=None):
     for name in ("io.R", "io-bootstrap.R"):
         shutil.copyfile(Path(__file__).with_name(name), runtime / name)
     script = (
-        "#!/usr/bin/env python3\nimport os,sys\n"
+        "#!/usr/bin/env python3\nimport os,sys,uuid\n"
         "args=[a for a in sys.argv[1:] if a!='--vanilla']\n"
         "if len(args)>=2 and args[0]=='-e':\n"
         " mode='expression'; value=args[1]; rest=args[2:]\n"
@@ -44,11 +44,19 @@ def launchers(directory, runtime=None):
         "else:\n raise SystemExit('Use bench-rscript --vanilla FILE or -e EXPRESSION')\n"
         "os.environ['GPTR_BENCH_PROGRAM_MODE']=mode\n"
         "os.environ['GPTR_BENCH_PROGRAM']=value\n"
+        "os.environ['GPTR_BENCH_PROGRAM_ID']=uuid.uuid4().hex\n"
+        + ("fd=os.open(os.devnull,os.O_RDONLY)\nos.dup2(fd,0)\n"
+           "if fd>2: os.close(fd)\n" if one_shot else "") +
         f"os.execv({rscript!r},[{rscript!r},'--vanilla',"
         f"{str(runtime / 'io-bootstrap.R')!r},*rest])\n"
     )
     (runtime / "bench-rscript").write_text(script)
     (runtime / "bench-rscript").chmod(0o700)
+    if one_shot:
+        # Standard Rscript on PATH gets the same recording and closed stdin.
+        (directory / "Rscript").symlink_to(runtime / "bench-rscript")
+        (directory / "R").write_text("#!/bin/sh\necho 'C1 requires a finite Rscript; interactive R is disabled.' >&2\nexit 64\n")
+        (directory / "R").chmod(0o700)
     library = str(REPO / ".runtime/library")
     return {**{k: "1" for k in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS",
                                "MKL_NUM_THREADS", "VECLIB_MAXIMUM_THREADS")},
@@ -58,7 +66,7 @@ def launchers(directory, runtime=None):
             "GPTR_BENCH_IO_HELPER": str(runtime / "io.R")}
 
 
-def run_arm(arm, trial, source, output, timeout, settings):
+def run_arm(arm, trial, source, output, timeout, settings, prompt_file=None):
     directory = output / f"{arm}-{trial}"
     directory.mkdir()
     workspace = directory / "workspace"
@@ -66,11 +74,13 @@ def run_arm(arm, trial, source, output, timeout, settings):
     shutil.copyfile(source / "input.rds", workspace / "input.rds")
     # Native Codex may write only inside its task workspace. Archive after it exits.
     io_path = workspace / "instrumentation" / "io.jsonl" if arm == "C1" else directory / "io.jsonl"
-    env = launchers(directory / "launchers", workspace / "instrumentation")
+    env = launchers(directory / "launchers", workspace / "instrumentation", one_shot=arm == "C1")
     env["GPTR_BENCH_IO_EVENTS"] = str(io_path)
+    if arm == "C1":
+        (workspace / "AGENTS.md").write_text(process.codex_policy.INSTRUCTIONS + "\n")
     config = dict(arm=arm, workspace=str(workspace), input=str(workspace / "input.rds"),
                   private=str(directory / "private"), trace=str(directory / "trace.jsonl"),
-                  prompt_file=str(Path(__file__).resolve().parents[1] / "prompts.json"),
+                  prompt_file=str(prompt_file or Path(__file__).resolve().parents[1] / "prompts.json"),
                   io_events=str(io_path), child_env=env, **settings)
     started = time.perf_counter()
     started_unix = time.time()
@@ -89,7 +99,7 @@ def run_arm(arm, trial, source, output, timeout, settings):
                workspace=str(workspace), input_file_bytes=(workspace / "input.rds").stat().st_size)
     for key in ("startup_ms", "dataset_load_ms", "serialization_ms", "r_compute_ms",
                 "tool_wall_ms", "tool_calls", "model_requests", "provider_requests",
-                "input_tokens", "output_tokens", "cost"):
+                "input_tokens", "cached_input_tokens", "output_tokens", "reasoning_output_tokens", "cost"):
         values = [result.get(key) for result in results]
         row[key] = sum(values) if all(value is not None for value in values) else None
     rss = [result["sampled_peak_rss_bytes"] for result in results
@@ -97,6 +107,10 @@ def run_arm(arm, trial, source, output, timeout, settings):
     row["sampled_peak_rss_bytes"] = max(rss) if rss else None
     row["memory_scope"] = ("process_tree" if all(result["memory_scope"] == "process_tree"
                                                for result in results) else "partial_or_unavailable")
+    row["codex_transport"] = settings.get("codex_transport", "app-server") if arm == "C1" else None
+    row["codex_r_execution_policy"] = process.codex_policy.NAME if arm == "C1" else None
+    row["tool_counter_scope"] = "native_session_audit_required" if arm == "C1" else "Peter tool events"
+    row["io_request_scope"] = "align by absolute timestamps; persistent child tag is 0" if arm == "C1" and row["codex_transport"] == "app-server" else "per-request tag"
     io = [json.loads(line) for line in io_path.read_text().splitlines()] if io_path.exists() else []
     original = [event for event in io if event["operation"] == "readRDS" and
                 Path(event["file"]).resolve() == (workspace / "input.rds").resolve()]

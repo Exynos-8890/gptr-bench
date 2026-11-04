@@ -20,6 +20,38 @@ def runner():
 
 
 class WorkflowTest(unittest.TestCase):
+    def test_custom_profile_is_frozen_shared_and_can_run_codex_first(self):
+        m = runner()
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            source = root / "T01"
+            source.mkdir()
+            (source / "input.rds").write_bytes(b"fixture")
+            (source / "dataset.json").write_text(json.dumps({"input_sha256": m.digest(source / "input.rds")}))
+            profile = root / "profile.json"
+            expected = {"T01": ["first variant", "second variant", "third variant"]}
+            profile.write_text(json.dumps(expected))
+            output = root / "results"
+            output.mkdir()
+            observed = []
+            def run(arm, *args, prompt_file=None, **kwargs):
+                observed.append((arm, Path(prompt_file), json.loads(Path(prompt_file).read_text())))
+                # Changes to the original profile after the first arm must not change the second.
+                profile.write_text(json.dumps({"T01": ["changed"] * 3}))
+                return dict(arm=arm, trial=1, status="ok")
+            config = dict(task="T01", input_root=str(root), phase="pilot", timeout=30,
+                          token_limit=1000, cost_limit=5, prompt_file=str(profile), first_arm="C1")
+            with patch.dict(os.environ, GPTR_LIVE_TESTS="true"), \
+                 patch.object(m.execution, "run_arm", side_effect=run), \
+                 patch.object(m.platform, "platform", return_value="test-platform"), \
+                 patch.object(m.subprocess, "check_output", return_value="test-codex"):
+                self.assertEqual(m.collect(config, output), 0)
+            self.assertEqual([x[0] for x in observed], ["C1", "A1"])
+            self.assertEqual(observed[0][1], observed[1][1])
+            self.assertEqual([x[2] for x in observed], [expected, expected])
+            self.assertEqual(json.loads((output / "manifest.json").read_text())["prompt_sha256"],
+                             m.digest(output / "prompts.json"))
+
     def test_collect_runs_only_two_live_arms_without_scoring(self):
         m = runner()
         with tempfile.TemporaryDirectory() as temporary:
@@ -39,31 +71,6 @@ class WorkflowTest(unittest.TestCase):
             self.assertEqual([c.args[0] for c in run.call_args_list], ["A1", "C1"])
             self.assertEqual(json.loads((output / "manifest.json").read_text())["review_status"], "pending")
             self.assertFalse((output / "prepared/task.json").exists())
-
-    def test_codex_uses_shared_prompts_and_leaves_outputs_pending_review(self):
-        m = runner()
-        with tempfile.TemporaryDirectory() as temporary:
-            root = Path(temporary)
-            source = root / "source"
-            source.mkdir()
-            (source / "input.rds").write_bytes(b"fixture")
-            prompts = []
-            def measured(*args, **kwargs):
-                prompts.append(kwargs["prompt"])
-                Path(kwargs["cwd"], "plot.svg").write_text("fixture plot")
-                for event in [dict(type="thread.started", thread_id="test"),
-                              dict(type="turn.completed", usage=dict(input_tokens=10 * len(prompts), output_tokens=len(prompts)))]:
-                    kwargs["events"].append((1, json.dumps(event)))
-                return dict(status="ok", sampled_peak_rss_bytes=1, memory_scope="process_tree", exit_code=0)
-            settings = dict(task_id="T01", dataset_sha256="test", codex_model="test", token_limit=1000)
-            with patch.object(m.process, "measure", side_effect=measured):
-                row = m.execution.run_arm("C1", 1, source, root, 30, settings)
-            self.assertEqual(prompts, json.loads((AWS / "prompts.json").read_text())["T01"])
-            self.assertEqual(row["input_tokens"], 30)
-            self.assertEqual(row["review_status"], "pending")
-            self.assertEqual(row["status"], "ok")
-            self.assertTrue(Path(row["workspace"], "plot.svg").exists())
-            self.assertFalse((root / "C1-1/evaluation.json").exists())
 
     def test_peter_adapter_with_fake_provider_and_no_reference_modules(self):
         with tempfile.TemporaryDirectory() as temporary:

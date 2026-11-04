@@ -35,12 +35,15 @@ class RunnerTest(unittest.TestCase):
         m = module()
         with tempfile.TemporaryDirectory() as temporary:
             output = Path(temporary) / "run"
-            args = ["run.py", "pilot", "--task", "T01", "--output", str(output)]
+            args = ["run.py", "pilot", "--task", "T01", "--output", str(output),
+                    "--token-limit", "2000000"]
             with patch.object(sys, "argv", args), patch.object(m, "collect", return_value=0) as run:
                 self.assertEqual(m.main(), 0)
             config, destination = run.call_args.args
-            self.assertEqual(config["input_root"], str(m.BENCH / "data/v05-150000"))
+            self.assertEqual(config["input_root"], str((m.BENCH / "data/v05-150000").resolve()))
             self.assertEqual(config["phase"], "pilot")
+            self.assertEqual(config["token_limit"], 2000000)
+            self.assertEqual(config["codex_transport"], "app-server")
             self.assertEqual(destination, output.resolve())
             self.assertFalse((output / "control.json").exists())
 

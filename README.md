@@ -25,6 +25,10 @@ See the [runbook](biomedical/v0.5/aws/RUNBOOK.md) for data preparation and impor
 [English report source](biomedical/v0.5/docs/REPORT-T01-live.en.md) ·
 [Download the interactive HTML](biomedical/v0.5/docs/REPORT-T01-live.en.html)
 
+Latest measured T01 result: dev.20, 450,000 real cells, three runs per arm.
+Median wall times: A1 246.51s, C1 285.15s; median tool calls: 5 vs 21.
+C1 uses finite one-shot Rscript processes. The cleaned runner is dev.21.
+
 Download the HTML and open it locally to view its interactive charts.
 GitHub shows HTML source in its repository viewer.
 

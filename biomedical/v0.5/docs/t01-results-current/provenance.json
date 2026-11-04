@@ -1,0 +1,33 @@
+{
+  "run_id": "v05-T01-dev20-one-shot-confirmation-20261104T065528Z",
+  "measured_benchmark_version": "0.5.0-dev.20",
+  "benchmark_source_sha256": "b9dfa4ae7c6e0238446027b5b43f91e642c459a62f1b973073627ec78afbbe88",
+  "combined_benchmark_and_gptr_source_sha256": "a2cb50140c4ea9863cea6f0d899c695edd2cc7e7cb520996f8d28f6d7885528a",
+  "gptr_source_sha256": "591d1429264343023f2f82b413ab547ff90daf6411e9500267749946562a1d41",
+  "dataset_sha256": "0926cf844bec3bf3877928629aa6bedb3dd865652c3e264ed69d2f491d40f605",
+  "prompt_sha256": "c8ef8eaf30921948c8ab37d64ba1b5749f1fbb2f4dc0ad39d0ae8c9c5249ae10",
+  "representative_trials": {
+    "A1": 3,
+    "C1": 3
+  },
+  "postcollection_review": {
+    "accepted": true,
+    "scope": "Required core numerical outputs/CI, requested file coverage, observed finite Rscript condition, visual/narrative consistency. Optional audit columns and pixels not exhaustively reconstructed. Three matched trials only; no population significance claim."
+  },
+  "source_files": {
+    "formal/results.json": "8889bd3b3c251f0db2ec6018456e9975ce314db0fbf0ef9d01c6da6cbd053a9a",
+    "formal/manifest.json": "9446e56b3e45e441516d5eff871d287a439a3b93ab580d9eeef343cabc16269b",
+    "derived-scientific-review/acceptance-review.json": "3ed2f64205233c93c5057f387074490a695dc0b79ca1cdda2b6a4f7d50688d2d",
+    "design.json": "1fa9b54831703fe84c6a7655d00309a6b5beab1335bce5723e2f0a1fc58a6d36",
+    "source-manifest.txt": "b9dfa4ae7c6e0238446027b5b43f91e642c459a62f1b973073627ec78afbbe88",
+    "formal/A1-3/trace.jsonl": "3cbd788d3cac77fe0c8d51b06a68383419c7d5ef4eafa3b19230044119de4990",
+    "formal/A1-3/io.jsonl": "e687335a7680cec77d79928d3fcb82103ef59c76d40909d5ca066a985105c06d",
+    "formal/C1-3/trace.jsonl": "1e0a9cfe033523f9e5f61836b896ba0a4c50ff647ffff58737f914ebd5331380",
+    "formal/C1-3/io.jsonl": "4403aaf9818fd80874f12ab3d46bc24d8caf8bc6b882e21d988d17b1581332ae",
+    "derived-confirmation/group-statistics.csv": "4e5d99a78e12bceb16a9b79d3d12cd709d1572eb1ff1c0791392bd7c05e869de",
+    "derived-confirmation/additive-mean-differences.csv": "4a7d640b6f2950ccc18010e18cb4dd563ecf14b5a0799316d80f37d79e586367",
+    "derived-confirmation/all-attempts.csv": "3a7f12f7edc68d13ba9293cfd5602c916ac905e8b496fa736348b3cf22c1e321",
+    "shared-prompts.json": "c8ef8eaf30921948c8ab37d64ba1b5749f1fbb2f4dc0ad39d0ae8c9c5249ae10"
+  },
+  "note": "Measured dev.20 source is preserved in the local source archive. The current cleaned runner is dev.21; this report contains no dev.21 measurements. Public CSV line endings are normalized to LF; source hashes refer to the unchanged originals."
+}

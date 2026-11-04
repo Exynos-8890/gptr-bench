@@ -66,16 +66,29 @@ def collect(config, output):
     require_live_permission(True)
     source = Path(config["input_root"]) / task_id
     data, checksum = read_input(task_id, source)
+    prompt_file = Path(config.get("prompt_file") or HERE / "prompts.json").resolve()
+    prompts = json.loads(prompt_file.read_text())
+    if task_id not in prompts or len(prompts[task_id]) != 3 or not all(
+            isinstance(prompt, str) and prompt.strip() for prompt in prompts[task_id]):
+        raise ValueError("A live task requires three nonempty shared prompts")
+    # Both arms use the same frozen copy, even if the profile is edited during collection.
+    shared_prompts = output / "prompts.json"
+    shutil.copyfile(prompt_file, shared_prompts)
     settings = dict(task_id=task_id, dataset_sha256=checksum,
         timeout=config["timeout"], token_limit=config["token_limit"],
         cost_limit=config["cost_limit"], model="codex/"+CATALOG["model"],
-        codex_model=CATALOG["model"])
+        codex_model=CATALOG["model"], codex_transport=config.get("codex_transport", CATALOG["codex_transport"]))
     manifest = dict(benchmark_version=CATALOG["version"], phase=config["phase"], task=task_id,
         real_repeats=3 if config["phase"] == "formal" else 1, timeout=config["timeout"],
         started_at=stamp(), model=CATALOG["model"], reasoning_effort="low", dataset=data,
         dataset_sha256=checksum, source_sha256=source_digest(), revision=execution.revision(),
         gptr_source=str(Path(os.environ["GPTR_SOURCE"]).resolve()),
         gptr_source_sha256=hashlib.sha256(inventory.manifest(Path(os.environ["GPTR_SOURCE"]).resolve(), "gptr").encode()).hexdigest(),
+        prompt_source=str(prompt_file), prompt_sha256=digest(shared_prompts),
+        first_arm=config.get("first_arm", "A1"),
+        codex_transport=settings["codex_transport"],
+        codex_r_execution_policy=process.codex_policy.NAME,
+        codex_execution_instructions_sha256=hashlib.sha256(process.codex_policy.INSTRUCTIONS.encode()).hexdigest(),
         platform=platform.platform(), python=platform.python_version(), threads=THREADS,
         budgets=dict(timeout=config["timeout"], tokens=config["token_limit"], cost=config["cost_limit"]),
         review_status="pending", codex_version=subprocess.check_output(["codex", "--version"], text=True).strip())
@@ -94,8 +107,10 @@ def collect(config, output):
         print(json.dumps(dict(arm=row["arm"], trial=row["trial"], status=row["status"])), flush=True)
 
     for trial in range(1, repeats + 1):
-        for arm in (["A1", "C1"] if trial % 2 else ["C1", "A1"]):
-            save(execution.run_arm(arm, trial, source, output, config["timeout"], settings))
+        order = ["A1", "C1"] if config.get("first_arm", "A1") == "A1" else ["C1", "A1"]
+        for arm in (order if trial % 2 else order[::-1]):
+            save(execution.run_arm(arm, trial, source, output, config["timeout"], settings,
+                                   prompt_file=shared_prompts))
     return int(any(r["status"] != "ok" for r in rows))
 
 
@@ -147,9 +162,14 @@ def main():
     parser.add_argument("--source", type=Path)
     parser.add_argument("--output", type=Path)
     parser.add_argument("--timeout", type=float)
+    parser.add_argument("--token-limit", type=int, default=1000000)
+    parser.add_argument("--prompt-file", type=Path, help="Shared experimental prompt profile; defaults to prompts.json")
+    parser.add_argument("--first-arm", choices=["A1", "C1"], default="A1")
     parser.add_argument("--cells", type=int, default=150000)
     parser.add_argument("--gwas-scope", default="full")
     args = parser.parse_args()
+    if args.token_limit <= 0:
+        parser.error("--token-limit must be positive")
     if args.command == "preflight":
         print(json.dumps(preflight(args.task, args.input_root.resolve()), indent=2))
         return 0
@@ -161,7 +181,10 @@ def main():
     config = dict(action=args.command, phase=args.command, task=args.task,
         input_root=str(args.input_root.resolve()), source=str(args.source.resolve()) if args.source else None,
         cells=args.cells, gwas_scope=args.gwas_scope,
-        timeout=timeout, token_limit=1000000, cost_limit=5)
+        prompt_file=str(args.prompt_file.resolve()) if args.prompt_file else None,
+        first_arm=args.first_arm,
+        codex_transport=CATALOG["codex_transport"],
+        timeout=timeout, token_limit=args.token_limit, cost_limit=5)
     if args.command in ("prepare", "import"):
         return prepare(config, output)
     return collect(config, output)

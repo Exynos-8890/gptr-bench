@@ -11,6 +11,8 @@ started = proc.time()[["elapsed"]]
 started_unix = as.numeric(Sys.time())
 success = FALSE
 connection = NULL
+io$finish("rscript_start", if (identical(mode, "file")) program else "<expression>",
+          started, started_unix, TRUE)
 invisible(tryCatch({
   if (identical(mode, "expression")) {
     connection = textConnection(program)

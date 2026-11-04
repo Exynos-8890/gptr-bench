@@ -1,5 +1,7 @@
 {
-  "version": "0.5.0-dev.16",
+  "version": "0.5.0-dev.21",
+  "codex_r_execution_policy": "one-shot-rscript",
+  "codex_transport": "app-server",
   "model": "gpt-6.1-sol",
   "reasoning_effort": "low",
   "review": "manual",
