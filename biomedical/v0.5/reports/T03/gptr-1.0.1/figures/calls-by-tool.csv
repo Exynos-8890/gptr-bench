@@ -1,0 +1,13 @@
+arm,trial,tool,calls
+C1,1,exec_command,4
+C1,1,write_stdin,21
+A1,1,r,3
+A1,1,write,1
+A1,2,r,3
+C1,2,exec_command,6
+C1,2,apply_patch,3
+C1,2,write_stdin,10
+C1,3,exec_command,5
+C1,3,apply_patch,3
+C1,3,write_stdin,20
+A1,3,r,3

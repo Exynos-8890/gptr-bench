@@ -1,0 +1,530 @@
+[
+  {
+    "source": "biomedical/v0.5/docs/t03-results-gptr101/plot.R",
+    "public": "gptr-1.0.1/figures/plot.R",
+    "original_sha256": "31059ccdd37df9bbd53a00f94d279780435e568f497c4ea267efbd37207817d0",
+    "published_sha256": "31059ccdd37df9bbd53a00f94d279780435e568f497c4ea267efbd37207817d0"
+  },
+  {
+    "source": "biomedical/v0.5/docs/t03-results-gptr101/execution-details.csv",
+    "public": "gptr-1.0.1/figures/execution-details.csv",
+    "original_sha256": "b9e4bdc486dc353a0e5d1c94c0510306b7447eb4cb1bb150a64d1726ae5f6c32",
+    "published_sha256": "b9e4bdc486dc353a0e5d1c94c0510306b7447eb4cb1bb150a64d1726ae5f6c32"
+  },
+  {
+    "source": "biomedical/v0.5/docs/t03-results-gptr101/all-attempts.csv",
+    "public": "gptr-1.0.1/figures/all-attempts.csv",
+    "original_sha256": "bf6adfacbd7b5cf9a13bae4d25be08ee3b0a0791ffb2e8051de05c043aa021ed",
+    "published_sha256": "bf6adfacbd7b5cf9a13bae4d25be08ee3b0a0791ffb2e8051de05c043aa021ed"
+  },
+  {
+    "source": "biomedical/v0.5/docs/t03-results-gptr101/request-stages.png",
+    "public": "gptr-1.0.1/figures/request-stages.png",
+    "original_sha256": "8f3a1c849f88b2e7a37ed66bdb04c55d91de8af0290ae81da710b97a823c674c",
+    "published_sha256": "8f3a1c849f88b2e7a37ed66bdb04c55d91de8af0290ae81da710b97a823c674c"
+  },
+  {
+    "source": "biomedical/v0.5/docs/t03-results-gptr101/comparison.png",
+    "public": "gptr-1.0.1/figures/comparison.png",
+    "original_sha256": "533af957632114dd77c7d55d2620cc8610a606624d07a8a8ef6afc78addacd5d",
+    "published_sha256": "533af957632114dd77c7d55d2620cc8610a606624d07a8a8ef6afc78addacd5d"
+  },
+  {
+    "source": "biomedical/v0.5/docs/t03-results-gptr101/timeline.csv",
+    "public": "gptr-1.0.1/figures/timeline.csv",
+    "original_sha256": "bc183dd2013d388eff96806c84fe338d90afa05d39bbc9d32b798180ee5a9294",
+    "published_sha256": "bc183dd2013d388eff96806c84fe338d90afa05d39bbc9d32b798180ee5a9294"
+  },
+  {
+    "source": "biomedical/v0.5/docs/t03-results-gptr101/additive-mean-differences.csv",
+    "public": "gptr-1.0.1/figures/additive-mean-differences.csv",
+    "original_sha256": "062e8dd6c2980d033c880eb27c25d0f1adf41c910669276368e5366b1bbb82ce",
+    "published_sha256": "062e8dd6c2980d033c880eb27c25d0f1adf41c910669276368e5366b1bbb82ce"
+  },
+  {
+    "source": "biomedical/v0.5/docs/t03-results-gptr101/gantt.png",
+    "public": "gptr-1.0.1/figures/gantt.png",
+    "original_sha256": "903a086cabc31831008cb94959b1ea94108fc5914f2f6d7385faee4e788ca1b6",
+    "published_sha256": "903a086cabc31831008cb94959b1ea94108fc5914f2f6d7385faee4e788ca1b6"
+  },
+  {
+    "source": "biomedical/v0.5/docs/t03-results-gptr101/group-statistics.csv",
+    "public": "gptr-1.0.1/figures/group-statistics.csv",
+    "original_sha256": "54487da88c7da37a5f120a97b01e4aa16546efe828d28f3655f1443cf3478571",
+    "published_sha256": "54487da88c7da37a5f120a97b01e4aa16546efe828d28f3655f1443cf3478571"
+  },
+  {
+    "source": "biomedical/v0.5/docs/t03-results-gptr101/signed-time.png",
+    "public": "gptr-1.0.1/figures/signed-time.png",
+    "original_sha256": "e742d55f7510f02be50d884d30dd3274971accc1a6a5375cec8f6070e41d9fb8",
+    "published_sha256": "e742d55f7510f02be50d884d30dd3274971accc1a6a5375cec8f6070e41d9fb8"
+  },
+  {
+    "source": "biomedical/v0.5/docs/t03-results-gptr101/calls-by-tool.csv",
+    "public": "gptr-1.0.1/figures/calls-by-tool.csv",
+    "original_sha256": "464f64e953e19078ec08f85903318fe5103da40cdf9c53c9d40104ffe2b3822d",
+    "published_sha256": "464f64e953e19078ec08f85903318fe5103da40cdf9c53c9d40104ffe2b3822d"
+  },
+  {
+    "source": "biomedical/v0.5/docs/t03-results-gptr101/gptr-version.json",
+    "public": "gptr-1.0.1/figures/gptr-version.json",
+    "original_sha256": "27ff196d261ae0905bd29cded8d7b2dac880c85f3aa179cd298890fb4c019147",
+    "published_sha256": "27ff196d261ae0905bd29cded8d7b2dac880c85f3aa179cd298890fb4c019147"
+  },
+  {
+    "source": "biomedical/v0.5/docs/t03-results-gptr101/request-stages.csv",
+    "public": "gptr-1.0.1/figures/request-stages.csv",
+    "original_sha256": "6a56720af733a17767abcb1f718e759f45deb7ed645b3bc4c431ad5ab12c6e26",
+    "published_sha256": "6a56720af733a17767abcb1f718e759f45deb7ed645b3bc4c431ad5ab12c6e26"
+  },
+  {
+    "source": "biomedical/v0.5/docs/REPORT-T03-gptr101-live.zh-CN.md",
+    "public": "gptr-1.0.1/report.md",
+    "original_sha256": "f33b7c36fb3182c7118b440bba8bceafa6327761feeb3e481c26cf4e6716df49",
+    "published_sha256": "429000bd0f8062bd00f241e47d632a0991f66a806a1afcac90a7c39dd60cd264"
+  },
+  {
+    "source": "biomedical/v0.5/docs/REPORT-T03-gptr101-live.zh-CN.html",
+    "public": "gptr-1.0.1/report.html",
+    "original_sha256": "308e2d314db463e436b1f045f3920b24a231f479c7f66a2996dd3ef2fdef4176",
+    "published_sha256": "efda7d157175abf6a4adacd143c23158ecb04f5bf2f6374db6f4f459a6607762"
+  },
+  {
+    "source": "biomedical/v0.5/docs/t03-results-dev30/plot.R",
+    "public": "gptr-1.0.0-dev30/figures/plot.R",
+    "original_sha256": "31059ccdd37df9bbd53a00f94d279780435e568f497c4ea267efbd37207817d0",
+    "published_sha256": "31059ccdd37df9bbd53a00f94d279780435e568f497c4ea267efbd37207817d0"
+  },
+  {
+    "source": "biomedical/v0.5/docs/t03-results-dev30/execution-details.csv",
+    "public": "gptr-1.0.0-dev30/figures/execution-details.csv",
+    "original_sha256": "b9e4bdc486dc353a0e5d1c94c0510306b7447eb4cb1bb150a64d1726ae5f6c32",
+    "published_sha256": "b9e4bdc486dc353a0e5d1c94c0510306b7447eb4cb1bb150a64d1726ae5f6c32"
+  },
+  {
+    "source": "biomedical/v0.5/docs/t03-results-dev30/all-attempts.csv",
+    "public": "gptr-1.0.0-dev30/figures/all-attempts.csv",
+    "original_sha256": "a5ee8970e2808bbfa3217536872a5d761ee7afccfb9afe14bf70d7e8110747a8",
+    "published_sha256": "a5ee8970e2808bbfa3217536872a5d761ee7afccfb9afe14bf70d7e8110747a8"
+  },
+  {
+    "source": "biomedical/v0.5/docs/t03-results-dev30/request-stages.png",
+    "public": "gptr-1.0.0-dev30/figures/request-stages.png",
+    "original_sha256": "02efe7c226ebc25e51177386f18c4ef316b8a425865b93aab9c5cb8c1993c0c1",
+    "published_sha256": "02efe7c226ebc25e51177386f18c4ef316b8a425865b93aab9c5cb8c1993c0c1"
+  },
+  {
+    "source": "biomedical/v0.5/docs/t03-results-dev30/comparison.png",
+    "public": "gptr-1.0.0-dev30/figures/comparison.png",
+    "original_sha256": "1d8db5666a1384b23841b8ed3c527f4b8c20c053a61108447bb5c64b73fddcd4",
+    "published_sha256": "1d8db5666a1384b23841b8ed3c527f4b8c20c053a61108447bb5c64b73fddcd4"
+  },
+  {
+    "source": "biomedical/v0.5/docs/t03-results-dev30/timeline.csv",
+    "public": "gptr-1.0.0-dev30/figures/timeline.csv",
+    "original_sha256": "47d27763dc2f4b1872b58cfacf779d90a8b4968b91002da26bb9c1c6e25417be",
+    "published_sha256": "47d27763dc2f4b1872b58cfacf779d90a8b4968b91002da26bb9c1c6e25417be"
+  },
+  {
+    "source": "biomedical/v0.5/docs/t03-results-dev30/additive-mean-differences.csv",
+    "public": "gptr-1.0.0-dev30/figures/additive-mean-differences.csv",
+    "original_sha256": "712446590378391099da716239c0a5a870e16866a05eb4c3d40ec26a7268c1b9",
+    "published_sha256": "712446590378391099da716239c0a5a870e16866a05eb4c3d40ec26a7268c1b9"
+  },
+  {
+    "source": "biomedical/v0.5/docs/t03-results-dev30/gantt.png",
+    "public": "gptr-1.0.0-dev30/figures/gantt.png",
+    "original_sha256": "b1dc090ed4e01c654c54de2f8ce0124838f695b3eff15c6ce4e3e2d89cacddb3",
+    "published_sha256": "b1dc090ed4e01c654c54de2f8ce0124838f695b3eff15c6ce4e3e2d89cacddb3"
+  },
+  {
+    "source": "biomedical/v0.5/docs/t03-results-dev30/group-statistics.csv",
+    "public": "gptr-1.0.0-dev30/figures/group-statistics.csv",
+    "original_sha256": "d81e5cde74d40f061ff7dc7c661ff1d36cbca6f9b1ff8eb5e887307c476c3dd5",
+    "published_sha256": "d81e5cde74d40f061ff7dc7c661ff1d36cbca6f9b1ff8eb5e887307c476c3dd5"
+  },
+  {
+    "source": "biomedical/v0.5/docs/t03-results-dev30/signed-time.png",
+    "public": "gptr-1.0.0-dev30/figures/signed-time.png",
+    "original_sha256": "74c7251f488f7d0a8d581f8d2893103ec12a2a09144ff952d3771b50cd713101",
+    "published_sha256": "74c7251f488f7d0a8d581f8d2893103ec12a2a09144ff952d3771b50cd713101"
+  },
+  {
+    "source": "biomedical/v0.5/docs/t03-results-dev30/calls-by-tool.csv",
+    "public": "gptr-1.0.0-dev30/figures/calls-by-tool.csv",
+    "original_sha256": "e9c9c2819b86a8d14d78574f23954464b8990ddf317bdc967d237082fda622d2",
+    "published_sha256": "e9c9c2819b86a8d14d78574f23954464b8990ddf317bdc967d237082fda622d2"
+  },
+  {
+    "source": "biomedical/v0.5/docs/t03-results-dev30/request-stages.csv",
+    "public": "gptr-1.0.0-dev30/figures/request-stages.csv",
+    "original_sha256": "b773ce8eaa3a3df28b344572b566b86f5866a26a084b9023548bd297b5544852",
+    "published_sha256": "b773ce8eaa3a3df28b344572b566b86f5866a26a084b9023548bd297b5544852"
+  },
+  {
+    "source": "biomedical/v0.5/docs/REPORT-T03-dev30-live.zh-CN.md",
+    "public": "gptr-1.0.0-dev30/report.md",
+    "original_sha256": "17678646dd749ab0457e19e3aa292aa472d8217e498c34eedce5b5e0d7cacf1a",
+    "published_sha256": "df2e975078d819f22f1d7ffab14d2b67d806f970a7b7c13c758129f1e400c8d6"
+  },
+  {
+    "source": "biomedical/v0.5/docs/REPORT-T03-dev30-live.zh-CN.html",
+    "public": "gptr-1.0.0-dev30/report.html",
+    "original_sha256": "a8c4e6670d0b1cc622c5bf65bbc5bbb1ad93371c1df6fd1712f41e77af373015",
+    "published_sha256": "8d3deebc5de5d3a471a0b75ec7bebb7eaf2d9c80941b2e697a6d444e1cf036ee"
+  },
+  {
+    "source": "biomedical/v0.5/docs/t03-results-current/plot.R",
+    "public": "gptr-1.0.0-dev29/figures/plot.R",
+    "original_sha256": "31059ccdd37df9bbd53a00f94d279780435e568f497c4ea267efbd37207817d0",
+    "published_sha256": "31059ccdd37df9bbd53a00f94d279780435e568f497c4ea267efbd37207817d0"
+  },
+  {
+    "source": "biomedical/v0.5/docs/t03-results-current/execution-details.csv",
+    "public": "gptr-1.0.0-dev29/figures/execution-details.csv",
+    "original_sha256": "35e5bde6d38c19444f07bd41ff8995a6a86926542dab77223a5cfb9fdf0af6aa",
+    "published_sha256": "35e5bde6d38c19444f07bd41ff8995a6a86926542dab77223a5cfb9fdf0af6aa"
+  },
+  {
+    "source": "biomedical/v0.5/docs/t03-results-current/all-attempts.csv",
+    "public": "gptr-1.0.0-dev29/figures/all-attempts.csv",
+    "original_sha256": "6c71c2a11e5b003751d9895be8c3b8047d724e7cd444e35cb5528263e8f156d7",
+    "published_sha256": "6c71c2a11e5b003751d9895be8c3b8047d724e7cd444e35cb5528263e8f156d7"
+  },
+  {
+    "source": "biomedical/v0.5/docs/t03-results-current/request-stages.png",
+    "public": "gptr-1.0.0-dev29/figures/request-stages.png",
+    "original_sha256": "623a99041678f36c8863bd3162c3f0643dd302dc4e253947d02a3d6fb9aa537f",
+    "published_sha256": "623a99041678f36c8863bd3162c3f0643dd302dc4e253947d02a3d6fb9aa537f"
+  },
+  {
+    "source": "biomedical/v0.5/docs/t03-results-current/comparison.png",
+    "public": "gptr-1.0.0-dev29/figures/comparison.png",
+    "original_sha256": "9a64fdc430c68f8c76ac53265b90c54fcc788e68df6f3f0c1e57c71739bb3e9a",
+    "published_sha256": "9a64fdc430c68f8c76ac53265b90c54fcc788e68df6f3f0c1e57c71739bb3e9a"
+  },
+  {
+    "source": "biomedical/v0.5/docs/t03-results-current/timeline.csv",
+    "public": "gptr-1.0.0-dev29/figures/timeline.csv",
+    "original_sha256": "d3ad762f2a4af60383f8b5fd15ed25315cc80213ecab2e2e5093a66d3016ac1f",
+    "published_sha256": "d3ad762f2a4af60383f8b5fd15ed25315cc80213ecab2e2e5093a66d3016ac1f"
+  },
+  {
+    "source": "biomedical/v0.5/docs/t03-results-current/additive-mean-differences.csv",
+    "public": "gptr-1.0.0-dev29/figures/additive-mean-differences.csv",
+    "original_sha256": "295e01e80f6e66bb7a41d24aa97a466f0483f8049ef6803eb4e6436537cd234a",
+    "published_sha256": "295e01e80f6e66bb7a41d24aa97a466f0483f8049ef6803eb4e6436537cd234a"
+  },
+  {
+    "source": "biomedical/v0.5/docs/t03-results-current/gantt.png",
+    "public": "gptr-1.0.0-dev29/figures/gantt.png",
+    "original_sha256": "311114a1efafb69cfe41d655f6f957193d8e8990ac9128f95c71c7e9a8cc5265",
+    "published_sha256": "311114a1efafb69cfe41d655f6f957193d8e8990ac9128f95c71c7e9a8cc5265"
+  },
+  {
+    "source": "biomedical/v0.5/docs/t03-results-current/group-statistics.csv",
+    "public": "gptr-1.0.0-dev29/figures/group-statistics.csv",
+    "original_sha256": "abceebf4f3de9f6b2d09a2cf0a371b724a0fe8a7888941b8e9371e75d6320e33",
+    "published_sha256": "abceebf4f3de9f6b2d09a2cf0a371b724a0fe8a7888941b8e9371e75d6320e33"
+  },
+  {
+    "source": "biomedical/v0.5/docs/t03-results-current/signed-time.png",
+    "public": "gptr-1.0.0-dev29/figures/signed-time.png",
+    "original_sha256": "561ec7d152c09a2cd565c7ba7ea6b1aa89fba90830641e443c90786553123dea",
+    "published_sha256": "561ec7d152c09a2cd565c7ba7ea6b1aa89fba90830641e443c90786553123dea"
+  },
+  {
+    "source": "biomedical/v0.5/docs/t03-results-current/calls-by-tool.csv",
+    "public": "gptr-1.0.0-dev29/figures/calls-by-tool.csv",
+    "original_sha256": "812f926503beaa0063882f8d3337586a939ab8e087e8935c56ef98e739040614",
+    "published_sha256": "812f926503beaa0063882f8d3337586a939ab8e087e8935c56ef98e739040614"
+  },
+  {
+    "source": "biomedical/v0.5/docs/t03-results-current/request-stages.csv",
+    "public": "gptr-1.0.0-dev29/figures/request-stages.csv",
+    "original_sha256": "2528eade8fcf240502b360d4794f22fe3312f1799eff7011ce1d0c135774340a",
+    "published_sha256": "2528eade8fcf240502b360d4794f22fe3312f1799eff7011ce1d0c135774340a"
+  },
+  {
+    "source": "biomedical/v0.5/docs/REPORT-T03-live.zh-CN.md",
+    "public": "gptr-1.0.0-dev29/report.md",
+    "original_sha256": "6606e42814382fc8a8b63751c7b3d2ade523edaa3dea72722b240bc09809ca91",
+    "published_sha256": "1fe8c67e4ca06767a71391418930a5859128bada49311adb1a0ad75abcac0504"
+  },
+  {
+    "source": "biomedical/v0.5/docs/REPORT-T03-live.zh-CN.html",
+    "public": "gptr-1.0.0-dev29/report.html",
+    "original_sha256": "aee221fc0944ca1fb95084ba03d44b58b6c494987532163875fc9b628fb3ef72",
+    "published_sha256": "0d1248143ca596ec9940b0d02f53a811beef172b000ad67f602405d13897daa4"
+  },
+  {
+    "source": "biomedical/runs/t03-trace-replay/tool-timing.csv",
+    "public": "replay/tool-timing.csv",
+    "original_sha256": "20db4b4140ec93eb1a1bb15296aefd2a1a6945558988010bebbf25624812ce43",
+    "published_sha256": "20db4b4140ec93eb1a1bb15296aefd2a1a6945558988010bebbf25624812ce43"
+  },
+  {
+    "source": "biomedical/runs/t03-trace-replay/timeline.csv",
+    "public": "replay/timeline.csv",
+    "original_sha256": "bc183dd2013d388eff96806c84fe338d90afa05d39bbc9d32b798180ee5a9294",
+    "published_sha256": "bc183dd2013d388eff96806c84fe338d90afa05d39bbc9d32b798180ee5a9294"
+  },
+  {
+    "source": "biomedical/runs/t03-trace-replay/replay.R",
+    "public": "replay/replay.R",
+    "original_sha256": "cf093457323e34dd5c7749ed1d6442e9b32ae5cb4ace83281d58083bac10644a",
+    "published_sha256": "cf093457323e34dd5c7749ed1d6442e9b32ae5cb4ace83281d58083bac10644a"
+  },
+  {
+    "source": "biomedical/runs/t03-trace-replay/gptr-version.json",
+    "public": "replay/gptr-version.json",
+    "original_sha256": "27ff196d261ae0905bd29cded8d7b2dac880c85f3aa179cd298890fb4c019147",
+    "published_sha256": "27ff196d261ae0905bd29cded8d7b2dac880c85f3aa179cd298890fb4c019147"
+  },
+  {
+    "source": "biomedical/runs/t03-trace-replay/request-stages.csv",
+    "public": "replay/request-stages.csv",
+    "original_sha256": "6a56720af733a17767abcb1f718e759f45deb7ed645b3bc4c431ad5ab12c6e26",
+    "published_sha256": "6a56720af733a17767abcb1f718e759f45deb7ed645b3bc4c431ad5ab12c6e26"
+  },
+  {
+    "source": "biomedical/runs/t03-trace-replay/A1-1/model-messages.jsonl",
+    "public": "replay/A1-1/model-messages.jsonl",
+    "original_sha256": "59c5ae5a4006cc9918f7c9fb491a8a83d393c674dd95d97d14b05b1d1388d495",
+    "published_sha256": "59c5ae5a4006cc9918f7c9fb491a8a83d393c674dd95d97d14b05b1d1388d495"
+  },
+  {
+    "source": "biomedical/runs/t03-trace-replay/A1-1/usage.json",
+    "public": "replay/A1-1/usage.json",
+    "original_sha256": "30478fa90eb0203e25d83eaf856b0baf5c2716fe60fb2978002ba37df805cc27",
+    "published_sha256": "80f1b2375f45441631af0b8f3579f9b447e6702b44365df027f4cadbbb33c048"
+  },
+  {
+    "source": "biomedical/runs/t03-trace-replay/A1-1/messages.md",
+    "public": "replay/A1-1/messages.md",
+    "original_sha256": "4c7ea7654a09ff82ee152bbfc1bff5974f73bdc7a7ded443f450711996f383bf",
+    "published_sha256": "4c7ea7654a09ff82ee152bbfc1bff5974f73bdc7a7ded443f450711996f383bf"
+  },
+  {
+    "source": "biomedical/runs/t03-trace-replay/A1-1/io.jsonl",
+    "public": "replay/A1-1/io.jsonl",
+    "original_sha256": "8524786dfa76e745aaaa6262a0e595e93661cb5de82ca3b4bb17f0f9c95eb7bc",
+    "published_sha256": "0ce74c3e771dcbc3f82139d663bab2e5dbbac2cea3eb66696d03c7a935dffe29"
+  },
+  {
+    "source": "biomedical/runs/t03-trace-replay/A1-1/recorded.R",
+    "public": "replay/A1-1/recorded.R",
+    "original_sha256": "718bb0e10259d021232ac1aaff08e03e9820fc8534017d4518f4e95ccdeff30f",
+    "published_sha256": "718bb0e10259d021232ac1aaff08e03e9820fc8534017d4518f4e95ccdeff30f"
+  },
+  {
+    "source": "biomedical/runs/t03-trace-replay/A1-1/ordinary.R",
+    "public": "replay/A1-1/ordinary.R",
+    "original_sha256": "d2370e0af29b9e8af5b50001516b4f882fd39b9296dbe76a94e5890aa3161087",
+    "published_sha256": "d2370e0af29b9e8af5b50001516b4f882fd39b9296dbe76a94e5890aa3161087"
+  },
+  {
+    "source": "biomedical/runs/t03-trace-replay/A1-1/trace.jsonl",
+    "public": "replay/A1-1/trace.jsonl",
+    "original_sha256": "848a296b3b9f9ec2748f62f357f2354d995298c022d17cb5dfb5888962c9f905",
+    "published_sha256": "f1e8cb54df9ca456c25290e47de0896474d6b18c22d89c476420394143d9740b"
+  },
+  {
+    "source": "biomedical/runs/t03-trace-replay/A1-1/calls.json",
+    "public": "replay/A1-1/calls.json",
+    "original_sha256": "29dfcc4720f8e161f67813450c476f3a4672f145514c6639bbeea1ec1680328a",
+    "published_sha256": "29dfcc4720f8e161f67813450c476f3a4672f145514c6639bbeea1ec1680328a"
+  },
+  {
+    "source": "biomedical/runs/t03-trace-replay/C1-3/app-server-client.jsonl",
+    "public": "replay/C1-3/app-server-client.jsonl",
+    "original_sha256": "15d86e527696c1b3e803f4040f1b56428c05018577e4e7301b55805aaf921982",
+    "published_sha256": "15d86e527696c1b3e803f4040f1b56428c05018577e4e7301b55805aaf921982"
+  },
+  {
+    "source": "biomedical/runs/t03-trace-replay/C1-3/io.jsonl",
+    "public": "replay/C1-3/io.jsonl",
+    "original_sha256": "79b51ecf11cc6b2b44b13fde446cf7e5a78bc907b8365b62a533b009007b89a4",
+    "published_sha256": "3395df371d5c739944fb71572562be0cc993acad328c5aba6fdf2b6bd0610c08"
+  },
+  {
+    "source": "biomedical/runs/t03-trace-replay/C1-3/trace.jsonl",
+    "public": "replay/C1-3/trace.jsonl",
+    "original_sha256": "21c139d7c08f235f7b619a581203a4fcf4a035f91f7cbf0a5658cdc9f2476ae4",
+    "published_sha256": "1acabc6103bf013b79aab5bc3dd2b06cfa4ba48f5d52acf59afa6e02d57f5cb8"
+  },
+  {
+    "source": "biomedical/runs/t03-trace-replay/C1-2/app-server-client.jsonl",
+    "public": "replay/C1-2/app-server-client.jsonl",
+    "original_sha256": "14aa631d7feda0e0f8dc696766c6face740539e6ac072feaeaf48a234f4c5268",
+    "published_sha256": "14aa631d7feda0e0f8dc696766c6face740539e6ac072feaeaf48a234f4c5268"
+  },
+  {
+    "source": "biomedical/runs/t03-trace-replay/C1-2/io.jsonl",
+    "public": "replay/C1-2/io.jsonl",
+    "original_sha256": "152edcf753c968eec01ababede22d4b2ee4ed056c956dde72f0a34491db18cd0",
+    "published_sha256": "66146c2f3d63f54df314c21b817decc34dd7c219eaca71754048efb0ab49e229"
+  },
+  {
+    "source": "biomedical/runs/t03-trace-replay/C1-2/trace.jsonl",
+    "public": "replay/C1-2/trace.jsonl",
+    "original_sha256": "874811b3eed8034ebe0dcde8d01f9e41be32fb5cfee9059216023ba80a0dcc14",
+    "published_sha256": "37e77f5161013f27e7fff236d791bc721eec031674f0ff58eb0a67af47f510dc"
+  },
+  {
+    "source": "biomedical/runs/t03-trace-replay/A1-2/model-messages.jsonl",
+    "public": "replay/A1-2/model-messages.jsonl",
+    "original_sha256": "c89b9eb55251cb54e6606ec31831b600be870c2c09234beefee0e375d2042664",
+    "published_sha256": "c89b9eb55251cb54e6606ec31831b600be870c2c09234beefee0e375d2042664"
+  },
+  {
+    "source": "biomedical/runs/t03-trace-replay/A1-2/usage.json",
+    "public": "replay/A1-2/usage.json",
+    "original_sha256": "58c5b27865e7a536342c5b489a125964b2649048cdb98427fe732baad1edeec9",
+    "published_sha256": "a8b36830e430cd18e9b39df55222f0ad96d98809e359d560da39a6742ceb6b33"
+  },
+  {
+    "source": "biomedical/runs/t03-trace-replay/A1-2/messages.md",
+    "public": "replay/A1-2/messages.md",
+    "original_sha256": "17d76e1ea960e22731e6280b1e7f818794d7171287c4607469f48d0c8a273fe9",
+    "published_sha256": "17d76e1ea960e22731e6280b1e7f818794d7171287c4607469f48d0c8a273fe9"
+  },
+  {
+    "source": "biomedical/runs/t03-trace-replay/A1-2/io.jsonl",
+    "public": "replay/A1-2/io.jsonl",
+    "original_sha256": "d58534f9a277fe618b046e4ee80a1a3d5fb9463cf6711eecd52d95f9fb60e762",
+    "published_sha256": "9325a71e5bc6633311763b81cc4feb38486d24757963094d1cde21bcaed6a3ac"
+  },
+  {
+    "source": "biomedical/runs/t03-trace-replay/A1-2/recorded.R",
+    "public": "replay/A1-2/recorded.R",
+    "original_sha256": "2a38d8ee44102ce208d6ce98f5843b0d42b6a6840aa6ccdf5e9cf9b9bfd60eee",
+    "published_sha256": "2a38d8ee44102ce208d6ce98f5843b0d42b6a6840aa6ccdf5e9cf9b9bfd60eee"
+  },
+  {
+    "source": "biomedical/runs/t03-trace-replay/A1-2/ordinary.R",
+    "public": "replay/A1-2/ordinary.R",
+    "original_sha256": "4dae51e3b384f3f6788d06bb5ec527c6a577df04c92e97183341a5a25bb2ae24",
+    "published_sha256": "4dae51e3b384f3f6788d06bb5ec527c6a577df04c92e97183341a5a25bb2ae24"
+  },
+  {
+    "source": "biomedical/runs/t03-trace-replay/A1-2/trace.jsonl",
+    "public": "replay/A1-2/trace.jsonl",
+    "original_sha256": "925e4b9a6c5573dca924dbf8d960a3a610b7906d65a3810c02eeb96c06086d2d",
+    "published_sha256": "47f15469c0f3e936aa37484420c36d8dc427c400585a12b6cc017d66bb0f1046"
+  },
+  {
+    "source": "biomedical/runs/t03-trace-replay/A1-2/calls.json",
+    "public": "replay/A1-2/calls.json",
+    "original_sha256": "1e26df006eb90388a72e32b08e2ea09ff4c938fa29f5f1bba836206fc0af6b39",
+    "published_sha256": "1e26df006eb90388a72e32b08e2ea09ff4c938fa29f5f1bba836206fc0af6b39"
+  },
+  {
+    "source": "biomedical/runs/t03-trace-replay/A1-3/model-messages.jsonl",
+    "public": "replay/A1-3/model-messages.jsonl",
+    "original_sha256": "aa0c016c0b8537e952115ce1ad9135accf148587de4887158f7c934fc8eaaf22",
+    "published_sha256": "aa0c016c0b8537e952115ce1ad9135accf148587de4887158f7c934fc8eaaf22"
+  },
+  {
+    "source": "biomedical/runs/t03-trace-replay/A1-3/usage.json",
+    "public": "replay/A1-3/usage.json",
+    "original_sha256": "2f2c0ae408e9406b626bd606a4a76dd018076f819e294459af86946494d1442d",
+    "published_sha256": "31b7e16efc286997585f48d6e9f44d092980f2b99ac88b3f158b801efaa8f49c"
+  },
+  {
+    "source": "biomedical/runs/t03-trace-replay/A1-3/messages.md",
+    "public": "replay/A1-3/messages.md",
+    "original_sha256": "0c61858da7614c9f42be791c1fee7686bc5c58d0ad72994401a0182c7c32dbd0",
+    "published_sha256": "0c61858da7614c9f42be791c1fee7686bc5c58d0ad72994401a0182c7c32dbd0"
+  },
+  {
+    "source": "biomedical/runs/t03-trace-replay/A1-3/io.jsonl",
+    "public": "replay/A1-3/io.jsonl",
+    "original_sha256": "ce1d315d86c4dbd8fa4ec34c4adeda4798ad263893b231cb40fadb0d37dbec6f",
+    "published_sha256": "13347717bf5aa136483c59e99afcb92fd6637d7397fd8d25c1824b6f0118c825"
+  },
+  {
+    "source": "biomedical/runs/t03-trace-replay/A1-3/recorded.R",
+    "public": "replay/A1-3/recorded.R",
+    "original_sha256": "b29a564ef2a5df82a470179140d7b617d96f097b65a7b3b6774beb1435348fda",
+    "published_sha256": "b29a564ef2a5df82a470179140d7b617d96f097b65a7b3b6774beb1435348fda"
+  },
+  {
+    "source": "biomedical/runs/t03-trace-replay/A1-3/ordinary.R",
+    "public": "replay/A1-3/ordinary.R",
+    "original_sha256": "c9984326480cdd0ad45f6667e1c66f18b36f57bdbe02b65fdbef098e986c1f07",
+    "published_sha256": "c9984326480cdd0ad45f6667e1c66f18b36f57bdbe02b65fdbef098e986c1f07"
+  },
+  {
+    "source": "biomedical/runs/t03-trace-replay/A1-3/trace.jsonl",
+    "public": "replay/A1-3/trace.jsonl",
+    "original_sha256": "3355740632de72c6d883ee59aa8519e2d51c5cd038022390af5ce6aee0f924c0",
+    "published_sha256": "56dae94cfede098d289533adf8532cea5bb7205d0069ef4bfbe4499a57347c29"
+  },
+  {
+    "source": "biomedical/runs/t03-trace-replay/A1-3/calls.json",
+    "public": "replay/A1-3/calls.json",
+    "original_sha256": "23aa5cd10600cbbe5235b1cc1d6dcca3138ff16436b940297917644e426ba2c5",
+    "published_sha256": "23aa5cd10600cbbe5235b1cc1d6dcca3138ff16436b940297917644e426ba2c5"
+  },
+  {
+    "source": "biomedical/runs/t03-trace-replay/C1-1/app-server-client.jsonl",
+    "public": "replay/C1-1/app-server-client.jsonl",
+    "original_sha256": "ee026f090b1c99d73fc86d532f61adae0f647e733d6d669bd24d747d23b2342f",
+    "published_sha256": "ee026f090b1c99d73fc86d532f61adae0f647e733d6d669bd24d747d23b2342f"
+  },
+  {
+    "source": "biomedical/runs/t03-trace-replay/C1-1/io.jsonl",
+    "public": "replay/C1-1/io.jsonl",
+    "original_sha256": "44af72d68b67af1375badecb8087a09f0f5ebb9604da4b6be1a909c085917f66",
+    "published_sha256": "550b2e2c306ea7d76eedb6da1d0ff61d86c65fff8c239daca448fa2e2d9976bc"
+  },
+  {
+    "source": "biomedical/runs/t03-trace-replay/C1-1/trace.jsonl",
+    "public": "replay/C1-1/trace.jsonl",
+    "original_sha256": "e3cad9936bb95f207643783f64ff30a81128360719f52d400bca99f25f22c23f",
+    "published_sha256": "a3924e5de37b7234f841ce8bf5610d7432c87b292f5b8a7ebc0813d35248f725"
+  },
+  {
+    "source": "biomedical/runs/v05-T03-formal-20261107-gptr101/shared-prompts.json",
+    "public": "metadata/shared-prompts.json",
+    "original_sha256": "2feba27146df5847cae9d6dcedaa80fa3a4b88c9ee5ea49d9afb4758dbf4b25a",
+    "published_sha256": "2feba27146df5847cae9d6dcedaa80fa3a4b88c9ee5ea49d9afb4758dbf4b25a"
+  },
+  {
+    "source": "biomedical/runs/v05-T03-formal-20261107-gptr101/runtime-packages.txt",
+    "public": "metadata/runtime-packages.txt",
+    "original_sha256": "f06a4e885c67047aafba2fd5bb9c417a8a5ed8481f732017878b69b3b504e8a6",
+    "published_sha256": "f06a4e885c67047aafba2fd5bb9c417a8a5ed8481f732017878b69b3b504e8a6"
+  },
+  {
+    "source": "biomedical/runs/v05-T03-formal-20261107-gptr101/gptr-version.json",
+    "public": "metadata/gptr-version.json",
+    "original_sha256": "27ff196d261ae0905bd29cded8d7b2dac880c85f3aa179cd298890fb4c019147",
+    "published_sha256": "27ff196d261ae0905bd29cded8d7b2dac880c85f3aa179cd298890fb4c019147"
+  },
+  {
+    "source": "biomedical/runs/v05-T03-formal-20261107-gptr101/formal/manifest.json",
+    "public": "metadata/manifest.json",
+    "original_sha256": "a6f33b692bbd7c3a902b976b9b2125a4675a172ee31a64770ae84f68596388ec",
+    "published_sha256": "a6f33b692bbd7c3a902b976b9b2125a4675a172ee31a64770ae84f68596388ec"
+  },
+  {
+    "source": "biomedical/v0.5/docs/t03-results-gptr101/provenance.json",
+    "public": "gptr-1.0.1/figures/provenance.json",
+    "original_sha256": "08f72fa04054144dfbc1da18bf7b5d134b419ea5b47598d959f3002f45adb2c1",
+    "published_sha256": "08f72fa04054144dfbc1da18bf7b5d134b419ea5b47598d959f3002f45adb2c1"
+  },
+  {
+    "source": "biomedical/v0.5/docs/t03-results-dev30/provenance.json",
+    "public": "gptr-1.0.0-dev30/figures/provenance.json",
+    "original_sha256": "4829d1b8c7db95b417113bab614e402a2cdd441c1147d38d87f3edd1c82ba2bd",
+    "published_sha256": "4829d1b8c7db95b417113bab614e402a2cdd441c1147d38d87f3edd1c82ba2bd"
+  },
+  {
+    "source": "biomedical/v0.5/docs/t03-results-current/provenance.json",
+    "public": "gptr-1.0.0-dev29/figures/provenance.json",
+    "original_sha256": "ea1417a41f07bdd9d591be0c93bd1f5101e4d314ef4b1ab6735651ba8fcbae18",
+    "published_sha256": "ea1417a41f07bdd9d591be0c93bd1f5101e4d314ef4b1ab6735651ba8fcbae18"
+  }
+]

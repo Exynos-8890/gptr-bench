@@ -1,0 +1,57 @@
+# Recorded model messages — A1-1
+
+Extracted verbatim from message_end events; original trace remains authoritative.
+
+## Request 1
+
+Use R for a complete native RNA read-and-reuse task on TCGA-BRCA STAR Counts. This is a descriptive file-level performance task, not differential expression, clinical inference, or patient-level comparison. There are three sequential requests. Complete ONLY the current request: do not infer or compute later requests early. In EVERY request use the same complete original tables in memory. If raw already exists in the current R session (exists("raw", inherits=FALSE)), reuse it without rereading. Otherwise read input-files.txt with base::readLines and fully load each of its 1231 TSV files with data.table::fread(file=filename, skip="gene_id", header=TRUE, showProgress=FALSE), setDTthreads(1), retaining ALL 60664 rows and ALL 9 columns of every file. Store raw=list(files=files,tables=setNames(tables,files)). No input.rds exists. No streaming substitute, lazy/on-disk object, row/column selection, or downsampling. The first four rows are STAR summary categories; gene rows have gene_id starting ENSG (60660 per file). Keep original gene IDs and order, including version suffixes. Biological summaries use unstranded counts for ENSG rows only; do not reinterpret TPM or other columns as counts. Each filename identifies an input file, not necessarily a unique patient. Files have matching gene-ID order. Work column-by-column/table-by-table in the retained list; do not concatenate or duplicate the full dataset into a second dense matrix. Use R assignment =. No package installation; data.table and base R suffice. Use the session r tool whenever available; otherwise use ./instrumentation/bench-rscript --vanilla FILE.R (or -e CODE) for finite native Rscript. Do not launch shell R when an r tool exists. Do not alter instrumentation, GPTR_BENCH_IO_EVENTS, library paths, or runtime settings. Combine related loading, computation, output and necessary checks into coherent calls; do not add calls merely to reprint known state. Diagnose errors or inconsistencies when needed. Keep tool returns concise: dimensions and aggregate checks, never full tables. Write only this request's explicitly named scientific outputs in the unchanged working directory, exact requested columns, unrounded numbers, no row names. No scientific RDS/RData or other state caches. Requested summary files cannot replace the required complete input tables. Use only supplied files and instructions, not references or other runs.
+
+Artifact policy shared by both arms: write only the scientific result files explicitly requested by this task. Do not write additional intermediate datasets, cleaned-cohort tables, object caches, checkpoints, state snapshots, or files intended solely to restore analysis state in a later execution. Do not hide such state in extra columns, sheets, metadata, or renamed files. R script source files needed to execute the analysis and required benchmark instrumentation are allowed; they must not embed datasets or serialized state as a cache. Requested result files may be read again for their stated scientific purpose. Reuse existing in-memory objects when available.
+
+Request 1: Fully load the tables as specified. Verify file count, dimensions, identical gene_id ordering across all files, and finite nonnegative integer unstranded counts on every ENSG row. Write input-audit.csv with exactly one row and columns n_files,rows_per_file,columns_per_file,genes_per_file,total_gene_counts,zero_gene_values. The final two quantities sum across all ENSG gene/file cells. Keep all complete tables in raw. Do not write other scientific files in this request.
+
+## Request 1
+
+I’ll load all 1,231 complete tables, verify their dimensions, gene order and counts, and write only `input-audit.csv`.
+
+
+The full-table load and audit are still running. All original rows and columns will remain in `raw`; the count checks use only ENSG rows.
+
+
+Created `input-audit.csv`. All checks passed: 1,231 tables, each 60,664 × 9, with identical gene-ID order and valid counts across 60,660 ENSG rows.
+
+Total gene counts: 71,357,946,062. Zero gene values: 34,425,437.
+
+Complete original tables remain in `raw`; the summary is in `input_audit`.
+
+## Request 2
+
+Request 2: Reuse or fully reload the same complete raw tables under Request 1 rules. From each file's ENSG-row unstranded counts compute total counts, number of genes with count>0, number with count=0, mean and maximum count. Write sample-summary.csv with columns file,total_counts,detected_genes,zero_genes,mean_count,max_count, one row per original filename, sorted by file. Do not write other scientific files or compute the next request early.
+
+## Request 2
+
+I’ll reuse `raw` to compute the five per-file summaries from ENSG-row unstranded counts and write `sample-summary.csv`, sorted by filename.
+
+
+The summary calculation and validation are still running. Each output row represents an original input file.
+
+
+Created `sample-summary.csv` with 1,231 rows and the six requested columns, sorted by filename. Aggregate counts match Request 1.
+
+Objects: `sample_summary` contains the results; `raw` retains all complete original tables. No other scientific files were written.
+
+## Request 3
+
+Request 3: Reuse or fully reload the same complete raw tables under Request 1 rules. For every ENSG gene, aggregate its unstranded counts over ALL files: total counts, files with count>0, files with count=0, mean and maximum count. Write gene-summary.csv with columns gene_id,total_counts,detected_files,zero_files,mean_count,max_count, in original gene order. Accumulate gene-length vectors over the existing list, initializing totals with numeric() to avoid integer overflow; avoid a second dense matrix. Write research-report.md describing the input scope and summaries, with these limits: files are not independent patients; no differential-expression model, biological group comparison, protein identification, or clinical conclusion. No other scientific outputs.
+
+## Request 3
+
+I’ll aggregate ENSG-row unstranded counts across all files using gene-length vectors, then write `gene-summary.csv` and `research-report.md` with the requested limits.
+
+
+The aggregation is still running. Totals are initialized with `numeric()` to avoid integer overflow, and the checks verify gene order and finite, nonnegative integer counts in every table.
+
+
+Created `gene-summary.csv` with 60,660 genes in original order and all six requested columns, plus `research-report.md` documenting scope, methods, results, and interpretation limits.
+
+Reused complete tables in `raw`; created `gene_summary`. Aggregate totals match earlier requests. No other scientific outputs were written.

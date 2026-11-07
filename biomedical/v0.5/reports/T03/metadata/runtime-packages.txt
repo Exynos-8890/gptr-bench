@@ -1,0 +1,23 @@
+              package  version
+jsonlite     jsonlite    2.0.0
+curl             curl    8.1.0
+processx     processx    3.9.0
+callr           callr    3.8.0
+rlang           rlang    1.3.0
+cli               cli    3.6.6
+yaml             yaml   2.3.12
+ps                 ps    1.9.3
+pkgload       pkgload    1.5.3
+withr           withr    3.0.3
+Matrix         Matrix    1.6.5
+survival     survival    3.5.8
+glmnet         glmnet      5.2
+openssl       openssl    2.4.2
+readxl         readxl    1.6.0
+testthat     testthat    3.3.2
+data.table data.table 1.18.6.1
+R.utils       R.utils   2.13.0
+bit64           bit64    4.8.6
+limma           limma   3.58.1
+edgeR           edgeR   4.0.16
+R version 4.3.3 (2024-02-29) 

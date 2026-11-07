@@ -1,0 +1,16 @@
+{
+  "package_version": "1.0.1",
+  "distribution": "GitHub source commit; not an official release",
+  "repository": "https://github.com/Broccolito/gptr",
+  "commit": "5e2992b13824fbf5218428d379a336dd44acddbb",
+  "download_url": "https://api.github.com/repos/Broccolito/gptr/tarball/5e2992b13824fbf5218428d379a336dd44acddbb",
+  "download_sha256": "9df795421486f9fc5a8e6bf56a2855a993b6dcb41b7e2a822ffc85b786cc8000",
+  "source_sha256": "2e35e46f8f65b6fd4399e9491e6e52b2a966fdfddebdf317b543b1c890720c79",
+  "aws_source_path": "/data/gptr-tmp/gptr-1.0.1-5e2992b",
+  "old_source": {
+    "package_version": "1.0.0",
+    "matching_clean_commit": "85c72019add63ca4927923c6a5d08a715d3c708a",
+    "source_sha256": "591d1429264343023f2f82b413ab547ff90daf6411e9500267749946562a1d41",
+    "identification": "Old source is an exported directory without Git metadata; the complete benchmark-hashed package files match this clean local Git commit. This identifies matching contents, not a unique ancestral commit."
+  }
+}
