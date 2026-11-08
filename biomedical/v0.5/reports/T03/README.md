@@ -20,6 +20,12 @@ In the latest batch A1 reads the complete inputs once; C1 reads them in each req
 
 **Investigation target:** A1-2 request 2 has a 34.08 s outer tool interval but reports 4.18 s inside execution; request 3 has 38.37 s versus 2.35 s. This is an observed boundary difference, not evidence identifying its cause. [Timing evidence](replay/tool-timing.csv).
 
+## Minimal single-file reproducer
+
+[Portable reproducer and measurements](minimal-replay/README.md) · [replay.R](minimal-replay/replay.R)
+
+Run `Rscript --vanilla replay.R`: the script installs the pinned gptr commit into a temporary library, generates synthetic IDs, and prints outer/internal tool timings. No local checkout, API key, dataset download or output directory is required. Normal completion or an R error triggers temporary-work/library cleanup. This is a synthetic MCP-path reproducer, separate from the original T03 trace replay below; it does not reproduce the scientific task or model latency.
+
 ## Inspect or replay
 
 - [Replay instructions](replay/README.md), starting with A1-2, the A1 trial displayed in the Gantt.

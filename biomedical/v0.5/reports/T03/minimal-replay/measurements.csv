@@ -1,0 +1,4 @@
+variant,platform,outer_s,internal_s,gap_s,ratio,error
+portable_before_cleanup_wrapper,AWS Linux,7.836,2.762,5.074,2.837075,False
+portable_before_cleanup_wrapper,macOS,5.461,3.185,2.276,1.7146,False
+current_cleanup_wrapper,macOS,5.62,2.967,2.653,1.8941691944725312,False

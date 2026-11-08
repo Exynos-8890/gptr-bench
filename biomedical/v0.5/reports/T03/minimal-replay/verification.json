@@ -1,0 +1,44 @@
+{
+  "gptr_version": "1.0.1 development snapshot",
+  "commit": "5e2992b13824fbf5218428d379a336dd44acddbb",
+  "entrypoint": "Rscript --vanilla replay.R",
+  "installation": "remotes::install_github with an isolated temporary package library; no user/site libraries",
+  "gptr_source_env_used": false,
+  "model_requests": 0,
+  "records": [
+    {
+      "platform": "AWS Linux",
+      "original_path": "/data/gptr-tmp/portable-replay-final.log",
+      "sha256": "19df88d660a06e6b2d8f10c747c709a5ac7e1768f26b78fe34d53f4ff6e9f165",
+      "published_path": "evidence/linux-before-cleanup.log",
+      "variant": "portable_before_cleanup_wrapper"
+    },
+    {
+      "platform": "macOS",
+      "original_path": "/LOCAL_USER/Documents/Repos/gptr-bench/biomedical/runs/t03-portable-replay-20261107/macos-final.log",
+      "sha256": "5998f2eb02cffff1d28bcd70c612f77701fadfd8f79c106e5e900762f80e707a",
+      "published_path": "evidence/macos-before-cleanup.log",
+      "variant": "portable_before_cleanup_wrapper"
+    }
+  ],
+  "limitations": [
+    "Dependency versions and R version are not locked.",
+    "Timing ratios depend on hardware; macOS need not reach 2x.",
+    "Downloads, installation and data generation are outside tool timings."
+  ],
+  "historical_reproducer_sha256": "c0c882d4f671d894cd91763162a7ee5836198bf9a4578a481b8fca74537935c9",
+  "reproducer_sha256": "adb2bae874295e4faa4990cd1503372ef65e663dee20621acd39d765aad211a9",
+  "current_validation": {
+    "platform": "macOS",
+    "variant": "current_cleanup_wrapper",
+    "outer_s": 5.62,
+    "internal_s": 2.967,
+    "gap_s": 2.653,
+    "ratio": 1.8941691944725312,
+    "error": false,
+    "process_exit_code": 0,
+    "remaining_temporary_entries": 0,
+    "evidence_type": "Console output observed during validation; no raw output log was saved.",
+    "aws_cleanup_variant_retested": false
+  }
+}

@@ -1,0 +1,6 @@
+Installing 8 packages: R6, ps, yaml, rlang, processx, jsonlite, curl, cli
+Running `R CMD build`...
+                             R  gptr                                   commit
+1 R version 4.5.1 (2025-06-13) 1.0.1 5e2992b13824fbf5218428d379a336dd44acddbb
+  outer_s internal_s gap_s  ratio error
+1   5.461      3.185 2.276 1.7146 FALSE
