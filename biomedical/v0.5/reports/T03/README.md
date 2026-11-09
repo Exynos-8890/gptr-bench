@@ -20,6 +20,12 @@ In the latest batch A1 reads the complete inputs once; C1 reads them in each req
 
 **Investigation target:** A1-2 request 2 has a 34.08 s outer tool interval but reports 4.18 s inside execution; request 3 has 38.37 s versus 2.35 s. This is an observed boundary difference, not evidence identifying its cause. [Timing evidence](replay/tool-timing.csv).
 
+## A1-2 MCP replay timing analysis (English)
+
+[English analysis and evidence](mcp-replay-analysis/README.md) · [Interactive HTML](mcp-replay-analysis/report.en.html)
+
+An offline AWS replay reproduces an outer/internal timing gap of about 27.60 seconds in requests 2 and 3. Each request makes one tool call. The report includes microscopic Gantt charts, phase timings, editable ggplot figures and raw timing evidence. Pre-gate processing and the permission gate dominate the gap; individual risk-classification costs were not separately measured.
+
 ## Minimal single-file reproducer
 
 [Portable reproducer and measurements](minimal-replay/README.md) · [replay.R](minimal-replay/replay.R)

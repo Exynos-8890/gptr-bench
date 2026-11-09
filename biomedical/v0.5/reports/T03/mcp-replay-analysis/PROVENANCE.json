@@ -1,0 +1,72 @@
+{
+  "source_report": "biomedical/v0.5/docs/REPORT-T03-A1-2-mcp-replay.zh-CN.html",
+  "source_report_sha256": "503edefbb56cb2bf3bb89cb16b7e4ccf941250a7830542607c0d48f73067488b",
+  "copies": [
+    {
+      "source_path": "biomedical/v0.5/docs/t03-mcp-replay-profile/micro-gantt.png",
+      "published_path": "figures/micro-gantt.png",
+      "source_sha256": "5b0504810f2cbdac62967496bf71dd52a430ce125cb5728109ac0bbc70a34a9b",
+      "published_sha256": "5b0504810f2cbdac62967496bf71dd52a430ce125cb5728109ac0bbc70a34a9b"
+    },
+    {
+      "source_path": "biomedical/v0.5/docs/t03-mcp-replay-profile/micro-gantt-zoom.png",
+      "published_path": "figures/micro-gantt-zoom.png",
+      "source_sha256": "c7d92aaf12ff19790e058566e553446e3543badaf5e23d77045cbab60f53ba72",
+      "published_sha256": "c7d92aaf12ff19790e058566e553446e3543badaf5e23d77045cbab60f53ba72"
+    },
+    {
+      "source_path": "biomedical/v0.5/docs/t03-mcp-replay-profile/micro-phases.csv",
+      "published_path": "figures/micro-phases.csv",
+      "source_sha256": "0d78c48d3ee261e39638e612378c75afc5b49fb467e8959ceb1263bf4b899b45",
+      "published_sha256": "0d78c48d3ee261e39638e612378c75afc5b49fb467e8959ceb1263bf4b899b45"
+    },
+    {
+      "source_path": "biomedical/v0.5/docs/t03-mcp-replay-profile/micro-calls.csv",
+      "published_path": "figures/micro-calls.csv",
+      "source_sha256": "ba2f0b137b3a8f755acda880e9532166317940f474c533e5841aba9a9c86d239",
+      "published_sha256": "ba2f0b137b3a8f755acda880e9532166317940f474c533e5841aba9a9c86d239"
+    },
+    {
+      "source_path": "biomedical/v0.5/docs/t03-mcp-replay-profile/plot-micro.R",
+      "published_path": "figures/plot-micro.R",
+      "source_sha256": "718e5b09a85b14040f22a54cbc67028ee7c080d2756464fdb8cca1b0cf477c13",
+      "published_sha256": "718e5b09a85b14040f22a54cbc67028ee7c080d2756464fdb8cca1b0cf477c13"
+    },
+    {
+      "source_path": "biomedical/v0.5/docs/t03-mcp-replay-profile/phase-timing.csv",
+      "published_path": "figures/phase-timing.csv",
+      "source_sha256": "cc263a40d15079e3d2bf5997eed72fd555cb962007a9badde2b017b487fd000d",
+      "published_sha256": "cc263a40d15079e3d2bf5997eed72fd555cb962007a9badde2b017b487fd000d"
+    },
+    {
+      "source_path": "biomedical/v0.5/docs/t03-mcp-replay-profile/timing.csv",
+      "published_path": "figures/timing.csv",
+      "source_sha256": "c0d81276951ebf76da2a4675a4a1de7c9d1010c3980f7dee5efbee235bd3657a",
+      "published_sha256": "c0d81276951ebf76da2a4675a4a1de7c9d1010c3980f7dee5efbee235bd3657a"
+    },
+    {
+      "source_path": "biomedical/runs/t03-A1-2-mcp-profile-20261107/workspace/events.jsonl",
+      "published_path": "evidence/events.jsonl",
+      "source_sha256": "eba51e173506f23e82c79093e7b90aa8c06647582a1815b2fa219851aa249f77",
+      "published_sha256": "eba51e173506f23e82c79093e7b90aa8c06647582a1815b2fa219851aa249f77"
+    },
+    {
+      "source_path": "biomedical/runs/t03-A1-2-mcp-profile-20261107/workspace/profile.jsonl",
+      "published_path": "evidence/profile.jsonl",
+      "source_sha256": "40c3b3dc98c74f81ce732f24ce28cec8cfff0b91681a3819df05db59c1b5a24c",
+      "published_sha256": "40c3b3dc98c74f81ce732f24ce28cec8cfff0b91681a3819df05db59c1b5a24c"
+    },
+    {
+      "source_path": "biomedical/runs/t03-A1-2-mcp-profile-20261107/profile-mcp.R",
+      "published_path": "evidence/profile-mcp.R",
+      "source_sha256": "c6a242bc348b5878511e76199928fd42883838054327a84d71dddf1121a96392",
+      "published_sha256": "c6a242bc348b5878511e76199928fd42883838054327a84d71dddf1121a96392"
+    },
+    {
+      "source_path": "biomedical/runs/t03-A1-2-mcp-profile-20261107/calls.json",
+      "published_path": "evidence/calls.json",
+      "source_sha256": "1e26df006eb90388a72e32b08e2ea09ff4c938fa29f5f1bba836206fc0af6b39",
+      "published_sha256": "1e26df006eb90388a72e32b08e2ea09ff4c938fa29f5f1bba836206fc0af6b39"
+    }
+  ]
+}
